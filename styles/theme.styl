@@ -1,0 +1,59 @@
+@import '~prismjs/themes/prism-tomorrow.css'
+@import '~vuepress/lib/default-theme/styles/code.styl'
+
+@import '~@theme/styles/variables.styl'
+
+*
+ box-sizing border-box
+
+html
+body
+  padding 0
+  margin 0
+
+body
+  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  font-size 16px
+  color $textColor
+  background-color #f6f6f6
+
+a
+  font-weight 500
+  color $accentColor
+  text-decoration none
+
+.container
+  margin 0 auto
+  padding 0 1rem
+  @media (min-width $MQWide)
+    max-width (($MQWide + $MQNarrow) / 2)
+  @media (max-width $MQWide - 1px)
+    max-width $MQNarrow
+
+.main-div
+  padding 1.5rem
+  background-color #ffffff
+  border-radius 5px
+
+.content
+  max-width $containerWidth
+  margin 0 auto
+  padding 1.5rem
+  background-color #fff
+  border-radius 5px
+  a:hover
+    text-decoration underline
+  p.demo
+    padding 1rem 1.5rem
+    border 1px solid #ddd
+    border-radius 4px
+  img
+    max-width 100%
+
+.clearfix
+  &::after
+    display block
+    clear both
+    content ''

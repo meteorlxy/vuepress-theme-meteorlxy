@@ -1,0 +1,11 @@
+# Editor directories and files
+.vscode
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node modules
+node_modules/
+yarn.lock

@@ -1,0 +1,24 @@
+{
+  "name": "vuepress-theme-meteorlxy",
+  "version": "0.1.0",
+  "description": "Vuepress theme - Meteorlxy",
+  "main": "Layout.vue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meteorlxy/vuepress-theme-meteorlxy.git"
+  },
+  "keywords": [
+    "vuepress",
+    "theme"
+  ],
+  "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues"
+  },
+  "homepage": "https://github.com/meteorlxy/vuepress-theme-meteorlxy",
+  "dependencies": {
+    "geopattern": "^1.2.3",
+    "moment": "^2.22.1"
+  }
+}
