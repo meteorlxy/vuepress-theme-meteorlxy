@@ -40,11 +40,6 @@ export default {
     TheHeaderNavbar,
     TheHeaderBanner
   },
-  data () {
-    return {
-      ready: false
-    }
-  },
   computed: {
     background () {
       return this.$site.themeConfig.headerBackground || {}
@@ -56,15 +51,12 @@ export default {
         'background-position': 'center',
         'background-attachment': 'scroll',
         'background-image': `url(${this.background.url})`
-      } : this.ready ? {
+      } : !this.$ssrContext ? {
+        // avoid prerendering the geopattern in build stage
+        // or the html files will be 14KB larger
         'background-image': this.gpImg()
       } : {}
     }
-  },
-  beforeMount () {
-    // avoid prerendering the geopattern in build stage
-    // or the html files will be 14KB larger
-    this.ready = true
   },
   methods: {
     // in computed, geopattern will always be computed

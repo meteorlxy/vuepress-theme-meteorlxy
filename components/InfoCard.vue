@@ -103,9 +103,7 @@ export default {
     },
     headerStyle () {
       return {
-        'background-image': GeoPattern.generate(this.nickname, {
-          color: '#eee'
-        }).toDataUrl()
+        'background-image': !this.$ssrContext ? GeoPattern.generate(this.nickname, { color: '#eee' }).toDataUrl() : null
       }
     }
   }

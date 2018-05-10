@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-meteorlxy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vuepress theme - Meteorlxy",
   "main": "Layout.vue",
   "repository": {
