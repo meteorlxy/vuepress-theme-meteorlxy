@@ -45,7 +45,7 @@ export default {
       return Boolean(this.$page.lastUpdated)
     },
     updatedAt () {
-      return showUpdatedAt
+      return this.showUpdatedAt
         ? moment(this.$page.lastUpdated).format('YYYY-MM-DD')
         : null
     }

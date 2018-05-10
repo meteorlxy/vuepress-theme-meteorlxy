@@ -5,10 +5,6 @@
         <slot>
           <template v-if="$page">
             <h1>{{ $page.title || '' }}</h1>
-
-            <p v-if="date">
-              {{ date }}
-            </p>
           </template>
 
           <h1 v-else>{{ $site.title || '' }}</h1>
@@ -19,16 +15,8 @@
 </template>
 
 <script>
-import moment from 'moment'
 export default {
-  name: 'TheHeaderBanner',
-  computed: {
-    date () {
-      const date = this.$page.frontmatter.date || ''
-      // return moment(date).format('dddd')
-      return ''
-    }
-  }
+  name: 'TheHeaderBanner'
 }
 </script>
 
