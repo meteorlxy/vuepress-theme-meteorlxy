@@ -13,7 +13,7 @@
       </main>
 
       <aside class="aside">
-        <InfoCard/>
+        <InfoCard class="main-div"/>
       </aside>
     </div>
   </TransitionFadeSlide>
@@ -63,6 +63,8 @@ export default {
 .container
   position relative
   margin 1rem auto
+  @media (max-width: $MQMobile - 1)
+    margin 0.5rem auto
   &:not(.show-aside)
     .main
       width 100%

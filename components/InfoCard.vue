@@ -1,5 +1,5 @@
 <template>
-  <div class="info-card main-div">
+  <div class="info-card">
     <div
       class="info-card-header"
       :style="headerStyle">

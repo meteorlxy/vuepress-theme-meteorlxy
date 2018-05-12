@@ -1,37 +1,31 @@
 <template>
-  <div class="main-div">
-    <div class="posts-tags">
+  <TransitionFadeSlide
+    tag="div"
+    class="posts-list"
+    direction="x"
+    group>
+    <div
+      v-for="post in listPosts"
+      :key="post.path"
+      class="post-item">
+        <router-link
+          :to="post.path"
+          class="post-link">
+          <h3 class="post-title">{{ post.title }}</h3>
 
+          <p class="post-desc">{{ post.frontmatter.description || '' }}</p>
+        </router-link>
+
+        <p
+          v-if="post.frontmatter.tags"
+          class="post-tags">
+          <PostTag
+            v-for="tag in post.frontmatter.tags"
+            :key="tag"
+            :name="tag"/>
+        </p>
     </div>
-
-    <TransitionFadeSlide
-      tag="div"
-      class="posts-list"
-      direction="x"
-      group>
-      <div
-        v-for="post in listPosts"
-        :key="post.path"
-        class="post-item">
-          <router-link
-            :to="post.path"
-            class="post-link">
-            <h3 class="post-title">{{ post.title }}</h3>
-
-            <p class="post-desc">{{ post.frontmatter.description || '' }}</p>
-          </router-link>
-
-          <p
-            v-if="post.frontmatter.tags"
-            class="post-tags">
-            <PostTag
-              v-for="tag in post.frontmatter.tags"
-              :key="tag"
-              :name="tag"/>
-          </p>
-      </div>
-    </TransitionFadeSlide>
-  </div>
+  </TransitionFadeSlide>
 </template>
 
 <script>
@@ -45,14 +39,7 @@ export default {
   },
   computed: {
     listPosts () {
-      const pages = this.$site.pages
-      const pageFilter = p => {
-        return p.frontmatter.layout === 'post'
-      }
-      const pageSort = (p1, p2) => {
-        return p1.frontmatter.date < p2.frontmatter.date
-      }
-      return pages.filter(pageFilter).sort(pageSort)
+      return this.$posts
     }
   }
 }
@@ -69,7 +56,7 @@ export default {
     .post-link
       .post-title
         color $textColor
-        transition all 0.1s
+        transition all 0.2s
       .post-desc
         color: $grayTextColor
         text-align justify

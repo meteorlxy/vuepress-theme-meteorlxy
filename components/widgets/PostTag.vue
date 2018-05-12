@@ -62,6 +62,5 @@ $fontSize = 1rem
     height 100%
     font-size $fontSize
     margin-left $paddingUnit
-    text-transform capitalize
 
 </style>

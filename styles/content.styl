@@ -1,0 +1,61 @@
+@import '~@theme/styles/variables.styl'
+
+.content
+  width 100%
+  margin 0 auto
+  padding 1.5rem
+  padding-left 1.7rem
+  line-height 1.65
+  background-color #fff
+  border-radius 5px
+  a:hover
+    text-decoration underline
+  ul, ol
+    padding-left 1.2em
+  img
+    max-width 100%
+  p.demo
+    padding 1rem 1.5rem
+    border 1px solid #ddd
+    border-radius 4px
+  hr
+    display block
+    height 1px
+    border 0
+    border-top 1px solid $borderColor
+    margin 1.2rem 0
+    padding 0
+  strong
+    font-weight 600
+  a.header-anchor
+    font-size 0.85em
+    float left
+    margin 0.125em 0 0 -0.85em
+    opacity 0
+    transition all 0.2s
+    &:hover
+      text-decoration none
+  h1, h2, h3, h4, h5, h6
+    &:hover > a.header-anchor
+      opacity 1
+  h1
+    font-size 1.5rem
+  h2
+    font-size 1.3rem
+  h3
+    font-size 1.1rem
+  h4, h5, h6
+    font-size 1rem
+  code, kbd
+    font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+  blockquote
+    padding 0 1em
+    color #6a737d
+    border-left 0.25em solid #dfe2e5
+    margin-left 0
+    >:first-child
+      margin-top 0
+    >:last-child
+      margin-bottom 0
+
+  
