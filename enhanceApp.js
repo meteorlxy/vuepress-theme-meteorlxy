@@ -11,6 +11,13 @@ const dataMixin = {
         return p1.frontmatter.date < p2.frontmatter.date
       }
       return pages.filter(pageFilter).sort(pageSort)
+    },
+    $tags () {
+      let tagsArr = []
+      for (const post of this.$posts) {
+        tagsArr = tagsArr.concat(post.frontmatter.tags)
+      }
+      return Array.from(new Set(tagsArr))
     }
   }
 }

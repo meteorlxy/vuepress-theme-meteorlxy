@@ -37,9 +37,16 @@ export default {
     TransitionFadeSlide,
     PostTag
   },
+  props: {
+    posts: {
+      type: Array,
+      required: false,
+      default: null
+    }
+  },
   computed: {
     listPosts () {
-      return this.$posts
+      return this.posts || this.$posts
     }
   }
 }
