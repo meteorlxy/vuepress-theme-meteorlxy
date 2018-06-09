@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/meteorlxy/vuepress-theme-meteorlxy",
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/vue-fontawesome": "^0.0.23",
     "geopattern": "^1.2.3",
     "moment": "^2.22.1"
   }
