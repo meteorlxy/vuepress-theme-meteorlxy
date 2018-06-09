@@ -106,3 +106,9 @@ module.exports = {
   }
 }
 ```
+
+## TODOS
+
+- [ ] Comments Support
+- [ ] SEO
+- [ ] General enhancement
