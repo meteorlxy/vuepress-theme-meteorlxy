@@ -30,7 +30,7 @@ export default {
         return this.$posts
       }
       return this.$posts.filter(p => {
-        const postTags = p.frontmatter.tags
+        const postTags = p.tags
         for (const tag of this.selectedTags) {
           if (postTags.includes(tag)) {
             return true

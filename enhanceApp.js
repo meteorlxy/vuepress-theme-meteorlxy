@@ -1,4 +1,5 @@
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import moment from 'moment'
 
 const dataMixin = {
   computed: {
@@ -10,20 +11,38 @@ const dataMixin = {
       const pageSort = (p1, p2) => {
         return p1.frontmatter.date < p2.frontmatter.date
       }
-      return pages.filter(pageFilter).sort(pageSort)
+      const pageMap = p => {
+        p.createdAt = moment(p.frontmatter.date).format('YYYY-MM-DD')
+        p.updatedAt = Boolean(p.lastUpdated) ? moment(p.lastUpdated).format('YYYY-MM-DD') : null
+        p.tags = p.frontmatter.tags || []
+        p.category = p.frontmatter.category || null
+        return p
+      }
+      const posts = pages.filter(pageFilter).sort(pageSort).map(pageMap)
+      return posts
+    },
+    $categories () {
+      let categoriesSet = new Set()
+      for (const post of this.$posts) {
+        if (post.category) {
+          categoriesSet.add(post.category)
+        }
+      }
+      return Array.from(categoriesSet)
     },
     $tags () {
       let tagsArr = []
       for (const post of this.$posts) {
-        tagsArr = tagsArr.concat(post.frontmatter.tags)
+        tagsArr = tagsArr.concat(post.tags)
       }
       return Array.from(new Set(tagsArr))
     }
   }
 }
 
-export default ({ Vue }) => {
+export default ({ Vue, options }) => {
   Vue.mixin(dataMixin)
+
   Vue.component('FontAwesomeIcon', {
     functional: true,
     props: FontAwesomeIcon.props,

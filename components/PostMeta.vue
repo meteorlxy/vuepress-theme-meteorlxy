@@ -3,22 +3,13 @@
     v-if="$page.frontmatter.type !== 'page'"
     class="post-meta main-div">
     <section class="post-date clearfix">
-      <span class="create-date">发布时间：{{ createdAt }}</span>
+      <span class="create-date">发布时间：{{ $page.createdAt }}</span>
 
       <span
-        v-if="showUpdatedAt"
+        v-if="$page.updatedAt"
         class="update-date">
-        最后修改：{{ updatedAt }}
+        最后修改：{{ $page.updatedAt }}
       </span>
-    </section>
-
-    <section
-      v-if="$page.frontmatter.tags"
-      class="post-tags">
-      <PostTag
-        v-for="tag in $page.frontmatter.tags"
-        :key="tag"
-        :name="tag"/>
     </section>
 
     <section class="post-links">
@@ -40,25 +31,15 @@
 </template>
 
 <script>
-import PostTag from '@theme/components/widgets/PostTag'
+import IconInfo from '@theme/components/widgets/IconInfo'
 import moment from 'moment'
+
 export default {
   name: 'PostMeta',
   components: {
-    PostTag
+    IconInfo
   },
   computed: {
-    createdAt () {
-      return moment(this.$page.frontmatter.date).format('YYYY-MM-DD')
-    },
-    showUpdatedAt () {
-      return Boolean(this.$page.lastUpdated)
-    },
-    updatedAt () {
-      return this.showUpdatedAt
-        ? moment(this.$page.lastUpdated).format('YYYY-MM-DD')
-        : null
-    },
     thisIndex () {
       return this.$posts.indexOf(this.$page)
     },
@@ -85,8 +66,6 @@ export default {
       float left
     .update-date
       float right
-  .post-tags
-    margin 1rem 0
   .post-links
     .post-link
       display block
@@ -96,5 +75,4 @@ export default {
       transition all 0.2s
       &:hover
         color $accentColor
-
 </style>

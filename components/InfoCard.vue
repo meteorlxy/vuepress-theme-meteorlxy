@@ -19,28 +19,32 @@
       </section>
       
       <section class="info-contact">
-        <section
-          v-if="location"
-          class="info-location">
-          <FontAwesomeIcon
-            class="info-icon"
-            :icon="faMapMarkerAlt"
+        <section>
+          <IconInfo
+            v-if="location"
+            class="info-location"
+            type="location"
+            :text="location"
             fixed-width/>
-
-          <span>{{ location }}</span>
         </section>
         
-        <section
-          v-if="email"
-          class="info-email">
-          <a :href="`mailto:${email}`">
-            <FontAwesomeIcon
-              class="info-icon"
-              :icon="faEnvelope"
-              fixed-width/>
-
-            <span>{{ email }}</span>
-          </a>
+        <section>
+          <IconInfo
+            v-if="organization"
+            class="info-organization"
+            type="organization"
+            :text="organization"
+            fixed-width/>
+        </section>
+        
+        <section>
+          <IconInfo
+            v-if="email"
+            class="info-email"
+            type="email"
+            :href="`mailto:${email}`"
+            :text="email"
+            fixed-width/>
         </section>
       </section>
     </div>
@@ -64,20 +68,15 @@
 </template>
 
 <script>
-import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope'
-import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
+import IconInfo from '@theme/components/widgets/IconInfo'
 import SnsIcon from '@theme/components/widgets/SnsIcon'
 import GeoPattern from 'geopattern'
+
 export default {
   name: 'InfoCard',
   components: {
+    IconInfo,
     SnsIcon
-  },
-  data () {
-    return {
-      faEnvelope,
-      faMapMarkerAlt
-    }
   },
   computed: {
     info () {
@@ -94,6 +93,9 @@ export default {
     },
     email () {
       return this.info.email || null
+    },
+    organization () {
+      return this.info.organization || null
     },
     avator () {
       return this.info.avator || '/assets/img/avator_unknown.jpg'
@@ -148,11 +150,7 @@ $avatorHeight = 120px
     .info-contact
       color $grayTextColor
       word-break break-all
-      .info-location
-      .info-email
-        margin 0.5rem 0
-      .info-icon
-        margin-right 0.3rem
+      line-height 160%
   .info-card-footer
     text-align center
     padding 1rem
