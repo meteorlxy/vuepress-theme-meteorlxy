@@ -75,20 +75,9 @@ module.exports = {
     if (isServer === false) {
       config.node.set('Buffer', false)
 
-      config
-        .plugin('context-replace')
-        .use(webpack.ContextReplacementPlugin, [
-          /moment[\/\\]locale$/, /zh-cn/
-        ])
-
       config.optimization.splitChunks({
         maxInitialRequests: 5,
         cacheGroups: {
-          moment: {
-            test: /[\\/]node_modules[\\/]moment[\\/]/,
-            name: 'vendor.moment',
-            chunks: 'all'
-          },
           vue: {
             test: /[\\/]node_modules[\\/](vue|vue-router)[\\/]/,
             name: 'vendor.vue',

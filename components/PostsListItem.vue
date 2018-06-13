@@ -31,7 +31,6 @@
 
 <script>
 import IconInfo from '@theme/components/widgets/IconInfo'
-import moment from 'moment'
 
 export default {
   name: 'PostsListItem',

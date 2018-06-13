@@ -1,5 +1,5 @@
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-import moment from 'moment'
+import format from 'date-fns/format'
 
 const dataMixin = {
   computed: {
@@ -12,8 +12,8 @@ const dataMixin = {
         return p1.frontmatter.date < p2.frontmatter.date
       }
       const pageMap = p => {
-        p.createdAt = moment(p.frontmatter.date).format('YYYY-MM-DD')
-        p.updatedAt = Boolean(p.lastUpdated) ? moment(p.lastUpdated).format('YYYY-MM-DD') : null
+        p.createdAt = format(p.frontmatter.date, 'YYYY-MM-DD')
+        p.updatedAt = Boolean(p.lastUpdated) ? format(p.lastUpdated, 'YYYY-MM-DD') : null
         p.tags = p.frontmatter.tags || []
         p.category = p.frontmatter.category || null
         return p
