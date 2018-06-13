@@ -17,6 +17,17 @@
     "url": "https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues"
   },
   "homepage": "https://github.com/meteorlxy/vuepress-theme-meteorlxy",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
@@ -26,5 +37,11 @@
     "date-fns": "^1.29.0",
     "geopattern": "^1.2.3",
     "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-vue": "^4.5.0",
+    "husky": "^1.0.0-rc.8",
+    "lint-staged": "^7.2.0"
   }
 }

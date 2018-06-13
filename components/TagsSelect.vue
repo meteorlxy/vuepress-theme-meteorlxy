@@ -2,6 +2,7 @@
   <div class="tags-select">
     <label
       v-for="tag in $tags"
+      :key="tag"
       class="tag-checkbox">
       <input
         v-show="false"
