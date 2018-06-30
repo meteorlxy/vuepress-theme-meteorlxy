@@ -40,7 +40,7 @@ export default {
   props: {
     post: {
       type: Object,
-      required: false,
+      required: false
     }
   }
 }
@@ -67,4 +67,3 @@ export default {
       .post-title
         color $accentColor
 </style>
-

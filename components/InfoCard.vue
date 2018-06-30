@@ -17,7 +17,7 @@
         class="info-desc"
         v-html="description">
       </section>
-      
+
       <section class="info-contact">
         <section>
           <IconInfo
@@ -27,7 +27,7 @@
             :text="location"
             fixed-width/>
         </section>
-        
+
         <section>
           <IconInfo
             v-if="organization"
@@ -36,7 +36,7 @@
             :text="organization"
             fixed-width/>
         </section>
-        
+
         <section>
           <IconInfo
             v-if="email"
@@ -156,4 +156,3 @@ $avatorHeight = 120px
     padding 1rem
 
 </style>
-

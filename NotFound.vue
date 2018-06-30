@@ -21,7 +21,7 @@ export default {
   name: 'NotFound',
   components: {
     TheHeader,
-    TheFooter,
+    TheFooter
   },
   methods: {
     getMsg () {

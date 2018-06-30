@@ -16,22 +16,22 @@ import TheHeaderNavbar from '@theme/components/TheHeaderNavbar'
 import TheHeaderBanner from '@theme/components/TheHeaderBanner'
 import GeoPattern from 'geopattern'
 const generators = [
-	'octogons',
-	'overlappingCircles',
-	'plusSigns',
-	'xes',
-	// 'sineWaves',
-	'hexagons',
-	'overlappingRings',
-	// 'plaid',
-	'triangles',
-	// 'squares',
-	'concentricCircles',
-	'diamonds',
-	'tessellation',
-	// 'nestedSquares',
-	'mosaicSquares',
-	'chevrons'
+  'octogons',
+  'overlappingCircles',
+  'plusSigns',
+  'xes',
+  // 'sineWaves',
+  'hexagons',
+  'overlappingRings',
+  // 'plaid',
+  'triangles',
+  // 'squares',
+  'concentricCircles',
+  'diamonds',
+  'tessellation',
+  // 'nestedSquares',
+  'mosaicSquares',
+  'chevrons'
 ]
 export default {
   name: 'TheHeader',
@@ -70,7 +70,7 @@ export default {
         : null
     },
     gpString () {
-      return (this.$page && this.$page.title || '') + (new Date()).toString()
+      return ((this.$page && this.$page.title) || '') + (new Date()).toString()
     },
     gpGenerator () {
       return generators[Math.floor(Math.random() * generators.length)]
@@ -85,4 +85,3 @@ export default {
   background-color $headerColor
   transition all 0.5s ease-in-out
 </style>
-

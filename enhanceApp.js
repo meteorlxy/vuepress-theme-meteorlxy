@@ -13,7 +13,7 @@ const dataMixin = {
       }
       const pageMap = p => {
         p.createdAt = format(p.frontmatter.date, 'YYYY-MM-DD')
-        p.updatedAt = Boolean(p.lastUpdated) ? format(p.lastUpdated, 'YYYY-MM-DD') : null
+        p.updatedAt = p.lastUpdated ? format(p.lastUpdated, 'YYYY-MM-DD') : null
         p.tags = p.frontmatter.tags || []
         p.category = p.frontmatter.category || null
         return p

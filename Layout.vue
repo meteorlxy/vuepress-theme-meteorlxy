@@ -15,20 +15,24 @@ import TheMain from '@theme/components/TheMain'
 import TheFooter from '@theme/components/TheFooter'
 export default {
   name: 'Layout',
-  mixins: [
-    nprogressMixin
-  ],
+
   components: {
     TheHeader,
     TheMain,
     TheFooter
   },
+
+  mixins: [
+    nprogressMixin
+  ],
+
   computed: {
     $layout () {
       const defaultLayout = 'post'
       const layout = this.$page.frontmatter.layout || defaultLayout
       return layout.toLowerCase()
     },
+
     $title () {
       const isHome = this.$layout === 'home'
       return isHome ? this.$siteTitle : this.$page.frontmatter.title + ' | ' + this.$siteTitle

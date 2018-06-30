@@ -22,7 +22,7 @@
       </div>
     </nav>
 
-    <div v-if="fixed" class="navbar-holder"/>
+    <div v-show="fixed" class="navbar-holder"/>
   </div>
 </template>
 
@@ -98,4 +98,3 @@ export default {
         border-bottom 2px solid $accentColor
 
 </style>
-
