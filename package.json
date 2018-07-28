@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-meteorlxy",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Vuepress theme - Meteorlxy",
   "main": "Layout.vue",
   "repository": {
@@ -32,11 +32,11 @@
     ]
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-brands": "^5.0.13",
-    "@fortawesome/fontawesome-free-regular": "^5.0.13",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
-    "@fortawesome/vue-fontawesome": "^0.0.23",
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/free-brands-svg-icons": "^5.2.0",
+    "@fortawesome/free-regular-svg-icons": "^5.2.0",
+    "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "@fortawesome/vue-fontawesome": "0.1.1",
     "date-fns": "^1.29.0",
     "geopattern": "^1.2.3",
     "vue": "^2.5.16"
@@ -44,11 +44,11 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-vue": "^4.5.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.5.0",
     "husky": "^1.0.0-rc.8",
     "lint-staged": "^7.2.0"
   }

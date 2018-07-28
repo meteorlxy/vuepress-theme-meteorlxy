@@ -1,4 +1,4 @@
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import format from 'date-fns/format'
 
 const dataMixin = {

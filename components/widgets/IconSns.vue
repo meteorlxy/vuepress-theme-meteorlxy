@@ -12,11 +12,14 @@
 </template>
 
 <script>
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
-import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
-import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
-import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
-import faWeibo from '@fortawesome/fontawesome-free-brands/faWeibo'
+import {
+  faGithub,
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faWeibo,
+  faZhihu
+} from '@fortawesome/free-brands-svg-icons'
 
 const nameMap = {
   'github': {
@@ -41,7 +44,7 @@ const nameMap = {
   },
   'zhihu': {
     title: 'ZhiHu',
-    icon: null
+    icon: faZhihu
   },
   'douban': {
     title: 'DouBan',
@@ -50,7 +53,7 @@ const nameMap = {
 }
 
 export default {
-  name: 'SnsIcon',
+  name: 'IconSns',
   props: {
     // Account of SNS
     account: {

@@ -10,17 +10,17 @@
         :value="tag"
         v-model="selectedTags"/>
 
-      <PostTag :name="tag"/>
+      <IconTag :name="tag"/>
     </label>
   </div>
 </template>
 
 <script>
-import PostTag from '@theme/components/widgets/PostTag'
+import IconTag from '@theme/components/widgets/IconTag'
 export default {
-  name: 'TagsSelect',
+  name: 'PostsTagsSelect',
   components: {
-    PostTag
+    IconTag
   },
   data () {
     return {

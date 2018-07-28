@@ -18,13 +18,17 @@
 </template>
 
 <script>
-import faBriefcase from '@fortawesome/fontawesome-free-solid/faBriefcase'
-import faCalendarAlt from '@fortawesome/fontawesome-free-regular/faCalendarAlt'
-import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope'
-import faFolderOpen from '@fortawesome/fontawesome-free-regular/faFolderOpen'
-import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
-import faTag from '@fortawesome/fontawesome-free-solid/faTag'
-import faTags from '@fortawesome/fontawesome-free-solid/faTags'
+import {
+  faBriefcase,
+  faEnvelope,
+  faMapMarkerAlt,
+  faTag,
+  faTags
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  faCalendarAlt,
+  faFolderOpen
+} from '@fortawesome/free-regular-svg-icons'
 
 const typeIconMap = {
   'category': faFolderOpen,

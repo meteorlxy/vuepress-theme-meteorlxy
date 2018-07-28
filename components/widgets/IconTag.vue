@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import faTag from '@fortawesome/fontawesome-free-solid/faTag'
+import { faTag } from '@fortawesome/free-solid-svg-icons'
 
 export default {
-  name: 'PostTag',
+  name: 'IconTag',
   props: {
     name: {
       type: String,

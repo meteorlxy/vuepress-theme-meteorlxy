@@ -6,7 +6,7 @@
         class="sns-link"
         :href="item.link"
         target="_blank">
-        <SnsIcon
+        <IconSns
           :name="name"
           :account="item.account"/>
       </a>
@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import SnsIcon from '@theme/components/widgets/SnsIcon'
+import IconSns from '@theme/components/widgets/IconSns'
 export default {
   name: 'TheFooter',
   components: {
-    SnsIcon
+    IconSns
   },
   computed: {
     sns () {

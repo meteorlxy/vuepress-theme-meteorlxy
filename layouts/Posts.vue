@@ -1,6 +1,6 @@
 <template>
   <div class="posts">
-    <TagsSelect
+    <PostsTagsSelect
       class="main-div"
       v-model="selectedTags"/>
 
@@ -12,12 +12,12 @@
 
 <script>
 import PostsList from '../components/PostsList'
-import TagsSelect from '../components/TagsSelect'
+import PostsTagsSelect from '../components/PostsTagsSelect'
 export default {
   name: 'Posts',
   components: {
     PostsList,
-    TagsSelect
+    PostsTagsSelect
   },
   data () {
     return {

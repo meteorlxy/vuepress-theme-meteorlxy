@@ -57,7 +57,7 @@
           :href="item.link"
           class="sns-link"
           target="_blank">
-          <SnsIcon
+          <IconSns
             :name="name"
             :account="item.account"
             size="lg"/>
@@ -69,14 +69,14 @@
 
 <script>
 import IconInfo from '@theme/components/widgets/IconInfo'
-import SnsIcon from '@theme/components/widgets/SnsIcon'
+import IconSns from '@theme/components/widgets/IconSns'
 import GeoPattern from 'geopattern'
 
 export default {
   name: 'InfoCard',
   components: {
     IconInfo,
-    SnsIcon
+    IconSns
   },
   computed: {
     info () {
