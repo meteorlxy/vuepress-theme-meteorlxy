@@ -1,21 +1,24 @@
 <template>
   <article class="post">
-    <PostMeta/>
+    <PostMeta />
 
     <Content
       :key="$page.path"
-      class="post-content markdown-body"/>
+      class="post-content markdown-body"
+    />
 
-    <PostMeta/>
+    <PostMeta />
   </article>
 </template>
 
 <script>
 import PostMeta from '@theme/components/PostMeta'
+
 export default {
   name: 'Post',
+
   components: {
-    PostMeta
-  }
+    PostMeta,
+  },
 }
 </script>

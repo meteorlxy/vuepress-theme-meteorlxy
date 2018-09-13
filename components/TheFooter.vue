@@ -1,37 +1,46 @@
 <template>
   <footer class="footer">
     <p class="sns-links">
-      <a v-for="(item, name) in sns"
+      <a
+        v-for="(item, name) in sns"
         :key="name"
         class="sns-link"
         :href="item.link"
-        target="_blank">
+        target="_blank"
+      >
         <IconSns
           :name="name"
-          :account="item.account"/>
+          :account="item.account"
+        />
       </a>
     </p>
 
     <p>
       <span>Powered by </span>
 
-      <a href="https://vuepress.vuejs.org" target="_blank">Vuepress</a>
+      <a
+        href="https://vuepress.vuejs.org"
+        target="_blank"
+      >Vuepress</a>
     </p>
   </footer>
 </template>
 
 <script>
 import IconSns from '@theme/components/widgets/IconSns'
+
 export default {
   name: 'TheFooter',
+
   components: {
-    IconSns
+    IconSns,
   },
+
   computed: {
     sns () {
       return this.$site.themeConfig.personalInfo.sns || {}
-    }
-  }
+    },
+  },
 }
 </script>
 

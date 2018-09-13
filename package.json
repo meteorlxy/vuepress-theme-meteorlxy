@@ -2,21 +2,21 @@
   "name": "vuepress-theme-meteorlxy",
   "version": "0.2.2",
   "description": "Vuepress theme - Meteorlxy",
-  "main": "Layout.vue",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/meteorlxy/vuepress-theme-meteorlxy.git"
-  },
+  "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "license": "MIT",
   "keywords": [
     "vuepress",
     "theme"
   ],
-  "author": "meteorlxy <meteor.lxy@foxmail.com>",
-  "license": "MIT",
+  "homepage": "https://github.com/meteorlxy/vuepress-theme-meteorlxy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meteorlxy/vuepress-theme-meteorlxy.git"
+  },
   "bugs": {
     "url": "https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues"
   },
-  "homepage": "https://github.com/meteorlxy/vuepress-theme-meteorlxy",
+  "main": "Layout.vue",
   "scripts": {
     "lint": "eslint --fix --ext .js,.vue ."
   },
@@ -42,14 +42,14 @@
     "vue": "^2.5.16"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "eslint-plugin-vue": "^4.5.0",
-    "husky": "^1.0.0-rc.8",
-    "lint-staged": "^7.2.0"
+    "eslint": "^5.5.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "husky": "^1.0.0-rc.14",
+    "lint-staged": "^7.2.2"
   }
 }

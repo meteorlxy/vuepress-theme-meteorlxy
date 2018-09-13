@@ -3,17 +3,19 @@
     <div
       class="container clearfix"
       :class="containerClass"
-      :key="showAside">
+      :key="showAside"
+    >
       <main class="main">
         <TransitionFadeSlide>
           <component
             :is="layout"
-            :key="$page.path"/>
+            :key="$page.path"
+          />
         </TransitionFadeSlide>
       </main>
 
       <aside class="aside">
-        <InfoCard class="main-div"/>
+        <InfoCard class="main-div" />
       </aside>
     </div>
   </TransitionFadeSlide>
@@ -26,22 +28,28 @@ import Home from '@theme/layouts/Home'
 import Posts from '@theme/layouts/Posts'
 import Post from '@theme/layouts/Post'
 import Page from '@theme/layouts/Page'
+
 export default {
   name: 'TheMain',
+
   components: {
     TransitionFadeSlide,
     InfoCard,
+    /* eslint-disable vue/no-unused-components */
     Home,
     Posts,
     Post,
-    Page
+    Page,
+    /* eslint-enable vue/no-unused-components */
   },
+
   props: {
     layout: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
+
   computed: {
     showAside () {
       if (this.$page.frontmatter.hasOwnProperty('aside')) {
@@ -49,12 +57,13 @@ export default {
       }
       return true
     },
+
     containerClass () {
       return {
-        'show-aside': this.showAside
+        'show-aside': this.showAside,
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

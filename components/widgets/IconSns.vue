@@ -1,13 +1,15 @@
 <template>
   <span
     class="sns-icon"
-    :title="title">
+    :title="title"
+  >
     <FontAwesomeIcon
       v-if="icon"
       :icon="icon"
       :size="size"
       :fixed-width="fixedWidth"
-      v-bind="$attrs"/>
+      v-bind="$attrs"
+    />
   </span>
 </template>
 
@@ -18,77 +20,86 @@ import {
   faTwitter,
   faLinkedin,
   faWeibo,
-  faZhihu
+  faZhihu,
 } from '@fortawesome/free-brands-svg-icons'
 
 const nameMap = {
   'github': {
     title: 'GitHub',
-    icon: faGithub
+    icon: faGithub,
   },
   'facebook': {
     title: 'Facebook',
-    icon: faFacebook
+    icon: faFacebook,
   },
   'twitter': {
     title: 'Twitter',
-    icon: faTwitter
+    icon: faTwitter,
   },
   'linkedin': {
     title: 'LinkedIn',
-    icon: faLinkedin
+    icon: faLinkedin,
   },
   'weibo': {
     title: 'WeiBo',
-    icon: faWeibo
+    icon: faWeibo,
   },
   'zhihu': {
     title: 'ZhiHu',
-    icon: faZhihu
+    icon: faZhihu,
   },
   'douban': {
     title: 'DouBan',
-    icon: null
-  }
+    icon: null,
+  },
 }
 
 export default {
   name: 'IconSns',
+
   props: {
     // Account of SNS
     account: {
       type: String,
-      required: false
+      required: false,
+      default: '',
     },
+
     // Name of SNS
     name: {
       type: String,
-      required: true
+      required: true,
     },
+
     // Size of FontAwesome
     size: {
       type: String,
       required: false,
-      default: 'lg'
+      default: 'lg',
     },
+
     // Fixed Width or not of FontAwesome
     fixedWidth: {
       type: Boolean,
       required: false,
-      default: true
-    }
+      default: true,
+    },
   },
+
   computed: {
+
     data () {
       return nameMap[this.name]
     },
+
     title () {
       return `${this.data.title}: ${this.account}`
     },
+
     icon () {
       return this.data.icon || false
-    }
-  }
+    },
+  },
 }
 </script>
 

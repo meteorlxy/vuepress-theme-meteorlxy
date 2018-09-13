@@ -3,35 +3,41 @@
     <label
       v-for="tag in $tags"
       :key="tag"
-      class="tag-checkbox">
+      class="tag-checkbox"
+    >
       <input
         v-show="false"
         type="checkbox"
         :value="tag"
-        v-model="selectedTags"/>
+        v-model="selectedTags"
+      >
 
-      <IconTag :name="tag"/>
+      <IconTag :name="tag" />
     </label>
   </div>
 </template>
 
 <script>
 import IconTag from '@theme/components/widgets/IconTag'
+
 export default {
   name: 'PostsTagsSelect',
+
   components: {
-    IconTag
+    IconTag,
   },
+
   data () {
     return {
-      selectedTags: []
+      selectedTags: [],
     }
   },
+
   watch: {
     selectedTags (val) {
       this.$emit('input', val)
-    }
-  }
+    },
+  },
 }
 </script>
 

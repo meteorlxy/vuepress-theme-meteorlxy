@@ -1,10 +1,13 @@
 <template>
-  <header class="header" :style="headerStyle">
-    <TheHeaderNavbar/>
+  <header
+    class="header"
+    :style="headerStyle"
+  >
+    <TheHeaderNavbar />
 
     <TransitionFadeSlide>
       <TheHeaderBanner :key="$route.path">
-        <slot/>
+        <slot />
       </TheHeaderBanner>
     </TransitionFadeSlide>
   </header>
@@ -15,6 +18,7 @@ import TransitionFadeSlide from '@theme/components/transitions/TransitionFadeSli
 import TheHeaderNavbar from '@theme/components/TheHeaderNavbar'
 import TheHeaderBanner from '@theme/components/TheHeaderBanner'
 import GeoPattern from 'geopattern'
+
 const generators = [
   'octogons',
   'overlappingCircles',
@@ -31,33 +35,38 @@ const generators = [
   'tessellation',
   // 'nestedSquares',
   'mosaicSquares',
-  'chevrons'
+  'chevrons',
 ]
+
 export default {
   name: 'TheHeader',
+
   components: {
     TransitionFadeSlide,
     TheHeaderNavbar,
-    TheHeaderBanner
+    TheHeaderBanner,
   },
+
   computed: {
     background () {
       return this.$site.themeConfig.headerBackground || {}
     },
+
     headerStyle () {
       return this.background.url ? {
         'background-size': 'cover',
         'background-repeat': 'no-repeat',
         'background-position': 'center',
         'background-attachment': 'scroll',
-        'background-image': `url(${this.background.url})`
+        'background-image': `url(${this.background.url})`,
       } : !this.$ssrContext ? {
         // avoid prerendering the geopattern in build stage
         // or the html files will be 14KB larger
-        'background-image': this.gpImg()
+        'background-image': this.gpImg(),
       } : {}
-    }
+    },
   },
+
   methods: {
     // in computed, geopattern will always be computed
     // in methods, geopattern won't be called with useGeo = false
@@ -65,17 +74,19 @@ export default {
       return this.background.useGeo
         ? GeoPattern.generate(this.gpString(), {
           // color: '#9fe0f6',
-          generator: this.gpGenerator()
+          generator: this.gpGenerator(),
         }).toDataUrl()
         : null
     },
+
     gpString () {
       return ((this.$page && this.$page.title) || '') + (new Date()).toString()
     },
+
     gpGenerator () {
       return generators[Math.floor(Math.random() * generators.length)]
-    }
-  }
+    },
+  },
 }
 </script>
 

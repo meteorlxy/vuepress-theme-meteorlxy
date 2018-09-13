@@ -21,6 +21,7 @@ const dataMixin = {
       const posts = pages.filter(pageFilter).sort(pageSort).map(pageMap)
       return posts
     },
+
     $categories () {
       let categoriesSet = new Set()
       for (const post of this.$posts) {
@@ -30,14 +31,15 @@ const dataMixin = {
       }
       return Array.from(categoriesSet)
     },
+
     $tags () {
       let tagsArr = []
       for (const post of this.$posts) {
         tagsArr = tagsArr.concat(post.tags)
       }
       return Array.from(new Set(tagsArr))
-    }
-  }
+    },
+  },
 }
 
 export default ({ Vue, options }) => {
@@ -54,6 +56,6 @@ export default ({ Vue, options }) => {
           context.parent.$forceUpdate()
         })
       }
-    }
+    },
   })
 }

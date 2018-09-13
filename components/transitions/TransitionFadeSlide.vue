@@ -4,44 +4,52 @@
     :name="name"
     :mode="mode"
     :appear="appear"
-    :tag="tag">
-    <slot/>
+    :tag="tag"
+  >
+    <slot />
   </component>
 </template>
 
 <script>
 export default {
   name: 'TransitionFadeSlide',
+
   props: {
     appear: {
       type: Boolean,
-      default: true
+      default: true,
     },
+
     direction: {
       type: String,
-      default: 'y'
+      default: 'y',
     },
+
     group: {
       type: Boolean,
-      default: false
+      default: false,
     },
+
     mode: {
       type: String,
-      default: 'out-in'
+      default: 'out-in',
     },
+
     tag: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
+
   computed: {
     name () {
       return `fade-slide-${this.direction}`
     },
+
     component () {
       return this.group ? 'transition-group' : 'transition'
-    }
-  }
+    },
+  },
 }
 </script>
 

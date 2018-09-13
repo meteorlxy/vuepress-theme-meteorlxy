@@ -2,7 +2,8 @@
   <div class="posts-list-item">
     <router-link
       :to="post.path"
-      class="post-link">
+      class="post-link"
+    >
       <h3 class="post-title">{{ post.title }}</h3>
     </router-link>
 
@@ -10,22 +11,26 @@
       <IconInfo
         type="date"
         :text="post.createdAt"
-        :fixed-width="false"/>
+        :fixed-width="false"
+      />
 
       <IconInfo
         v-if="post.category"
         type="category"
-        :text="post.category"/>
+        :text="post.category"
+      />
 
       <IconInfo
         v-if="post.tags.length"
         type="tags"
-        :text="post.tags.join(',')"/>
+        :text="post.tags.join(',')"
+      />
     </p>
 
     <p
       class="post-excerpt"
-      v-html="post.excerpt || post.frontmatter.description || ''"></p>
+      v-html="post.excerpt || post.frontmatter.description || ''"
+    />
   </div>
 </template>
 
@@ -34,15 +39,17 @@ import IconInfo from '@theme/components/widgets/IconInfo'
 
 export default {
   name: 'PostsListItem',
+
   components: {
-    IconInfo
+    IconInfo,
   },
+
   props: {
     post: {
       type: Object,
-      required: false
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

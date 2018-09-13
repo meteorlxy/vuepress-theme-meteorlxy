@@ -1,10 +1,15 @@
 <template>
   <div>
-    <nav class="navbar" :class="navbarClass">
+    <nav
+      class="navbar"
+      :class="navbarClass"
+    >
       <div class="container">
         <router-link :to="$localePath">
-          <span v-if="$siteTitle"
-            class="navbar-site-name">
+          <span
+            v-if="$siteTitle"
+            class="navbar-site-name"
+          >
             {{ $siteTitle }}
           </span>
         </router-link>
@@ -15,37 +20,44 @@
             :key="nav.text"
             :to="nav.link"
             class="navbar-link"
-            :exact="nav.exact || false">
+            :exact="nav.exact || false"
+          >
             {{ nav.text }}
           </router-link>
         </div>
       </div>
     </nav>
 
-    <div v-show="fixed" class="navbar-holder"/>
+    <div
+      v-show="fixed"
+      class="navbar-holder"
+    />
   </div>
 </template>
 
 <script>
 export default {
   name: 'TheHeaderNavbar',
+
   data () {
     return {
-      fixed: false
+      fixed: false,
     }
   },
+
   computed: {
     navbarClass () {
       return {
-        'fixed': this.fixed
+        'fixed': this.fixed,
       }
-    }
+    },
   },
+
   mounted () {
     window.addEventListener('scroll', () => {
       this.fixed = window.scrollY !== 0
     })
-  }
+  },
 }
 </script>
 

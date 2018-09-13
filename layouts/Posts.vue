@@ -2,28 +2,34 @@
   <div class="posts">
     <PostsTagsSelect
       class="main-div"
-      v-model="selectedTags"/>
+      v-model="selectedTags"
+    />
 
     <PostsList
       class="main-div"
-      :posts="filteredPosts"/>
+      :posts="filteredPosts"
+    />
   </div>
 </template>
 
 <script>
 import PostsList from '../components/PostsList'
 import PostsTagsSelect from '../components/PostsTagsSelect'
+
 export default {
   name: 'Posts',
+
   components: {
     PostsList,
-    PostsTagsSelect
+    PostsTagsSelect,
   },
+
   data () {
     return {
-      selectedTags: []
+      selectedTags: [],
     }
   },
+
   computed: {
     filteredPosts () {
       if (this.selectedTags.length === 0) {
@@ -38,7 +44,7 @@ export default {
         }
         return false
       })
-    }
-  }
+    },
+  },
 }
 </script>
