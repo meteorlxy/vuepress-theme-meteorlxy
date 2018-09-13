@@ -1,6 +1,3 @@
-# Editor directories and files
-.vscode
-
 # Log files
 npm-debug.log*
 yarn-debug.log*
