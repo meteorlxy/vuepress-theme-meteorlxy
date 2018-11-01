@@ -1,10 +1,10 @@
 <template>
   <span
+    v-if="icon"
     class="sns-icon"
     :title="title"
   >
     <FontAwesomeIcon
-      v-if="icon"
       :icon="icon"
       :size="size"
       :fixed-width="fixedWidth"
