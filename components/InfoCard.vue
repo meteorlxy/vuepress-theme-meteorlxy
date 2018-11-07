@@ -130,7 +130,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/variables.styl'
+@require '~@theme/styles/variables'
 
 $headerBgHeight = 150px
 $avatorHeight = 120px

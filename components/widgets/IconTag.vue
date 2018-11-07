@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '~@theme/styles/variables.styl'
+@require '~@theme/styles/variables'
 
 $paddingUnit = 0.3rem
 $fontSize = 1rem

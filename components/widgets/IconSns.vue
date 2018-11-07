@@ -104,7 +104,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '~@theme/styles/variables.styl'
+@require '~@theme/styles/variables'
 
 .sns-link
   .sns-icon

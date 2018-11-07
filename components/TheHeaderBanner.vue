@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/variables.styl'
+@require '~@theme/styles/variables'
 
 .banner
   cursor default

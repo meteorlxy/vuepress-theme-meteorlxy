@@ -91,7 +91,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/variables.styl'
+@require '~@theme/styles/variables'
+
 .header
   background-color $headerColor
   transition all 0.5s ease-in-out

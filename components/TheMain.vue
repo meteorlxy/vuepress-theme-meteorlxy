@@ -68,7 +68,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/variables.styl'
+@require '~@theme/styles/variables'
+
 .container
   position relative
   margin 1rem auto

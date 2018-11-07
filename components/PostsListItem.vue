@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@theme/styles/variables.styl'
+@require '~@theme/styles/variables'
 
 .posts-list-item
   padding 0 0.5rem
