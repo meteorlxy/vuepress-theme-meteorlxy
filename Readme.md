@@ -8,6 +8,20 @@ Meteorlxy theme for [Vuepress](https://vuepress.vuejs.org)
 
 See demo on [my homepage](https://www.meteorlxy.cn)
 
+## Installation
+
+```sh
+# For vuepress 0.x
+yarn add vuepress-theme-meteorlxy
+# or
+npm install vuepress-theme-meteorlxy
+
+# For vuepress 1.x
+yarn add vuepress-theme-meteorlxy@next
+# or
+npm install vuepress-theme-meteorlxy@next
+```
+
 ## Extra Config
 
 As Vuepress doesn't allow themes to access Vuepress's config by now, you have to add extra config in `.vupress/config.js` of your project.
