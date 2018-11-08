@@ -1,25 +1,32 @@
 <template>
-  <div class="posts">
-    <PostsTagsSelect
-      class="main-div"
-      v-model="selectedTags"
-    />
+  <Layout>
+    <div
+      slot="main"
+      class="posts"
+    >
+      <PostsTagsSelect
+        class="main-div"
+        v-model="selectedTags"
+      />
 
-    <PostsList
-      class="main-div"
-      :posts="filteredPosts"
-    />
-  </div>
+      <PostsList
+        class="main-div"
+        :posts="filteredPosts"
+      />
+    </div>
+  </Layout>
 </template>
 
 <script>
-import PostsList from '../components/PostsList'
-import PostsTagsSelect from '../components/PostsTagsSelect'
+import Layout from '@theme/layouts/Layout'
+import PostsList from '@theme/components/PostsList'
+import PostsTagsSelect from '@theme/components/PostsTagsSelect'
 
 export default {
   name: 'Posts',
 
   components: {
+    Layout,
     PostsList,
     PostsTagsSelect,
   },

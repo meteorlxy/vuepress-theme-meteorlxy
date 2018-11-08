@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <TheHeader />
+    <TheHeader>
+      <slot name="header" />
+    </TheHeader>
 
-    <TheMain :layout="$layout" />
+    <TheMain>
+      <slot name="main" />
+    </TheMain>
 
     <TheFooter />
   </div>
 </template>
 
 <script>
-import nprogressMixin from '@theme/mixins/nprogress'
 import TheHeader from '@theme/components/TheHeader'
 import TheMain from '@theme/components/TheMain'
 import TheFooter from '@theme/components/TheFooter'
@@ -22,10 +25,6 @@ export default {
     TheMain,
     TheFooter,
   },
-
-  mixins: [
-    nprogressMixin,
-  ],
 
   computed: {
     $layout () {
@@ -42,4 +41,4 @@ export default {
 }
 </script>
 
-<style lang="stylus" src="@theme/styles/theme.styl"/>
+<style lang="stylus" src="@theme/styles"/>

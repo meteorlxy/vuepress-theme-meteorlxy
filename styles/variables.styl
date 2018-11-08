@@ -1,26 +1,15 @@
-// colors
-$textColor = #2c3e50
-$accentColor = #1e90ff
-$grayTextColor = #666
-$lightTextColor = #999
-$borderColor = #eaecef
-$codeBgColor = #282c34
-$arrowBgColor = #ccc
-$navbarColor = #fff
-$headerColor = #fff
+@require '~@temp/palette'
 
 // layout
-$navbarHeight = 3.6rem
-$bannerHeight = 12rem
+$navbarHeight ?= 3.6rem
+$bannerHeight ?= 12rem
 
 // responsive breakpoints
-$MQWide = 1440px
-$MQNarrow = 1024px
-$MQMobile = 768px
+$MQWide ?= 1440px
+$MQNarrow ?= 1024px
+$MQMobile ?= 768px
 $MQMobileNarrow = 480px
 
 // code
-$lineNumbersWrapperWidth = 3.5rem
-$codeLang = js ts html md vue css sass scss less stylus go java c sh yaml py
-
-@require '~@temp/override'
+$lineNumbersWrapperWidth ?= 3.5rem
+$codeLang ?= js ts html md vue css sass scss less stylus go java c sh yaml py

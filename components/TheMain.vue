@@ -7,10 +7,7 @@
     >
       <main class="main">
         <TransitionFadeSlide>
-          <component
-            :is="layout"
-            :key="$page.path"
-          />
+          <slot />
         </TransitionFadeSlide>
       </main>
 
@@ -24,10 +21,6 @@
 <script>
 import TransitionFadeSlide from '@theme/components/transitions/TransitionFadeSlide'
 import InfoCard from '@theme/components/InfoCard'
-import Home from '@theme/layouts/Home'
-import Posts from '@theme/layouts/Posts'
-import Post from '@theme/layouts/Post'
-import Page from '@theme/layouts/Page'
 
 export default {
   name: 'TheMain',
@@ -35,19 +28,6 @@ export default {
   components: {
     TransitionFadeSlide,
     InfoCard,
-    /* eslint-disable vue/no-unused-components */
-    Home,
-    Posts,
-    Post,
-    Page,
-    /* eslint-enable vue/no-unused-components */
-  },
-
-  props: {
-    layout: {
-      type: String,
-      required: true,
-    },
   },
 
   computed: {
