@@ -8,6 +8,14 @@ Meteorlxy theme for [Vuepress](https://vuepress.vuejs.org)
 
 See demo on [my homepage](https://www.meteorlxy.cn)
 
+## Installation
+
+```sh
+yarn add vuepress-theme-meteorlxy@next
+# or
+npm install vuepress-theme-meteorlxy@next
+```
+
 ## Theme Config
 
 Sample config:
