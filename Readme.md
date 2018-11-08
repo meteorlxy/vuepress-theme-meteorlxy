@@ -1,6 +1,6 @@
-> This branch is for `vuepress 0.x`, not for vuepress's next version `1.x`.
+> This branch is for `vuepress 0.x`.
 
-> `vuepress 1.x-alpha` has some problems with transitions between layouts, which somehow breaks my theme. I'll try to upgrade to `vuepress 1.x` when it is stable.
+> For `vuepress 1.x-alpha`, see the [next](https://github.com/meteorlxy/vuepress-theme-meteorlxy/tree/next) branch.
 
 # Vuepress Theme - Meteorlxy
 
