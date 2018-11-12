@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-meteorlxy",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Vuepress theme - Meteorlxy",
   "author": "meteorlxy <meteor.lxy@foxmail.com>",
   "license": "MIT",
@@ -54,6 +54,6 @@
     "lint-staged": "^8.0.4"
   },
   "peerDependencies": {
-    "vuepress": "^1.0.0-alpha.19"
+    "vuepress": "^1.0.0-alpha.20"
   }
 }

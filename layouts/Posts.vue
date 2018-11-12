@@ -4,10 +4,16 @@
       slot="main"
       class="posts"
     >
-      <PostsTagsSelect
-        class="main-div"
-        v-model="selectedTags"
-      />
+
+      <div class="main-div">
+        <h3>Categories</h3>
+
+        <PostsCategoriesSelect v-model="selectedCategory" />
+
+        <h3>Tags</h3>
+
+        <PostsTagsSelect v-model="selectedTags" />
+      </div>
 
       <PostsList
         class="main-div"
@@ -20,6 +26,7 @@
 <script>
 import Layout from '@theme/layouts/Layout'
 import PostsList from '@theme/components/PostsList'
+import PostsCategoriesSelect from '@theme/components/PostsCategoriesSelect'
 import PostsTagsSelect from '@theme/components/PostsTagsSelect'
 
 export default {
@@ -28,29 +35,37 @@ export default {
   components: {
     Layout,
     PostsList,
+    PostsCategoriesSelect,
     PostsTagsSelect,
   },
 
   data () {
     return {
       selectedTags: [],
+      selectedCategory: null,
     }
   },
 
   computed: {
     filteredPosts () {
-      if (this.selectedTags.length === 0) {
-        return this.$posts
+      let filteredPosts = this.$posts
+
+      if (this.selectedCategory) {
+        filteredPosts = filteredPosts.filter(p => p.category === this.selectedCategory)
       }
-      return this.$posts.filter(p => {
-        const postTags = p.tags
-        for (const tag of this.selectedTags) {
-          if (postTags.includes(tag)) {
-            return true
+
+      if (this.selectedTags.length !== 0) {
+        filteredPosts = filteredPosts.filter(p => {
+          const postTags = p.tags
+          for (const tag of this.selectedTags) {
+            if (postTags.includes(tag)) {
+              return true
+            }
           }
-        }
-        return false
-      })
+          return false
+        })
+      }
+      return filteredPosts
     },
   },
 }

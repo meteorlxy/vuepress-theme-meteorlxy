@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
     'vuepress-plugin-nprogress',
-    require('./plugin'),
+    require('./plugins/blog'),
+    require('./plugins/index'),
   ],
 }

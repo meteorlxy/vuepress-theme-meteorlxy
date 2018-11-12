@@ -1,18 +1,29 @@
 <template>
   <div class="tags-select">
+    <label class="tag-checkbox">
+      <input
+        v-show="false"
+        type="radio"
+        :value="null"
+        v-model="selectedCategory"
+      >
+
+      <IconTag name="all" />
+    </label>
+
     <label
-      v-for="tag in Object.keys($tags)"
-      :key="tag"
+      v-for="category in Object.keys($categories)"
+      :key="category"
       class="tag-checkbox"
     >
       <input
         v-show="false"
-        type="checkbox"
-        :value="tag"
-        v-model="selectedTags"
+        type="radio"
+        :value="category"
+        v-model="selectedCategory"
       >
 
-      <IconTag :name="tag" />
+      <IconTag :name="category" />
     </label>
   </div>
 </template>
@@ -21,7 +32,7 @@
 import IconTag from '@theme/components/widgets/IconTag'
 
 export default {
-  name: 'PostsTagsSelect',
+  name: 'PostsCategoriesSelect',
 
   components: {
     IconTag,
@@ -29,12 +40,12 @@ export default {
 
   data () {
     return {
-      selectedTags: [],
+      selectedCategory: null,
     }
   },
 
   watch: {
-    selectedTags (val) {
+    selectedCategory (val) {
       this.$emit('input', val)
     },
   },
@@ -47,7 +58,7 @@ export default {
 .tag-checkbox
   &:not(:first-child)
     margin-left 0.3rem
-  input[type="checkbox"]:checked + .post-tag
+  input[type="radio"]:checked + .post-tag
     color $accentColor
     font-weight bold
 
