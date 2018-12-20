@@ -11,7 +11,9 @@
       v-bind="$attrs"
     />
 
-    <span class="post-tag-name">{{ name }}</span>
+    <span class="post-tag-name">
+      {{ name }}
+    </span>
   </span>
 </template>
 

@@ -1,11 +1,13 @@
 <template>
   <div class="posts-list-item">
-    <router-link
+    <RouterLink
       :to="post.path"
       class="post-link"
     >
-      <h3 class="post-title">{{ post.title }}</h3>
-    </router-link>
+      <h3 class="post-title">
+        {{ post.title }}
+      </h3>
+    </RouterLink>
 
     <p class="post-info-list">
       <IconInfo

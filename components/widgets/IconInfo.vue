@@ -1,5 +1,5 @@
 <template>
-  <component
+  <Component
     :is="is"
     class="info"
     :href="href"
@@ -16,8 +16,10 @@
     <span
       class="info-text"
       :style="textStyle"
-    >{{ text }}</span>
-  </component>
+    >
+      {{ text }}
+    </span>
+  </Component>
 </template>
 
 <script>

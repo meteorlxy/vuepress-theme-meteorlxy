@@ -1,5 +1,5 @@
 <template>
-  <component
+  <Component
     :is="component"
     :name="name"
     :mode="mode"
@@ -7,7 +7,7 @@
     :tag="tag"
   >
     <slot />
-  </component>
+  </Component>
 </template>
 
 <script>

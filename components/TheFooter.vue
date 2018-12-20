@@ -21,7 +21,9 @@
       <a
         href="https://vuepress.vuejs.org"
         target="_blank"
-      >Vuepress</a>
+      >
+        Vuepress
+      </a>
     </p>
   </footer>
 </template>

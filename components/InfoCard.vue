@@ -12,7 +12,9 @@
     </div>
 
     <div class="info-card-body">
-      <section class="info-nickname">{{ nickname }}</section>
+      <section class="info-nickname">
+        {{ nickname }}
+      </section>
 
       <section
         v-if="description"

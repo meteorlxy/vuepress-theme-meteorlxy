@@ -5,17 +5,17 @@
       :class="navbarClass"
     >
       <div class="container">
-        <router-link :to="$localePath">
+        <RouterLink :to="$localePath">
           <span
             v-if="$siteTitle"
             class="navbar-site-name"
           >
             {{ $siteTitle }}
           </span>
-        </router-link>
+        </RouterLink>
 
         <div class="navbar-links">
-          <router-link
+          <RouterLink
             v-for="nav of $site.themeConfig.nav"
             :key="nav.text"
             :to="nav.link"
@@ -23,7 +23,7 @@
             :exact="nav.exact || false"
           >
             {{ nav.text }}
-          </router-link>
+          </RouterLink>
         </div>
       </div>
     </nav>

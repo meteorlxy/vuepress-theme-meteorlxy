@@ -4,7 +4,6 @@
       slot="main"
       class="posts"
     >
-
       <div class="main-div">
         <h3>Categories</h3>
 

@@ -4,7 +4,9 @@
     class="post-meta main-div"
   >
     <section class="post-date clearfix">
-      <span class="create-date">发布时间：{{ $page.createdAt }}</span>
+      <span class="create-date">
+        发布时间：{{ $page.createdAt }}
+      </span>
 
       <span
         v-if="$page.updatedAt"
@@ -15,21 +17,21 @@
     </section>
 
     <section class="post-links">
-      <router-link
+      <RouterLink
         v-if="prevPost"
         :to="prevPost.path"
         class="post-link"
       >
         上一篇：{{ prevPost.title }}
-      </router-link>
+      </RouterLink>
 
-      <router-link
+      <RouterLink
         v-if="nextPost"
         :to="nextPost.path"
         class="post-link"
       >
         下一篇：{{ nextPost.title }}
-      </router-link>
+      </RouterLink>
     </section>
   </section>
 </template>

@@ -7,7 +7,9 @@
             <h1>{{ $page.title || '' }}</h1>
           </template>
 
-          <h1 v-else>{{ $site.title || '' }}</h1>
+          <h1 v-else>
+            {{ $site.title || '' }}
+          </h1>
         </slot>
       </div>
     </div>
