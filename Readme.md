@@ -1,7 +1,5 @@
 > This branch is for `vuepress 0.x`.
 
-> For `vuepress 1.x-alpha`, see the [next](https://github.com/meteorlxy/vuepress-theme-meteorlxy/tree/next) branch.
-
 # Vuepress Theme - Meteorlxy
 
 Meteorlxy theme for [Vuepress](https://vuepress.vuejs.org)
@@ -113,9 +111,3 @@ module.exports = {
   }
 }
 ```
-
-## TODOS
-
-- [ ] Comments Support
-- [ ] SEO
-- [ ] General enhancement
