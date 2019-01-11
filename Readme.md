@@ -1,6 +1,6 @@
-> This branch is for vuepress's next version `1.x`.
+> This branch is for Vuepress `1.x`
 
-> As vuepress `1.x` is on `alpha` stage, this branch is not stable.
+> For Vuepress `0.x`, see branch [0.x](https://github.com/meteorlxy/vuepress-theme-meteorlxy/tree/0.x)
 
 # Vuepress Theme - Meteorlxy
 
@@ -11,9 +11,10 @@ See demo on [my homepage](https://www.meteorlxy.cn)
 ## Installation
 
 ```sh
-yarn add vuepress-theme-meteorlxy@next
-# or
+# for vuepress 1.x
 npm install vuepress-theme-meteorlxy@next
+# for vuepress 0.x
+npm install vuepress-theme-meteorlxy
 ```
 
 ## Theme Config
@@ -100,9 +101,3 @@ module.exports = {
   },
 }
 ```
-
-## TODOS
-
-- [ ] Comments Support
-- [ ] SEO
-- [ ] General enhancement
