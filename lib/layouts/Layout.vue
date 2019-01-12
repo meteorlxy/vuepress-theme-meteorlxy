@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-    <TheHeader>
-      <slot name="header" />
-    </TheHeader>
+    <TheHeader />
 
-    <TheMain>
-      <slot name="main" />
-    </TheMain>
+    <TheMain :layout="$layout" />
 
     <TheFooter />
   </div>

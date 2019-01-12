@@ -1,7 +1,11 @@
-.vscode
+.temp/
+.vscode/
+docs/
+docs-dist/
 .editorconfig
-.eslintrc.js
+.eslint*
 .gitattributes
+.gitignore
 yarn.lock
 
 # Log files

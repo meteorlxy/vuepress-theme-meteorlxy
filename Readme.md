@@ -95,8 +95,8 @@ module.exports = {
     // for the navbar
     nav: [
       { text: 'Home', link: '/', exact: true },
-      { text: 'Posts', link: '/posts/', exact: false  },
-      { text: 'About', link: '/about/', exact: false  }, 
+      { text: 'Posts', link: '/posts/', exact: false },
+      { text: 'About', link: '/about/', exact: false }, 
     ]
   },
 }

@@ -1,29 +1,23 @@
 <template>
-  <Layout>
-    <div
-      slot="main"
-      class="posts"
-    >
-      <div class="main-div">
-        <h3>Categories</h3>
+  <div class="posts">
+    <div class="main-div">
+      <h3>Categories</h3>
 
-        <PostsCategoriesSelect v-model="selectedCategory" />
+      <PostsCategoriesSelect v-model="selectedCategory" />
 
-        <h3>Tags</h3>
+      <h3>Tags</h3>
 
-        <PostsTagsSelect v-model="selectedTags" />
-      </div>
-
-      <PostsList
-        class="main-div"
-        :posts="filteredPosts"
-      />
+      <PostsTagsSelect v-model="selectedTags" />
     </div>
-  </Layout>
+
+    <PostsList
+      class="main-div"
+      :posts="filteredPosts"
+    />
+  </div>
 </template>
 
 <script>
-import Layout from '@theme/layouts/Layout'
 import PostsList from '@theme/components/PostsList'
 import PostsCategoriesSelect from '@theme/components/PostsCategoriesSelect'
 import PostsTagsSelect from '@theme/components/PostsTagsSelect'
@@ -32,7 +26,6 @@ export default {
   name: 'Posts',
 
   components: {
-    Layout,
     PostsList,
     PostsCategoriesSelect,
     PostsTagsSelect,

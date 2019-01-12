@@ -3,9 +3,9 @@
     <div class="container">
       <div class="center">
         <slot>
-          <template v-if="$page">
-            <h1>{{ $page.title || '' }}</h1>
-          </template>
+          <h1 v-if="$page">
+            {{ $page.title || '' }}
+          </h1>
 
           <h1 v-else>
             {{ $site.title || '' }}
