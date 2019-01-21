@@ -2,7 +2,7 @@ You can add more pages.
 
 First, create another directory, and put a `index.md` or `readme.md` in it:
 
-```sh {5,6}
+```bash {5,6}
 root
 ├── .vuepress
 │   └── config.js

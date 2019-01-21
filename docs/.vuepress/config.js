@@ -71,9 +71,9 @@ module.exports = {
 
     comments: {
       owner: 'meteorlxy',
-      repo: 'vssue-test',
-      clientId: '9fb56bc9476389533577',
-      clientSecret: '00d917a5f2496051f20827ce3e2673bc3dc2cd7b',
+      repo: 'vuepress-theme-meteorlxy',
+      clientId: 'cbda894952ba70c00666',
+      clientSecret: '1ade785ca693bf3092be5e5338720d5ee43672b7',
     },
   },
 }
