@@ -10,23 +10,47 @@
     </RouterLink>
 
     <p class="post-info-list">
-      <IconInfo
-        type="date"
-        :text="post.createdAt"
-        :fixed-width="false"
-      />
+      <span
+        v-if="post.createdAt"
+        class="post-info-item"
+      >
+        <IconInfo
+          type="date"
+          :title="post.createdAt"
+        >
+          {{ post.createdAt }}
+        </IconInfo>
+      </span>
 
-      <IconInfo
+      <span
         v-if="post.category"
-        type="category"
-        :text="post.category"
-      />
+        class="post-info-item"
+      >
+        <RouterLink :to="$categories.getItemByName(post.category).path">
+          <IconInfo
+            type="category"
+            :title="post.category"
+          >
+            {{ post.category }}
+          </IconInfo>
+        </RouterLink>
+      </span>
 
-      <IconInfo
+      <span
         v-if="post.tags.length"
-        type="tags"
-        :text="post.tags.join(',')"
-      />
+        class="post-info-item"
+      >
+        <IconInfo type="tags">
+          <RouterLink
+            v-for="(tag, i) in post.tags"
+            :key="tag"
+            :to="$tags.getItemByName(tag).path"
+            :title="tag"
+          >
+            {{ `${tag}${i === post.tags.length - 1 ? '' : ', '}` }}
+          </RouterLink>
+        </IconInfo>
+      </span>
     </p>
 
     <p
@@ -37,7 +61,7 @@
 </template>
 
 <script>
-import IconInfo from '@theme/components/widgets/IconInfo'
+import IconInfo from './IconInfo.vue'
 
 export default {
   name: 'PostsListItem',
@@ -55,18 +79,27 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @require '~@theme/styles/variables'
 
 .posts-list-item
   padding 0 0.5rem
-  &:not(:last-child)
-    border-bottom 1px solid $borderColor
+  &:not(:first-child)
+    border-top 1px solid $borderColor
   .post-title
     color $textColor
     transition all 0.2s
   .post-info-list
     color $lightTextColor
+    .post-info-item
+      cursor default
+      &:not(:first-child)
+        margin-left 0.5em
+      a
+        color $lightTextColor
+        font-weight normal
+      .icon
+        fill $lightTextColor
   .post-excerpt
     color: $grayTextColor
     text-align justify

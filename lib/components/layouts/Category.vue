@@ -1,6 +1,9 @@
 <template>
-  <div class="home">
-    <PostsList class="main-div" />
+  <div class="category">
+    <PostsList
+      class="main-div"
+      :posts="$category.posts"
+    />
   </div>
 </template>
 
@@ -8,7 +11,7 @@
 import PostsList from '../PostsList.vue'
 
 export default {
-  name: 'Home',
+  name: 'Category',
 
   components: {
     PostsList,

@@ -23,35 +23,35 @@
       />
 
       <section class="info-contact">
-        <section>
+        <section v-if="location">
           <IconInfo
-            v-if="location"
             class="info-location"
             type="location"
-            :text="location"
-            fixed-width
-          />
+            :title="location"
+          >
+            {{ location }}
+          </IconInfo>
         </section>
 
-        <section>
+        <section v-if="organization">
           <IconInfo
-            v-if="organization"
             class="info-organization"
             type="organization"
-            :text="organization"
-            fixed-width
-          />
+            :title="organization"
+          >
+            {{ organization }}
+          </IconInfo>
         </section>
 
-        <section>
+        <section v-if="email">
           <IconInfo
-            v-if="email"
             class="info-email"
             type="email"
             :href="`mailto:${email}`"
-            :text="email"
-            fixed-width
-          />
+            :title="email"
+          >
+            {{ email }}
+          </IconInfo>
         </section>
       </section>
     </div>
@@ -68,7 +68,7 @@
           <IconSns
             :name="name"
             :account="item.account"
-            size="lg"
+            size="1.5em"
           />
         </a>
       </section>
@@ -77,8 +77,8 @@
 </template>
 
 <script>
-import IconInfo from '@theme/components/widgets/IconInfo'
-import IconSns from '@theme/components/widgets/IconSns'
+import IconInfo from './IconInfo.vue'
+import IconSns from './IconSns.vue'
 import GeoPattern from 'geopattern'
 
 export default {
@@ -170,6 +170,8 @@ $avatorHeight = 120px
       color $grayTextColor
       word-break break-all
       line-height 160%
+      .icon
+        fill $grayTextColor
   .info-card-footer
     text-align center
     padding 1rem

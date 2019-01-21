@@ -2,15 +2,7 @@
   <div class="banner">
     <div class="container">
       <div class="center">
-        <slot>
-          <h1 v-if="$page">
-            {{ $page.title || '' }}
-          </h1>
-
-          <h1 v-else>
-            {{ $site.title || '' }}
-          </h1>
-        </slot>
+        <slot />
       </div>
     </div>
   </div>

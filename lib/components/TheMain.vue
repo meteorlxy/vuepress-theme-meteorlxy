@@ -19,12 +19,16 @@
 </template>
 
 <script>
-import TransitionFadeSlide from './transitions/TransitionFadeSlide.vue'
+import TransitionFadeSlide from './TransitionFadeSlide.vue'
 import InfoCard from './InfoCard.vue'
 import Home from './layouts/Home.vue'
 import Posts from './layouts/Posts.vue'
 import Post from './layouts/Post.vue'
 import Page from './layouts/Page.vue'
+import Tags from './layouts/Tags.vue'
+import Categories from './layouts/Categories.vue'
+import Tag from './layouts/Tag.vue'
+import Category from './layouts/Category.vue'
 
 export default {
   name: 'TheMain',
@@ -37,6 +41,10 @@ export default {
     Posts,
     Post,
     Page,
+    Tags,
+    Categories,
+    Tag,
+    Category,
     /* eslint-enable vue/no-unused-components */
   },
 

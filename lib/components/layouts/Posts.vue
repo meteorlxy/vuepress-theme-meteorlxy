@@ -1,11 +1,19 @@
 <template>
   <div class="posts">
     <div class="main-div">
-      <h3>Categories</h3>
+      <h3 class="link-categories">
+        <RouterLink to="/posts/categories/">
+          Categories
+        </RouterLink>
+      </h3>
 
       <PostsCategoriesSelect v-model="selectedCategory" />
 
-      <h3>Tags</h3>
+      <h3 class="link-tags">
+        <RouterLink to="/posts/tags/">
+          Tags
+        </RouterLink>
+      </h3>
 
       <PostsTagsSelect v-model="selectedTags" />
     </div>
@@ -18,9 +26,9 @@
 </template>
 
 <script>
-import PostsList from '@theme/components/PostsList'
-import PostsCategoriesSelect from '@theme/components/PostsCategoriesSelect'
-import PostsTagsSelect from '@theme/components/PostsTagsSelect'
+import PostsList from '../PostsList.vue'
+import PostsCategoriesSelect from '../PostsCategoriesSelect.vue'
+import PostsTagsSelect from '../PostsTagsSelect.vue'
 
 export default {
   name: 'Posts',
@@ -62,3 +70,12 @@ export default {
   },
 }
 </script>
+
+<style lang="stylus">
+@require '~@theme/styles/variables'
+
+.link-categories,
+.link-tags
+  a
+    color $textColor
+</style>

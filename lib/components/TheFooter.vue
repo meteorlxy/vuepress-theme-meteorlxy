@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import IconSns from '@theme/components/widgets/IconSns'
+import IconSns from './IconSns.vue'
 
 export default {
   name: 'TheFooter',

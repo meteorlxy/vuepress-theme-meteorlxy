@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import TheHeader from '@theme/components/TheHeader'
-import TheMain from '@theme/components/TheMain'
-import TheFooter from '@theme/components/TheFooter'
+import TheHeader from '../components/TheHeader.vue'
+import TheMain from '../components/TheMain.vue'
+import TheFooter from '../components/TheFooter.vue'
 
 export default {
   name: 'Layout',
@@ -24,14 +24,9 @@ export default {
 
   computed: {
     $layout () {
-      const defaultLayout = 'post'
+      const defaultLayout = 'Home'
       const layout = this.$page.frontmatter.layout || defaultLayout
       return layout.toLowerCase()
-    },
-
-    $title () {
-      const isHome = this.$layout === 'home'
-      return isHome ? this.$siteTitle : this.$page.frontmatter.title + ' | ' + this.$siteTitle
     },
   },
 }

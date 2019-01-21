@@ -1,18 +1,8 @@
-<template>
-  <Component
-    :is="component"
-    :name="name"
-    :mode="mode"
-    :appear="appear"
-    :tag="tag"
-  >
-    <slot />
-  </Component>
-</template>
-
 <script>
 export default {
   name: 'TransitionFadeSlide',
+
+  functional: true,
 
   props: {
     appear: {
@@ -39,6 +29,19 @@ export default {
       type: String,
       default: '',
     },
+  },
+
+  render (h, { props, children }) {
+    return h(
+      props.group ? 'TransitionGroup' : 'Transition',
+      {
+        props: {
+          name: `fade-slide-${props.direction}`,
+          ...props,
+        },
+      },
+      children,
+    )
   },
 
   computed: {

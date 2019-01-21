@@ -3,12 +3,10 @@
     class="post-tag"
     :title="name"
   >
-    <FontAwesomeIcon
+    <Icon
       class="post-tag-icon"
-      :icon="icon"
+      :name="icon"
       :size="size"
-      :fixed-width="fixedWidth"
-      v-bind="$attrs"
     />
 
     <span class="post-tag-name">
@@ -18,13 +16,22 @@
 </template>
 
 <script>
-import { faTag } from '@fortawesome/free-solid-svg-icons'
+import Icon from './Icon.vue'
 
 export default {
   name: 'IconTag',
 
+  components: {
+    Icon,
+  },
+
   props: {
     name: {
+      type: String,
+      required: true,
+    },
+
+    icon: {
       type: String,
       required: true,
     },
@@ -33,17 +40,6 @@ export default {
       type: String,
       default: '1x',
     },
-
-    fixedWidth: {
-      type: Boolean,
-      default: true,
-    },
-  },
-
-  computed: {
-    icon () {
-      return faTag
-    },
   },
 }
 </script>
@@ -51,26 +47,30 @@ export default {
 <style lang="stylus">
 @require '~@theme/styles/variables'
 
-$paddingUnit = 0.3rem
+$gutter = 0.4rem
 $fontSize = 1rem
 
 .post-tag
-  display inline-block
-  height $fontSize + $paddingUnit * 4
+  display inline-flex
+  justify-content center
+  margin 0 0.2rem
+  height $fontSize + $gutter * 2
   line-height $fontSize
-  padding $paddingUnit * 2 $paddingUnit * 3
+  padding $gutter $gutter * 1.5
   color lighten($grayTextColor, 10%)
-  background-color #eee
+  background-color #fff
   transition color 0.2s ease-out
   &:hover
     cursor pointer
     color $accentColor
+    .icon
+      fill $accentColor
   .post-tag-name
     display inline-block
     height 100%
     font-size $fontSize
-    margin-left $paddingUnit
+    font-weight normal
+    margin-left $gutter
   &:not(:first-of-type)
-    margin-left $paddingUnit
-
+    margin-left $gutter
 </style>

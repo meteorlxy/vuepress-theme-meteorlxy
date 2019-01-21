@@ -1,61 +1,49 @@
 <template>
   <span
-    v-if="icon"
     class="sns-icon"
     :title="title"
   >
-    <FontAwesomeIcon
-      :icon="icon"
+    <Icon
+      :name="name"
       :size="size"
-      :fixed-width="fixedWidth"
-      v-bind="$attrs"
+      :title="title"
     />
   </span>
 </template>
 
 <script>
-import {
-  faGithub,
-  faFacebook,
-  faTwitter,
-  faLinkedin,
-  faWeibo,
-  faZhihu,
-} from '@fortawesome/free-brands-svg-icons'
+import Icon from './Icon.vue'
 
 const nameMap = {
   'github': {
     title: 'GitHub',
-    icon: faGithub,
   },
   'facebook': {
     title: 'Facebook',
-    icon: faFacebook,
   },
   'twitter': {
     title: 'Twitter',
-    icon: faTwitter,
   },
   'linkedin': {
     title: 'LinkedIn',
-    icon: faLinkedin,
   },
   'weibo': {
-    title: 'WeiBo',
-    icon: faWeibo,
+    title: '新浪微博',
   },
   'zhihu': {
-    title: 'ZhiHu',
-    icon: faZhihu,
+    title: '知乎',
   },
   'douban': {
-    title: 'DouBan',
-    icon: null,
+    title: '豆瓣',
   },
 }
 
 export default {
   name: 'IconSns',
+
+  components: {
+    Icon,
+  },
 
   props: {
     // Account of SNS
@@ -75,29 +63,13 @@ export default {
     size: {
       type: String,
       required: false,
-      default: 'lg',
-    },
-
-    // Fixed Width or not of FontAwesome
-    fixedWidth: {
-      type: Boolean,
-      required: false,
-      default: true,
+      default: '25px',
     },
   },
 
   computed: {
-
-    data () {
-      return nameMap[this.name]
-    },
-
     title () {
-      return `${this.data.title}: ${this.account}`
-    },
-
-    icon () {
-      return this.data.icon || false
+      return `${nameMap[this.name].title}: ${this.account}`
     },
   },
 }
@@ -107,9 +79,13 @@ export default {
 @require '~@theme/styles/variables'
 
 .sns-link
+  margin 0 0.1em
   .sns-icon
     color $grayTextColor
     transition all 0.5s ease-out
     &:hover
       color $accentColor
+      .icon
+        fill $accentColor
+        transition all 0.5s ease-out
 </style>

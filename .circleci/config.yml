@@ -1,0 +1,65 @@
+version: 2.1
+
+executors:
+  node:
+    docker:
+      - image: circleci/node:10
+
+commands:
+  install:
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save node_modules Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+
+jobs:
+  build:
+    executor: node
+    steps:
+      - install
+      - run:
+          name: Build Docs
+          command: yarn build
+      - run:
+          name: Publish Github Pages
+          command: |
+            cd ./docs-dist
+            echo ${GH_CNAME} > CNAME
+            git init
+            git config user.name "${GH_USER_NAME}"
+            git config user.email "${GH_USER_EMAIL}"
+            git add .
+            git commit -m "build $(date +%Y%m%d%H%M)"
+            git push --force --quiet "https://${GH_TOKEN}@${GH_REPO}" master:gh-pages
+  lint:
+    executor: node
+    steps:
+      - install
+      - run:
+          name: Lint Code
+          command: yarn lint
+
+workflows:
+  version: 2
+  github_pages:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+  checks:
+    jobs:
+      - lint:
+          filters:
+            branches:
+              ignore: gh-pages

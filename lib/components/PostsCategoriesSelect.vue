@@ -8,11 +8,14 @@
         v-model="selectedCategory"
       >
 
-      <IconTag name="all" />
+      <IconTag
+        icon="folder-open"
+        name="all"
+      />
     </label>
 
     <label
-      v-for="category in Object.keys($categories)"
+      v-for="category in Object.keys($categories.map)"
       :key="category"
       class="tag-checkbox"
     >
@@ -23,13 +26,16 @@
         v-model="selectedCategory"
       >
 
-      <IconTag :name="category" />
+      <IconTag
+        icon="folder-open"
+        :name="category"
+      />
     </label>
   </div>
 </template>
 
 <script>
-import IconTag from '@theme/components/widgets/IconTag'
+import IconTag from './IconTag.vue'
 
 export default {
   name: 'PostsCategoriesSelect',
@@ -52,14 +58,12 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @require '~@theme/styles/variables'
 
 .tag-checkbox
-  &:not(:first-child)
-    margin-left 0.3rem
   input[type="radio"]:checked + .post-tag
     color $accentColor
-    font-weight bold
-
+    .icon
+      fill $accentColor
 </style>

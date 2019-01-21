@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheHeader>
-      <h1>{{ getMsg() }}</h1>
+      <h1>404 Not Found</h1>
     </TheHeader>
 
     <TheFooter />
@@ -9,15 +9,8 @@
 </template>
 
 <script>
-import TheHeader from '@theme/components/TheHeader'
-import TheFooter from '@theme/components/TheFooter'
-
-const msgs = [
-  `There's nothing here.`,
-  `How did we get here?`,
-  `That's a 404 Not Found.`,
-  `Looks like we've got some broken links.`,
-]
+import TheHeader from '../components/TheHeader.vue'
+import TheFooter from '../components/TheFooter.vue'
 
 export default {
   name: 'NotFound',
@@ -25,12 +18,6 @@ export default {
   components: {
     TheHeader,
     TheFooter,
-  },
-
-  methods: {
-    getMsg () {
-      return msgs[Math.floor(Math.random() * msgs.length)]
-    },
   },
 }
 </script>

@@ -7,16 +7,20 @@
 
     <TransitionFadeSlide>
       <TheHeaderBanner :key="$route.path">
-        <slot />
+        <slot>
+          <h1>
+            {{ $page.frontmatter.title || $page.title || $site.title || '' }}
+          </h1>
+        </slot>
       </TheHeaderBanner>
     </TransitionFadeSlide>
   </header>
 </template>
 
 <script>
-import TransitionFadeSlide from '@theme/components/transitions/TransitionFadeSlide'
-import TheHeaderNavbar from '@theme/components/TheHeaderNavbar'
-import TheHeaderBanner from '@theme/components/TheHeaderBanner'
+import TransitionFadeSlide from './TransitionFadeSlide.vue'
+import TheHeaderNavbar from './TheHeaderNavbar.vue'
+import TheHeaderBanner from './TheHeaderBanner.vue'
 import GeoPattern from 'geopattern'
 
 const generators = [

@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import TransitionFadeSlide from '@theme/components/transitions/TransitionFadeSlide'
-import PostsListItem from '@theme/components/PostsListItem'
+import TransitionFadeSlide from './TransitionFadeSlide.vue'
+import PostsListItem from './PostsListItem.vue'
 
 export default {
   name: 'PostsList',
