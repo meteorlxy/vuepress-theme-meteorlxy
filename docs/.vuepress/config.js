@@ -23,7 +23,7 @@ module.exports = {
       location: 'Xi\'an City, China',
       organization: 'Xi\'an Jiao Tong University',
 
-      avator: 'https://www.meteorlxy.cn/assets/img/avator.jpg',
+      avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
 
       sns: {
         github: {

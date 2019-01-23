@@ -82,7 +82,7 @@ module.exports = {
       organization: 'Xi\'an Jiao Tong University',
 
       // 头像
-      avator: 'https://www.meteorlxy.cn/assets/img/avator.jpg',
+      avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
 
       // 社交平台帐号信息
       sns: {

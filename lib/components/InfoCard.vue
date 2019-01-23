@@ -5,8 +5,8 @@
       :style="headerStyle"
     >
       <img
-        class="info-avator"
-        :src="avator"
+        class="info-avatar"
+        :src="avatar"
         :alt="nickname"
       >
     </div>
@@ -114,8 +114,8 @@ export default {
       return this.info.organization || null
     },
 
-    avator () {
-      return this.info.avator || '/assets/img/avator_unknown.jpg'
+    avatar () {
+      return this.info.avatar || '/assets/img/avatar_unknown.jpg'
     },
 
     sns () {
@@ -135,7 +135,7 @@ export default {
 @require '~@theme/styles/variables'
 
 $headerBgHeight = 150px
-$avatorHeight = 120px
+$avatarHeight = 120px
 
 .info-card
   padding 0
@@ -144,16 +144,16 @@ $avatorHeight = 120px
     font-weight normal
   .info-card-header
     height $headerBgHeight
-    margin-bottom $avatorHeight * 0.5
-    .info-avator
+    margin-bottom $avatarHeight * 0.5
+    .info-avatar
       display block
-      width $avatorHeight
-      height $avatorHeight
+      width $avatarHeight
+      height $avatarHeight
       margin 0 auto
       border 3px solid #fff
       border-radius 50%
       box-shadow: 0 0 2px alpha(black, 0.2)
-      transform translateY($headerBgHeight - $avatorHeight * 0.5)
+      transform translateY($headerBgHeight - $avatarHeight * 0.5)
   .info-card-body
     cursor default
     padding 1rem
