@@ -6,7 +6,7 @@
 
 Meteorlxy theme for [Vuepress](https://vuepress.vuejs.org)
 
-Documentation link is broken and will be fixed ASAP. Currently you can check my blog as [Live Demo](https://www.meteorlxy.cn)
+[Live Demo and Docs](http://vuepress-theme.meteorlxy.cn)
 
 ## Installation
 
