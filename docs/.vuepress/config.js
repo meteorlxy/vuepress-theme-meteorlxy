@@ -1,8 +1,6 @@
 const path = require('path')
 
 module.exports = {
-  base: '/vuepress-theme-meteorlxy/',
-
   title: 'vuepress-theme-meteorlxy',
 
   description: 'Vuepress theme of meteorlxy\'s blog',
