@@ -188,12 +188,28 @@ more 下面的内容只有浏览这篇文章时才会完全展示，不会显示
 
 默认使用 Github 平台来存储评论，查看 [Vssue 官方文档](https://vssue.js.org/zh/guide/github.html) 了解如何设置 `owner`、`repo`、`clientId`、`clientSecret`。
 
+```js
+module.exports = {
+  // 主题配置
+  themeConfig: {
+    // 评论配置
+    comments: {
+      platform: 'github', // 可选，默认使用 'github'，还可以选择 'gitlab', 'bitbucket'。详情参考 Vssue 文档
+      owner: 'meteorlxy',
+      repo: 'vuepress-theme-meteorlxy',
+      clientId: 'MY_CLIENT_ID',
+      clientSecret: 'MY_CLIENT_SECRET',
+    },
+  },
+}
+
+```
+
 博客评论将储存在你的 Github 仓库的 Issue 系统中，每篇博文会自动创建一个 Issue，默认使用博文的标题 `title` 作为 Issue 的标题。如果你博文的标题可能会有变动，建议你在 frontmatter 中加入一条 `vssue-title` 来作为 Issue 固定的标题，避免因为后续改动博文标题引发问题。
 
 如果你想要手动创建 Issue，那么你需要在 frontmatter 中设置 `vssue-id`，来对应 Issue 的 ID：
 
-```md
-
+```md {7}
 ---
 category: hello
 tags:
