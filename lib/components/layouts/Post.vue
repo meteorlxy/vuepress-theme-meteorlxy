@@ -7,6 +7,8 @@
       class="post-content"
     />
 
+    <PostMeta />
+
     <section
       v-if="useVssue"
       class="main-div"
