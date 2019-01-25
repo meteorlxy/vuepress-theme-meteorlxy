@@ -14,7 +14,6 @@
       <Vssue
         :title="vssueTitle"
         :issue-id="vssueId"
-        :options="$site.themeConfig.comments"
       />
     </section>
   </article>
