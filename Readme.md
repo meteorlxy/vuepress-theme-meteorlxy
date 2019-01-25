@@ -6,7 +6,7 @@
 
 Meteorlxy theme for [Vuepress](https://vuepress.vuejs.org)
 
-[Live Demo and Docs](http://vuepress-theme.meteorlxy.cn)
+[Live Demo and Docs](https://vuepress-theme-meteorlxy.meteorlxy.cn)
 
 ## Installation
 
