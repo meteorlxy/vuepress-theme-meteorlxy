@@ -4,6 +4,12 @@
 
 # Vuepress Theme - Meteorlxy
 
+![](https://img.shields.io/circleci/project/github/meteorlxy/vuepress-theme-meteorlxy/master.svg?style=flat)
+![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy/latest.svg?style=flat)
+![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy/next.svg?style=flat)
+![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
+
+
 Meteorlxy theme for [Vuepress](https://vuepress.vuejs.org)
 
 [Live Demo and Docs](https://vuepress-theme-meteorlxy.meteorlxy.cn)
