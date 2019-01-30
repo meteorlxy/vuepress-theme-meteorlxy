@@ -113,12 +113,3 @@ export default {
   name: 'Iconfont',
 }
 </script>
-
-<style>
-.icon {
-  width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: #333;
-  overflow: hidden;
-}
-</style>
