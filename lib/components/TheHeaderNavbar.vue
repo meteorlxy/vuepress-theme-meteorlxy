@@ -15,15 +15,28 @@
         </RouterLink>
 
         <div class="navbar-links">
-          <RouterLink
-            v-for="nav of $site.themeConfig.nav"
-            :key="nav.text"
-            :to="nav.link"
-            class="navbar-link"
-            :exact="nav.exact || false"
-          >
-            {{ nav.text }}
-          </RouterLink>
+          <template v-for="nav of $site.themeConfig.nav">
+            <RouterLink
+              v-if="!isExternal(nav.link)"
+              :key="nav.text"
+              :to="nav.link"
+              class="navbar-link"
+              :exact="nav.exact || false"
+            >
+              {{ nav.text }}
+            </RouterLink>
+
+            <a
+              v-else
+              :key="nav.text"
+              :href="nav.link"
+              class="navbar-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ nav.text }}
+            </a>
+          </template>
         </div>
       </div>
     </nav>
@@ -57,6 +70,12 @@ export default {
     window.addEventListener('scroll', () => {
       this.fixed = window.scrollY !== 0
     })
+  },
+
+  methods: {
+    isExternal (link) {
+      return /^(https?:|mailto:|tel:)/.test(link)
+    },
   },
 }
 </script>
