@@ -5,3 +5,5 @@ yarn-error.log*
 
 # Node modules
 node_modules/
+
+.temp/

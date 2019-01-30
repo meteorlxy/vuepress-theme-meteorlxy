@@ -1,0 +1,12 @@
+.temp/
+.vscode/
+.editorconfig
+.eslint*
+.gitattributes
+.gitignore
+yarn.lock
+
+# Log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
