@@ -1,8 +1,5 @@
 <template>
-  <section
-    v-if="$page.frontmatter.type !== 'page'"
-    class="post-meta main-div"
-  >
+  <section class="post-meta main-div">
     <section class="post-date clearfix">
       <span class="create-date">
         发布时间：{{ $page.createdAt }}
