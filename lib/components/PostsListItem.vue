@@ -54,7 +54,7 @@
     </p>
 
     <p
-      class="post-excerpt"
+      class="post-excerpt content"
       v-html="post.excerpt || post.frontmatter.description || ''"
     />
   </div>
@@ -101,8 +101,9 @@ export default {
       .icon
         fill $lightTextColor
   .post-excerpt
-    color: $grayTextColor
+    color $grayTextColor
     text-align justify
+    padding 0
   .post-link
     &:hover
       text-decoration none
