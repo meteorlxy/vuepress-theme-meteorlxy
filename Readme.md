@@ -10,9 +10,9 @@
 ![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
 
 
-Meteorlxy theme for [Vuepress](https://vuepress.vuejs.org)
+:heart: Meteorlxy theme for [Vuepress](https://vuepress.vuejs.org)
 
-[Live Demo and Docs](https://vuepress-theme-meteorlxy.meteorlxy.cn)
+:book: [Live Demo and Docs](https://vuepress-theme-meteorlxy.meteorlxy.cn)
 
 ## Installation
 
