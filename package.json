@@ -40,6 +40,7 @@
     "@vssue/vuepress-plugin-vssue": "^0.5.1",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.35",
     "@vuepress/plugin-blog": "^1.0.0-alpha.35",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.35",
     "@vuepress/plugin-nprogress": "^1.0.0-alpha.35",
     "date-fns": "^1.30.1",
     "geopattern": "^1.2.3"
