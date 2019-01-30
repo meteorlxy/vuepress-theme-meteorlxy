@@ -7,7 +7,10 @@
     >
       <main class="main">
         <TransitionFadeSlide>
-          <component :is="layout" />
+          <component
+            :is="layout"
+            :key="$page.path"
+          />
         </TransitionFadeSlide>
       </main>
 
