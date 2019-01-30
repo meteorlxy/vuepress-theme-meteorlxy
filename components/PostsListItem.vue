@@ -4,7 +4,9 @@
       :to="post.path"
       class="post-link"
     >
-      <h3 class="post-title">{{ post.title }}</h3>
+      <h3 class="post-title">
+        {{ post.title }}
+      </h3>
     </router-link>
 
     <p class="post-info-list">
@@ -28,7 +30,7 @@
     </p>
 
     <p
-      class="post-excerpt"
+      class="post-excerpt content"
       v-html="post.excerpt || post.frontmatter.description || ''"
     />
   </div>
@@ -66,8 +68,9 @@ export default {
   .post-info-list
     color $lightTextColor
   .post-excerpt
-    color: $grayTextColor
+    color $grayTextColor
     text-align justify
+    padding 0
   .post-link
     &:hover
       text-decoration none
