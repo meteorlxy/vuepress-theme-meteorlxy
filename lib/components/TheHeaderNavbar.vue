@@ -49,6 +49,8 @@
 </template>
 
 <script>
+import throttle from 'lodash.throttle'
+
 export default {
   name: 'TheHeaderNavbar',
 
@@ -67,9 +69,9 @@ export default {
   },
 
   mounted () {
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', throttle(() => {
       this.fixed = window.scrollY !== 0
-    })
+    }), 100)
   },
 
   methods: {

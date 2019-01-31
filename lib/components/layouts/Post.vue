@@ -11,6 +11,7 @@
 
     <section
       v-if="useVssue"
+      id="post-comments"
       class="main-div"
     >
       <Vssue

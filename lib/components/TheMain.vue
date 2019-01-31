@@ -16,6 +16,11 @@
 
       <aside class="aside">
         <InfoCard class="main-div" />
+
+        <PostNavCard
+          v-if="$page.type === 'post'"
+          class="main-div"
+        />
       </aside>
     </div>
   </TransitionFadeSlide>
@@ -23,6 +28,7 @@
 
 <script>
 import TransitionFadeSlide from './TransitionFadeSlide.vue'
+import PostNavCard from './PostNavCard.vue'
 import InfoCard from './InfoCard.vue'
 import Home from './layouts/Home.vue'
 import Posts from './layouts/Posts.vue'
@@ -39,6 +45,7 @@ export default {
   components: {
     TransitionFadeSlide,
     InfoCard,
+    PostNavCard,
     /* eslint-disable vue/no-unused-components */
     Home,
     Posts,
@@ -81,6 +88,8 @@ export default {
 .container
   position relative
   margin 1rem auto
+  .aside
+    position relative
   @media (max-width $MQMobile - 1)
     margin 0.5rem auto
   &:not(.show-aside)
