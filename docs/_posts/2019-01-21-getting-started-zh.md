@@ -15,6 +15,8 @@ vssue-id: 2
 
 ## 开始使用
 
+### 安装主题
+
 创建一个新的项目 `my-blog` ：
 
 ```bash
@@ -28,19 +30,37 @@ cd my-blog
 npm install vuepress@next vuepress-theme-meteorlxy@next
 ```
 
-创建 `_posts` 文件夹和 Vuepress 配置文件，项目结构大致为：
+创建 `src/_posts` 文件夹和 Vuepress 配置文件，项目结构大致为：
 
 ```bash
 my-blog
-├── .vuepress # Vuepress 目录
-│   └── config.js # Vuepress 配置文件
-├── _posts # 博客文件夹
-│   ├── xxx.md
-│   ...
+├── src # Blog 源文件目录
+│   ├── .vuepress # Vuepress 目录
+│   │   └── config.js # Vuepress 配置文件
+│   └── _posts # 博客文件夹
+│       ├── xxx.md
+│       ...
 └── package.json
 ```
 
-在 `.vuepress/config.js` 中配置 Vuepress 和主题：
+在 `package.json` 加入 `script` 字段：
+
+```json
+{
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src --dest dist",
+  }
+}
+```
+
+### 配置主题
+
+在 `src/.vuepress/config.js` 中配置 Vuepress 和主题：
+
+<details>
+
+<summary>点击展开配置示例</summary>
 
 ```js
 // .vuepress/config.js
@@ -158,6 +178,9 @@ module.exports = {
   },
 }
 ```
+</details>
+
+### 开始写博客
 
 创建你的第一篇博文：
 
@@ -182,11 +205,24 @@ more 上面的内容是摘要，将显示在目录中。
 more 下面的内容只有浏览这篇文章时才会完全展示，不会显示在目录中。
 ```
 
+运行相应 `script` 生成你的博客网站：
+
+```sh
+# 开发
+npm run dev
+# 构建
+npm run build
+```
+
 ## 页面评论
 
-本主题通过 [Vssue](https://vssue.js.org) 启用页面评论功能，只有在 `_posts` 文件夹下的博文才会启用评论，其他页面没有评论。
+本主题通过 [Vssue](https://vssue.js.org) 启用页面评论功能。
 
-默认使用 Github 平台来存储评论，查看 [Vssue 官方文档](https://vssue.js.org/zh/guide/github.html) 了解如何设置 `owner`、`repo`、`clientId`、`clientSecret`。
+### 配置评论功能
+
+只有在 `_posts` 文件夹下的博文才能启用评论，其他页面没有评论。
+
+默认使用 Github 平台来存储评论，可以查看 [Vssue 官方文档](https://vssue.js.org/zh/guide/github.html) 了解如何配置各个参数。
 
 ```js
 module.exports = {
@@ -202,10 +238,26 @@ module.exports = {
     },
   },
 }
-
 ```
 
-博客评论将储存在你的 Github 仓库的 Issue 系统中，每篇博文会自动创建一个 Issue，默认使用博文的标题 `title` 作为 Issue 的标题。如果你博文的标题可能会有变动，建议你在 frontmatter 中加入一条 `vssue-title` 来作为 Issue 固定的标题，避免因为后续改动博文标题引发问题。
+配置完成后，博客评论将储存在你的 Github 仓库的 Issue 系统中，每篇博文会自动创建一个 Issue，默认使用博文的标题 `title` 作为 Issue 的标题。
+
+### 针对每篇博文单独配置
+
+如果你博文的标题可能会有变动，建议你在 frontmatter 中加入一条 `vssue-title` 来作为 Issue 固定的标题，避免因为后续改动博文标题而引发问题：
+
+```md {7}
+---
+category: hello
+tags:
+  - world
+date: 2019-01-21
+title: Hello, world!
+vssue-title: 固定的 Issue 标题
+---
+
+这是第一篇博文。
+```
 
 如果你想要手动创建 Issue，那么你需要在 frontmatter 中设置 `vssue-id`，来对应 Issue 的 ID：
 
@@ -222,8 +274,37 @@ vssue-id: 1
 这是第一篇博文。
 ```
 
-如果你想要禁用某篇博文的评论，在 frontmatter 中设置 `vssue: false` 即可。
+如果你想要关闭某篇博文下的评论，在 frontmatter 中设置 `vssue: false` 即可：
+
+```md {7}
+---
+category: hello
+tags:
+  - world
+date: 2019-01-21
+title: Hello, world!
+vssue: false
+---
+
+这是第一篇博文。
+```
 
 ::: tip
 如果你熟悉 Vssue，那么 `vssue-title` 对应的就是 Vssue 组件的 prop `title`，`vssue-id` 对应的就是 Vssue 组件的 prop `issue-id`。
 :::
+
+### 禁用评论功能
+
+当前，你可以选择不开启本主题的评论功能：
+
+```js
+module.exports = {
+  // 主题配置
+  themeConfig: {
+    // 评论配置
+    comments: false,
+  },
+}
+```
+
+设置 `comments: false` 后，Vuepress 就不会引入 Vssue 相关的代码了。
