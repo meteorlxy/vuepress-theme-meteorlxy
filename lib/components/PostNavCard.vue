@@ -18,9 +18,9 @@
             v-if="h.level === 2"
             :key="h.slug"
           >
-            <a :href="`#${h.slug}`">
+            <RouterLink :to="`#${h.slug}`">
               {{ h.title }}
-            </a>
+            </RouterLink>
           </li>
         </template>
       </ul>
@@ -32,9 +32,9 @@
     >
       <Icon name="comment" />
 
-      <a href="#post-comments">
+      <RouterLink to="#post-comments">
         评论
-      </a>
+      </RouterLink>
     </div>
   </div>
 </template>
