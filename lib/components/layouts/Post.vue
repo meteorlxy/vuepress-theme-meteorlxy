@@ -42,7 +42,7 @@ export default {
     },
 
     useVssue () {
-      return this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
+      return this.$site.themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
     },
   },
 }
