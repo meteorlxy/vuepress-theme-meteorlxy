@@ -34,7 +34,7 @@
     ]
   },
   "peerDependencies": {
-    "vuepress": "1.0.0-alpha.35"
+    "vuepress": "1.0.0-alpha.39"
   },
   "dependencies": {
     "@vssue/vuepress-plugin-vssue": "^0.7.2",
