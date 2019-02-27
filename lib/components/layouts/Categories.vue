@@ -1,7 +1,7 @@
 <template>
   <div class="categories">
     <div class="main-div">
-      <h2>文章分类 | Categories</h2>
+      <h2>{{ $themeConfig.lang.categories }}</h2>
 
       <RouterLink
         v-for="cate in $categories.list"
