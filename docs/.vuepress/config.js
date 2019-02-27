@@ -7,13 +7,16 @@ module.exports = {
 
   locales: {
     '/': {
-      lang: 'zh-CN',
+      lang: 'en-US',
     },
   },
 
   theme: path.resolve(__dirname, '../../lib'),
 
   themeConfig: {
+    lang: require(path.resolve(__dirname, '../../lib/langs/en-US')),
+    // lang: require(path.resolve(__dirname, '../../lib/langs/zh-CN')),
+
     personalInfo: {
       nickname: 'meteorlxy',
       description: 'Happy Coding<br/>Happy Life',

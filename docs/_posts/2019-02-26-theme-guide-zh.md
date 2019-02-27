@@ -1,9 +1,9 @@
 ---
-category: 文档
+category: docs
 tags:
-  - 使用指南
-date: 2019-01-21
-title: 使用指南
+  - zh
+date: 2019-02-26
+title: 主题使用指南
 vssue-id: 2
 ---
 
@@ -109,6 +109,9 @@ module.exports = {
 
   // 主题配置
   themeConfig: {
+    // 主题语言，参考下方 [主题语言] 章节
+    lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+
     // 个人信息（没有或不想设置的，删掉对应字段即可）
     personalInfo: {
       // 昵称
@@ -127,7 +130,11 @@ module.exports = {
       organization: 'Xi\'an Jiao Tong University',
 
       // 头像
+      // 设置为外部链接
       avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
+      // 或者放置在 .vuepress/public 文件夹，例如 .vuepress/public/img/avatar.jpg
+      // avatar: '/img/avatar.jpg',
+      
 
       // 社交平台帐号信息
       sns: {
@@ -175,12 +182,12 @@ module.exports = {
       },
     },
 
-    // 上方 header 的背景，可以使用图片，或者随机变化的图案
+    // 上方 header 的背景，可以使用图片，或者随机变化的图案（geopattern）
     headerBackground: {
       // 使用图片的 URL，如果设置了图片 URL，则不会生成随机变化的图案，下面的 useGeo 将失效
       url: '/assets/img/bg.jpg',
 
-      // 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为纯色背景
+      // 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为空白背景
       useGeo: true,
     },
 
@@ -189,8 +196,8 @@ module.exports = {
 
     // 顶部导航栏内容
     nav: [
-      { text: 'Home', link: '/', exact: true },
-      { text: 'Posts', link: '/posts/', exact: false },
+      { text: '首页', link: '/', exact: true },
+      { text: '文章', link: '/posts/', exact: false },
     ],
 
     // 评论配置，参考下方 [页面评论] 章节
@@ -249,9 +256,68 @@ npm run dev
 npm run build
 ```
 
+## 主题语言
+
+> 你可以前往 [Blogs that use this theme](./2019-02-01-demo-blogs.md) 来看看使用不同语言的效果。
+
+### 引入预设的语言包
+
+为了让多语言的用户使用本主题，我们提供了一些语言包，你可以直接引入它们。
+
+> 你可以前往 [语言包目录](https://github.com/meteorlxy/vuepress-theme-meteorlxy/tree/master/lib/langs) 查看目前支持的语言
+
+```js
+// .vuepress/config.js
+
+module.exports = {
+  themeConfig: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+}
+```
+
+### 翻译成你自己的语言
+
+如果默认提供了语言包不能满足你的要求，你可以手动翻译对应字段。
+
+> 欢迎提交 PR，帮助我们的主题支持更多语言！
+
+```js
+// .vuepress/config.js
+
+module.exports = {
+  themeConfig: {
+    home: '首页',
+    posts: '文章',
+    category: '分类',
+    categories: '分类',
+    allCategories: '全部',
+    tag: '标签',
+    tags: '标签',
+    createdAt: '发布时间',
+    updatedAt: '最后修改',
+    prevPost: '上一篇',
+    nextPost: '下一篇',
+  },
+}
+```
+
+### 覆盖语言包的某些翻译
+
+如果你觉得默认语言包的某些翻译不合你意，或者你想使用更有个性的文字。
+
+```js
+// .vuepress/config.js
+
+module.exports = {
+  themeConfig: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
+    home: '欢迎来到我的首页！',
+    posts: '这是我写的文章哦',
+  }),
+}
+```
+
 ## 页面评论
 
-本主题通过 [Vssue](https://vssue.js.org) 启用页面评论功能。
+本主题通过 [Vssue](https://vssue.js.org/zh/) 启用页面评论功能。
 
 ### 配置评论功能
 
@@ -276,6 +342,14 @@ module.exports = {
 ```
 
 配置完成后，博客评论将储存在你的 Github 仓库的 Issue 系统中，每篇博文会自动创建一个 Issue，默认使用博文的标题 `title` 作为 Issue 的标题。
+
+::: tip
+为什么选择用 Issue 系统来存储评论呢？
+
+- 程序员们都在用 GitHub 或其他代码托管平台，所以他们不需要为了给你的博客留言而注册一个新的帐号。
+- 这样你就可以完全控制你的博客，包括评论系统。
+- 你的 Blog 仓库的 Issue 系统基本处于闲置状态，正好可以利用起来！
+:::
 
 ### 针对每篇博文单独配置
 
@@ -311,6 +385,8 @@ vssue-id: 1
 
 如果你想要关闭某篇博文下的评论，在 frontmatter 中设置 `vssue: false` 即可：
 
+> 你可以前往 [Disable Comments](2019-01-20-disable-comments.md) 查看禁用某一篇文章评论的效果。
+
 ```md {7}
 ---
 category: hello
@@ -330,7 +406,7 @@ vssue: false
 
 ### 禁用评论功能
 
-当前，你可以选择不开启本主题的评论功能：
+当然，如果你不想让你的博客拥有评论功能，你可以完全禁用它：
 
 ```js
 module.exports = {
