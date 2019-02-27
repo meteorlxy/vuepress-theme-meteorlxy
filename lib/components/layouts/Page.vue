@@ -2,7 +2,7 @@
   <div class="page">
     <Content
       :key="$page.path"
-      class="page-content markdown-body"
+      class="page-content"
     />
   </div>
 </template>
