@@ -19,20 +19,31 @@ vssue-id: 2
 
 创建一个新的项目 `my-blog` ：
 
-```bash
+```sh
 mkdir my-blog
 cd my-blog
 ```
 
 安装 `vuepress` 和 `vuepress-theme-meteorlxy`，注意添加 `next` 标签安装 `1.x` 版本：
 
-```bash
+```sh
 npm install vuepress@next vuepress-theme-meteorlxy@next
 ```
 
+::: warning 注意
+现在 Vuepress 1.x 还处于 Alpha 阶段，经常会发生改动，如果直接安装 `@next` 后使用主题出现问题的话，建议按照本主题的 `peerDependencies` 要求锁定对应的 `vuepress` 和 `@vuepress/core` 的版本号。例如：
+
+```sh
+npm install \
+  vuepress@1.0.0-alpha.35 \
+  @vuepress/core@1.0.0-alpha.35 \
+  vuepress-theme-meteorlxy@1.0.0-alpha.13
+```
+:::
+
 创建 `src/_posts` 文件夹和 Vuepress 配置文件，项目结构大致为：
 
-```bash
+```sh
 my-blog
 ├── src # Blog 源文件目录
 │   ├── .vuepress # Vuepress 目录
@@ -43,13 +54,27 @@ my-blog
 └── package.json
 ```
 
+::: tip
+注意，`src/index.md` 或 `src/README.md` 不是必须的，本主题会自动为你加上首页。
+
+如果你创建了 `src/index.md` 的话，你需要手动添加 frontmatter:
+
+```yaml
+---
+layout: Home
+# 通过这种方式可以覆盖首页的默认标题
+title: Welcome to My Blog
+---
+```
+:::
+
 在 `package.json` 加入 `script` 字段：
 
 ```json
 {
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src --dest dist",
+    "build": "vuepress build src --dest dist"
   }
 }
 ```
@@ -79,8 +104,8 @@ module.exports = {
     },
   },
 
-  // 使用的主题
-  theme: 'vuepress-theme-meteorlxy',
+  // 使用的主题。如果你使用 >= vuepress@1.0.0-alpha.33, <= vuepress@1.0.0-alpha.39 以外的版本，必须通过 require.resolve() 引入本主题，注意主题文件是在 lib 子目录下。
+  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
 
   // 主题配置
   themeConfig: {
@@ -179,6 +204,16 @@ module.exports = {
 }
 ```
 </details>
+
+::: danger 注意
+如果你的 Vuepress 版本小于 1.0.0-alpha.33 或大于 1.0.0-alpha.39，你需要通过 `require.resolve()` 来引入本主题，即：
+
+```js
+module.exports: {
+  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
+}
+```
+:::
 
 ### 开始写博客
 
