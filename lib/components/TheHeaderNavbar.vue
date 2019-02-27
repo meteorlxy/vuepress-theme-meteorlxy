@@ -131,8 +131,9 @@ $lineHeight = $navbarHeight - ($gutter * 2)
   &.fixed
     position fixed
     background-color $navbarColor
-    .navbar-links
-      background-color $navbarColor
+    @media (max-width $MQMobile - 1)
+      .navbar-links
+        background-color $navbarColor
   .navbar-site-name
     position relative
     font-size 1.2rem
