@@ -10,7 +10,7 @@
 
       <IconTag
         icon="folder-open"
-        name="all"
+        :name="$themeConfig.lang.allCategories"
       />
     </label>
 

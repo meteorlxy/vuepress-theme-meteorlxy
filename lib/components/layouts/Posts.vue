@@ -3,7 +3,7 @@
     <div class="main-div">
       <h3 class="link-categories">
         <RouterLink to="/posts/categories/">
-          Categories
+          {{ $themeConfig.lang.categories }}
         </RouterLink>
       </h3>
 
@@ -11,7 +11,7 @@
 
       <h3 class="link-tags">
         <RouterLink to="/posts/tags/">
-          Tags
+          {{ $themeConfig.lang.tags }}
         </RouterLink>
       </h3>
 
