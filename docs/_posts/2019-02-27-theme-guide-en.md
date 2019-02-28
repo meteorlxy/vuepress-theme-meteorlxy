@@ -305,7 +305,9 @@ To help users with different languages to use this theme, we provide some langua
 // .vuepress/config.js
 
 module.exports = {
-  themeConfig: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
+  themeConfig: {
+    lang: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
+  },
 }
 ```
 
@@ -320,17 +322,19 @@ You can also translate the fields into your own language manually.
 
 module.exports = {
   themeConfig: {
-    home: 'Home',
-    posts: 'Posts',
-    category: 'Category',
-    categories: 'Categories',
-    allCategories: 'All',
-    tag: 'Tag',
-    tags: 'Tags',
-    createdAt: 'Created',
-    updatedAt: 'Updated',
-    prevPost: 'Previous Post',
-    nextPost: 'Next Post',
+    lang: {
+      home: 'Home',
+      posts: 'Posts',
+      category: 'Category',
+      categories: 'Categories',
+      allCategories: 'All',
+      tag: 'Tag',
+      tags: 'Tags',
+      createdAt: 'Created',
+      updatedAt: 'Updated',
+      prevPost: 'Previous Post',
+      nextPost: 'Next Post',
+    },
   },
 }
 ```
@@ -343,10 +347,12 @@ If you don't like some translation of the language packs, or you want to use som
 // .vuepress/config.js
 
 module.exports = {
-  themeConfig: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
-    home: 'Welcome to my Homepage !',
-    posts: 'Here is my articles',
-  }),
+  themeConfig: {
+    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
+      home: 'Welcome to my Homepage !',
+      posts: 'Here is my articles',
+    }),
+  },
 }
 ```
 

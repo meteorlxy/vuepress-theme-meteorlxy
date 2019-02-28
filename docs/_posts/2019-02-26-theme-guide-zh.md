@@ -306,7 +306,9 @@ npm run build
 // .vuepress/config.js
 
 module.exports = {
-  themeConfig: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+  themeConfig: {
+    lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+  },
 }
 ```
 
@@ -321,17 +323,19 @@ module.exports = {
 
 module.exports = {
   themeConfig: {
-    home: '首页',
-    posts: '文章',
-    category: '分类',
-    categories: '分类',
-    allCategories: '全部',
-    tag: '标签',
-    tags: '标签',
-    createdAt: '发布时间',
-    updatedAt: '最后修改',
-    prevPost: '上一篇',
-    nextPost: '下一篇',
+    lang: {
+      home: '首页',
+      posts: '文章',
+      category: '分类',
+      categories: '分类',
+      allCategories: '全部',
+      tag: '标签',
+      tags: '标签',
+      createdAt: '发布时间',
+      updatedAt: '最后修改',
+      prevPost: '上一篇',
+      nextPost: '下一篇',
+    },
   },
 }
 ```
@@ -344,10 +348,12 @@ module.exports = {
 // .vuepress/config.js
 
 module.exports = {
-  themeConfig: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
-    home: '欢迎来到我的首页！',
-    posts: '这是我写的文章哦',
-  }),
+  themeConfig: {
+    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
+      home: '欢迎来到我的首页！',
+      posts: '这是我写的文章哦',
+    }),
+  }
 }
 ```
 
