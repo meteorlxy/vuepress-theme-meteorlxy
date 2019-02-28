@@ -1,21 +1,27 @@
 <template>
   <div class="posts">
     <div class="main-div">
-      <h3 class="link-categories">
+      <h3 class="filter-categories">
         <RouterLink to="/posts/categories/">
           {{ $themeConfig.lang.categories }}
         </RouterLink>
       </h3>
 
-      <PostsFilterCategories v-model="selectedCategory" />
+      <PostsFilterCategories v-model="filterCategory" />
 
-      <h3 class="link-tags">
+      <h3 class="filter-tags">
         <RouterLink to="/posts/tags/">
           {{ $themeConfig.lang.tags }}
         </RouterLink>
       </h3>
 
-      <PostsFilterTags v-model="selectedTags" />
+      <PostsFilterTags v-model="filterTags" />
+
+      <h3 class="filter-search">
+        {{ $themeConfig.lang.search }}
+      </h3>
+
+      <PostsFilterSearch v-model="filterSearch" />
     </div>
 
     <PostsList
@@ -29,6 +35,7 @@
 import PostsList from '../PostsList.vue'
 import PostsFilterCategories from '../PostsFilterCategories.vue'
 import PostsFilterTags from '../PostsFilterTags.vue'
+import PostsFilterSearch from '../PostsFilterSearch.vue'
 
 export default {
   name: 'Posts',
@@ -37,12 +44,14 @@ export default {
     PostsList,
     PostsFilterCategories,
     PostsFilterTags,
+    PostsFilterSearch,
   },
 
   data () {
     return {
-      selectedTags: [],
-      selectedCategory: null,
+      filterTags: [],
+      filterCategory: null,
+      filterSearch: '',
     }
   },
 
@@ -50,14 +59,14 @@ export default {
     filteredPosts () {
       let filteredPosts = this.$posts
 
-      if (this.selectedCategory) {
-        filteredPosts = filteredPosts.filter(p => p.category === this.selectedCategory)
+      if (this.filterCategory) {
+        filteredPosts = filteredPosts.filter(p => p.category === this.filterCategory)
       }
 
-      if (this.selectedTags.length !== 0) {
+      if (this.filterTags.length !== 0) {
         filteredPosts = filteredPosts.filter(p => {
           const postTags = p.tags
-          for (const tag of this.selectedTags) {
+          for (const tag of this.filterTags) {
             if (postTags.includes(tag)) {
               return true
             }
@@ -74,8 +83,8 @@ export default {
 <style lang="stylus">
 @require '~@theme/styles/variables'
 
-.link-categories,
-.link-tags
+.filter-categories,
+.filter-tags
   a
     color $textColor
 </style>
