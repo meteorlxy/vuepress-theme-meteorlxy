@@ -10,7 +10,7 @@
     >
       <Icon name="book" />
 
-      <span>文章目录</span>
+      <span>{{ $themeConfig.lang.toc }}</span>
 
       <ul>
         <template v-for="h in $page.headers">
@@ -33,7 +33,7 @@
       <Icon name="comment" />
 
       <RouterLink to="#post-comments">
-        评论
+        {{ $themeConfig.lang.comments }}
       </RouterLink>
     </div>
   </div>
