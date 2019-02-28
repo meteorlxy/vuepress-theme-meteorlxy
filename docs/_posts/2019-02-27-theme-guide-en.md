@@ -100,7 +100,7 @@ module.exports = {
   // Language of your website
   locales: {
     '/': {
-      lang: 'zh-CN',
+      lang: 'en-US',
     },
   },
 
@@ -110,7 +110,7 @@ module.exports = {
   // Theme config
   themeConfig: {
     // Language of this theme. See the [Theme Language] section below.
-    lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+    lang: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
 
     // Personal infomation (delete the fields if you don't have / don't want to display)
     personalInfo: {
