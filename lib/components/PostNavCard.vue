@@ -10,7 +10,7 @@
     >
       <Icon name="book" />
 
-      <span>{{ $themeConfig.lang.heads }}</span>
+      <span>{{ $themeConfig.lang.toc }}</span>
 
       <ul>
         <template v-for="h in $page.headers">
