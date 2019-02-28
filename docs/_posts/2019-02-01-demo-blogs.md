@@ -21,3 +21,7 @@ List of blogs that use this theme.
 ### 中文博客
 
 - [@meteorlxy](https://www.meteorlxy.cn)
+
+### Brazilian Portuguese Blogs
+
+- [@tgmti](https://tgmti.github.io/advpl/)
