@@ -7,7 +7,7 @@
         </RouterLink>
       </h3>
 
-      <PostsCategoriesSelect v-model="selectedCategory" />
+      <PostsFilterCategories v-model="selectedCategory" />
 
       <h3 class="link-tags">
         <RouterLink to="/posts/tags/">
@@ -15,7 +15,7 @@
         </RouterLink>
       </h3>
 
-      <PostsTagsSelect v-model="selectedTags" />
+      <PostsFilterTags v-model="selectedTags" />
     </div>
 
     <PostsList
@@ -27,16 +27,16 @@
 
 <script>
 import PostsList from '../PostsList.vue'
-import PostsCategoriesSelect from '../PostsCategoriesSelect.vue'
-import PostsTagsSelect from '../PostsTagsSelect.vue'
+import PostsFilterCategories from '../PostsFilterCategories.vue'
+import PostsFilterTags from '../PostsFilterTags.vue'
 
 export default {
   name: 'Posts',
 
   components: {
     PostsList,
-    PostsCategoriesSelect,
-    PostsTagsSelect,
+    PostsFilterCategories,
+    PostsFilterTags,
   },
 
   data () {

@@ -24,7 +24,7 @@
 import IconTag from './IconTag.vue'
 
 export default {
-  name: 'PostsTagsSelect',
+  name: 'PostsFilterTags',
 
   components: {
     IconTag,
