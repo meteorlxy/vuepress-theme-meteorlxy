@@ -178,6 +178,42 @@ module.exports = {
           account: '159342708',
           link: 'https://www.douban.com/people/159342708',
         },
+
+        // Reddit account and link
+        reddit: {
+          account: 'meteorlxy',
+          link: 'https://www.reddit.com/user/meteorlxy',
+        },
+
+        // Medium account and link
+        medium: {
+          account: 'meteorlxy.cn',
+          link: 'https://medium.com/@meteorlxy.cn',
+        },
+
+        // Instagram account and link
+        instagram: {
+          account: 'meteorlxy.cn',
+          link: 'https://www.instagram.com/meteorlxy.cn',
+        },
+
+        // GitLab account and link
+        gitlab: {
+          account: 'meteorlxy',
+          link: 'https://gitlab.com/meteorlxy',
+        },
+
+        // Bitbucket account and link
+        bitbucket: {
+          account: 'meteorlxy',
+          link: 'https://bitbucket.org/meteorlxy',
+        },
+
+        // Docker Hub account and link
+        docker: {
+          account: 'meteorlxy',
+          link: 'https://hub.docker.com/u/meteorlxy',
+        },
       },
     },
 

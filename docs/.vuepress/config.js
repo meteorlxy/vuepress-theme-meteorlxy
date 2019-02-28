@@ -55,6 +55,30 @@ module.exports = {
           account: '159342708',
           link: 'https://www.douban.com/people/159342708',
         },
+        reddit: {
+          account: 'meteorlxy',
+          link: 'https://www.reddit.com/user/meteorlxy',
+        },
+        medium: {
+          account: 'meteorlxy.cn',
+          link: 'https://medium.com/@meteorlxy.cn',
+        },
+        instagram: {
+          account: 'meteorlxy.cn',
+          link: 'https://www.instagram.com/meteorlxy.cn',
+        },
+        gitlab: {
+          account: 'meteorlxy',
+          link: 'https://gitlab.com/meteorlxy',
+        },
+        bitbucket: {
+          account: 'meteorlxy',
+          link: 'https://bitbucket.org/meteorlxy',
+        },
+        docker: {
+          account: 'meteorlxy',
+          link: 'https://hub.docker.com/u/meteorlxy',
+        },
       },
     },
 

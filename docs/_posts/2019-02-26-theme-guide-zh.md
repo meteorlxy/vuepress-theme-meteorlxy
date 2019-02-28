@@ -179,6 +179,42 @@ module.exports = {
           account: '159342708',
           link: 'https://www.douban.com/people/159342708',
         },
+
+        // Reddit 帐号和链接
+        reddit: {
+          account: 'meteorlxy',
+          link: 'https://www.reddit.com/user/meteorlxy',
+        },
+
+        // Medium 帐号和链接
+        medium: {
+          account: 'meteorlxy.cn',
+          link: 'https://medium.com/@meteorlxy.cn',
+        },
+
+        // Instagram 帐号和链接
+        instagram: {
+          account: 'meteorlxy.cn',
+          link: 'https://www.instagram.com/meteorlxy.cn',
+        },
+
+        // GitLab 帐号和链接
+        gitlab: {
+          account: 'meteorlxy',
+          link: 'https://gitlab.com/meteorlxy',
+        },
+
+        // Bitbucket 帐号和链接
+        bitbucket: {
+          account: 'meteorlxy',
+          link: 'https://bitbucket.org/meteorlxy',
+        },
+
+        // Docker Hub 帐号和链接
+        docker: {
+          account: 'meteorlxy',
+          link: 'https://hub.docker.com/u/meteorlxy',
+        },
       },
     },
 
