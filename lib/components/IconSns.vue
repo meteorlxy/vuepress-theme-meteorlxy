@@ -18,6 +18,15 @@ const nameMap = {
   'github': {
     title: 'GitHub',
   },
+  'gitlab': {
+    title: 'GitLab',
+  },
+  'bitbucket': {
+    title: 'Bitbucket',
+  },
+  'docker': {
+    title: 'Docker Hub',
+  },
   'facebook': {
     title: 'Facebook',
   },
@@ -35,6 +44,15 @@ const nameMap = {
   },
   'douban': {
     title: '豆瓣',
+  },
+  'reddit': {
+    title: 'Reddit',
+  },
+  'medium': {
+    title: 'Medium',
+  },
+  'instagram': {
+    title: 'Instagram',
   },
 }
 
