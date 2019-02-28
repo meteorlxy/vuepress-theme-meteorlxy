@@ -3,6 +3,7 @@
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "files.eol": "\n",
+  "files.encoding": "utf8",
   "vetur.validation.template": false,
   "eslint.validate": [
     "javascript",
