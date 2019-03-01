@@ -31,14 +31,18 @@ npm install vuepress@next vuepress-theme-meteorlxy@next
 ```
 
 ::: warning 注意
-现在 Vuepress 1.x 还处于 Alpha 阶段，经常会发生改动，如果直接安装 `@next` 后使用主题出现问题的话，建议按照本主题的 `peerDependencies` 要求锁定对应的 `vuepress` 和 `@vuepress/core` 的版本号。例如：
+现在 Vuepress 1.x 还处于 Alpha 阶段，经常会发生改动，如果直接安装 `@next` 后使用主题出现问题的话，建议按照本主题的 `peerDependencies` 要求锁定对应的 `vuepress` 和相关包的版本号。例如：
 
 ```sh
 npm install \
   vuepress@1.0.0-alpha.35 \
   @vuepress/core@1.0.0-alpha.35 \
+  @vuepress/markdown@1.0.0-alpha.35 \
+  @vuepress/markdown-loader@1.0.0-alpha.35 \
   vuepress-theme-meteorlxy@1.0.0-alpha.13
 ```
+
+是的，你必须手动锁定所有相关包的版本号，因为 Vuepress 并没有锁定它们（这确实很不好）
 :::
 
 创建 `src/_posts` 文件夹和 Vuepress 配置文件，项目结构大致为：
@@ -104,8 +108,8 @@ module.exports = {
     },
   },
 
-  // 使用的主题。如果你使用 >= vuepress@1.0.0-alpha.33, <= vuepress@1.0.0-alpha.39 以外的版本，必须通过 require.resolve() 引入本主题，注意主题文件是在 lib 子目录下。
-  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
+  // 使用的主题
+  theme: 'meteorlxy',
 
   // 主题配置
   themeConfig: {
@@ -249,7 +253,7 @@ module.exports = {
 </details>
 
 ::: danger 注意
-如果你的 Vuepress 版本小于 1.0.0-alpha.33 或大于 1.0.0-alpha.39，你需要通过 `require.resolve()` 来引入本主题，即：
+如果你的 Vuepress 版本为 `< 1.0.0-alpha.33` 或 `= 1.0.0-alpha.40`，你需要通过 `require.resolve()` 来引入本主题，即：
 
 ```js
 module.exports: {

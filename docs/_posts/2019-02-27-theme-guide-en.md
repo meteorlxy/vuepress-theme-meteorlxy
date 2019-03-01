@@ -31,14 +31,19 @@ npm install vuepress@next vuepress-theme-meteorlxy@next
 ```
 
 ::: warning ATTENTION
-Vuepress 1.x is at alpha stage now, which may have breaking changes. If you have problem when installing with `@next`, suggest to lock the version of `vuepress` and `@vuepress/core` according to the `peerDependencies` of this theme. For example:
+Vuepress 1.x is at alpha stage now, which may have breaking changes. If you have problem when installing with `@next`, suggest to lock the version of `vuepress` and related packages according to the `peerDependencies` of this theme. For example:
 
 ```sh
 npm install \
   vuepress@1.0.0-alpha.35 \
   @vuepress/core@1.0.0-alpha.35 \
+  @vuepress/markdown@1.0.0-alpha.35 \
+  @vuepress/markdown-loader@1.0.0-alpha.35 \
   vuepress-theme-meteorlxy@1.0.0-alpha.13
 ```
+
+Yes you have to lock all the related packages manaully, as vuepress does not lock them for you (it's bad)
+
 :::
 
 Create `src/_posts` directory and the config file of Vuepress. The structure of your project looks like:
@@ -104,8 +109,8 @@ module.exports = {
     },
   },
 
-  // Theme to use. If you are NOT using >= vuepress@1.0.0-alpha.33, <= vuepress@1.0.0-alpha.39 , you have to use `require.resolve()` to introduce this theme, and don't forget the `lib/` sub directory.
-  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
+  // Theme to use
+  theme: 'meteorlxy',
 
   // Theme config
   themeConfig: {
@@ -248,7 +253,7 @@ module.exports = {
 </details>
 
 ::: danger ATTENTION
-If the version of your Vuepress is `<1.0.0-alpha.33` or `>1.0.0-alpha.39`, you hanve to use `require.resolve()` to introduce this theme, i.e.
+If the version of your Vuepress is `< 1.0.0-alpha.33` or `= 1.0.0-alpha.40`, you have to use `require.resolve()` to introduce this theme, i.e.
 
 ```js
 module.exports: {
