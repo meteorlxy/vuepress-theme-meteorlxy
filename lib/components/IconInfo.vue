@@ -1,22 +1,3 @@
-<template>
-  <Component
-    :is="is"
-    :href="href"
-    :title="title"
-  >
-    <Icon
-      class="info-icon"
-      :name="icon"
-      :size="size"
-      :title="title"
-    />
-
-    <span class="info-text">
-      <slot />
-    </span>
-  </Component>
-</template>
-
 <script>
 import Icon from './Icon.vue'
 const typeIconMap = {
@@ -31,6 +12,8 @@ const typeIconMap = {
 
 export default {
   name: 'IconInfo',
+
+  functional: true,
 
   components: {
     Icon,
@@ -62,14 +45,26 @@ export default {
     },
   },
 
-  computed: {
-    icon () {
-      return typeIconMap[this.type]
-    },
+  render (h, { props: { href, size, title, type }, children }) {
+    const Component = href ? 'a' : 'span'
+    const icon = typeIconMap[type]
+    return (
+      <Component
+        href={href}
+        title={title}
+      >
+        <Icon
+          class="info-icon"
+          name={icon}
+          size={size}
+          title={title}
+        />
 
-    is () {
-      return this.href ? 'a' : 'span'
-    },
+        <span class="info-text">
+          { children }
+        </span>
+      </Component>
+    )
   },
 }
 </script>

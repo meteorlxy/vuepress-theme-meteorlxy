@@ -1,20 +1,8 @@
-<template functional>
-  <svg
-    class="icon"
-    :style="{
-      'fill': props.color ? props.color : false,
-      'font-size': props.size ? props.size : false,
-    }"
-  >
-    <title v-text="props.title || props.name" />
-
-    <use :xlink:href="`#icon-${props.name}`" />
-  </svg>
-</template>
-
 <script>
 export default {
   name: 'Icon',
+
+  functional: true,
 
   props: {
     color: {
@@ -39,6 +27,24 @@ export default {
       required: false,
       default: null,
     },
+  },
+
+  render (h, { props: { color, name, size, title } }) {
+    return (
+      <svg
+        class="icon"
+        style={{
+          'fill': color,
+          'font-size': size,
+        }}
+      >
+        <title>
+          { title || name }
+        </title>
+
+        <use xlinkHref={`#icon-${name}`} />
+      </svg>
+    )
   },
 }
 </script>

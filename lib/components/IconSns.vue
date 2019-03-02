@@ -1,16 +1,3 @@
-<template>
-  <span
-    class="sns-icon"
-    :title="title"
-  >
-    <Icon
-      :name="name"
-      :size="size"
-      :title="title"
-    />
-  </span>
-</template>
-
 <script>
 import Icon from './Icon.vue'
 
@@ -59,9 +46,7 @@ const nameMap = {
 export default {
   name: 'IconSns',
 
-  components: {
-    Icon,
-  },
+  functional: true,
 
   props: {
     // Account of SNS
@@ -85,10 +70,20 @@ export default {
     },
   },
 
-  computed: {
-    title () {
-      return `${nameMap[this.name].title}: ${this.account}`
-    },
+  render (h, { props: { account, name, size } }) {
+    const title = `${nameMap[name].title}: ${account}`
+    return (
+      <span
+        class="sns-icon"
+        title={title}
+      >
+        <Icon
+          name={name}
+          size={size}
+          title={title}
+        />
+      </span>
+    )
   },
 }
 </script>

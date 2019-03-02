@@ -1,29 +1,10 @@
-<template>
-  <span
-    class="post-tag"
-    :title="name"
-  >
-    <Icon
-      class="post-tag-icon"
-      :name="icon"
-      :size="size"
-    />
-
-    <span class="post-tag-name">
-      {{ name }}
-    </span>
-  </span>
-</template>
-
 <script>
 import Icon from './Icon.vue'
 
 export default {
   name: 'IconTag',
 
-  components: {
-    Icon,
-  },
+  functional: true,
 
   props: {
     name: {
@@ -40,6 +21,25 @@ export default {
       type: String,
       default: '1x',
     },
+  },
+
+  render (h, { props: { name, icon, size } }) {
+    return (
+      <span
+        class="post-tag"
+        title={name}
+      >
+        <Icon
+          class="post-tag-icon"
+          name={icon}
+          size={size}
+        />
+
+        <span class="post-tag-name">
+          { name }
+        </span>
+      </span>
+    )
   },
 }
 </script>
