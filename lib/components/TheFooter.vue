@@ -1,6 +1,9 @@
 <template>
   <footer class="footer">
-    <p class="sns-links">
+    <p
+      v-if="sns"
+      class="sns-links"
+    >
       <a
         v-for="(item, name) in sns"
         :key="name"
@@ -40,7 +43,7 @@ export default {
 
   computed: {
     sns () {
-      return this.$site.themeConfig.personalInfo.sns || {}
+      return this.$site.themeConfig.personalInfo.sns || null
     },
   },
 }
