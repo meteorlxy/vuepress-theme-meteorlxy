@@ -316,6 +316,10 @@ module.exports = {
 }
 ```
 
+::: tip
+If the `lang` option is not set, theme will use `en-US` as the default language.
+:::
+
 ### Translate to your own language
 
 You can also translate the fields into your own language manually.

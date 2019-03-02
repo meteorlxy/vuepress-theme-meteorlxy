@@ -298,7 +298,7 @@ npm run build
 
 ## 主题语言
 
-> 你可以前往 [Blogs that use this theme](./2019-02-01-demo-blogs.md) 来看看使用不同语言的效果。
+你可以前往 [Blogs that use this theme](./2019-02-01-demo-blogs.md) 来看看使用不同语言的效果。
 
 ### 引入预设的语言包
 
@@ -315,6 +315,10 @@ module.exports = {
   },
 }
 ```
+
+::: tip
+如果没有设置 `lang` 选项，主题将会使用 `en-US` 作为默认语言。
+:::
 
 ### 翻译成你自己的语言
 
