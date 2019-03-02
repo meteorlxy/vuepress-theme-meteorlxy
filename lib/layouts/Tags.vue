@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import IconTag from '../IconTag.vue'
+import IconTag from '../components/IconTag.vue'
 
 export default {
   name: 'Tags',

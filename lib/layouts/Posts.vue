@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import PostsList from '../PostsList.vue'
-import PostsFilterCategories from '../PostsFilterCategories.vue'
-import PostsFilterTags from '../PostsFilterTags.vue'
+import PostsList from '../components/PostsList.vue'
+import PostsFilterCategories from '../components/PostsFilterCategories.vue'
+import PostsFilterTags from '../components/PostsFilterTags.vue'
 
 export default {
   name: 'Posts',

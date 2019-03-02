@@ -30,14 +30,6 @@
 import TransitionFadeSlide from './TransitionFadeSlide.vue'
 import PostNavCard from './PostNavCard.vue'
 import InfoCard from './InfoCard.vue'
-import Home from './layouts/Home.vue'
-import Posts from './layouts/Posts.vue'
-import Post from './layouts/Post.vue'
-import Page from './layouts/Page.vue'
-import Tags from './layouts/Tags.vue'
-import Categories from './layouts/Categories.vue'
-import Tag from './layouts/Tag.vue'
-import Category from './layouts/Category.vue'
 
 export default {
   name: 'TheMain',
@@ -46,26 +38,17 @@ export default {
     TransitionFadeSlide,
     InfoCard,
     PostNavCard,
-    /* eslint-disable vue/no-unused-components */
-    Home,
-    Posts,
-    Post,
-    Page,
-    Tags,
-    Categories,
-    Tag,
-    Category,
-    /* eslint-enable vue/no-unused-components */
-  },
-
-  props: {
-    layout: {
-      type: String,
-      required: true,
-    },
   },
 
   computed: {
+    layout () {
+      if (this.$vuepress.isLayoutExists(this.$page.frontmatter.layout)) {
+        return this.$page.frontmatter.layout
+      }
+
+      return 'Home'
+    },
+
     showAside () {
       if (this.$page.frontmatter.hasOwnProperty('aside')) {
         return this.$page.frontmatter.aside
