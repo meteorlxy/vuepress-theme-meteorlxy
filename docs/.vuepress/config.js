@@ -11,6 +11,8 @@ module.exports = {
     },
   },
 
+  evergreen: true,
+
   theme: path.resolve(__dirname, '../../lib'),
 
   themeConfig: {
