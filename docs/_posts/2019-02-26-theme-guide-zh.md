@@ -38,8 +38,6 @@ npm install \
   vuepress@1.0.0-alpha.41 \
   vuepress-theme-meteorlxy@1.0.0-alpha.22
 ```
-
-是的，你必须手动锁定所有相关包的版本号，因为 Vuepress 并没有锁定它们（这确实很不好）
 :::
 
 创建 `src/_posts` 文件夹和 Vuepress 配置文件，项目结构大致为：

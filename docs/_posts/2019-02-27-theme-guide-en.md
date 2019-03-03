@@ -38,9 +38,6 @@ npm install \
   vuepress@1.0.0-alpha.41 \
   vuepress-theme-meteorlxy@1.0.0-alpha.22
 ```
-
-Yes you have to lock all the related packages manaully, as vuepress does not lock them for you (it's bad)
-
 :::
 
 Create `src/_posts` directory and the config file of Vuepress. The structure of your project looks like:
