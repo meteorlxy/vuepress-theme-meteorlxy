@@ -31,15 +31,12 @@ npm install vuepress@next vuepress-theme-meteorlxy@next
 ```
 
 ::: warning 注意
-现在 Vuepress 1.x 还处于 Alpha 阶段，经常会发生改动，如果直接安装 `@next` 后使用主题出现问题的话，建议按照本主题的 `peerDependencies` 要求锁定对应的 `vuepress` 和相关包的版本号。例如：
+现在 Vuepress 1.x 还处于 Alpha 阶段，经常会发生改动，如果直接安装 `@next` 后使用主题出现问题的话，建议按照本主题的 `peerDependencies` 要求锁定对应的 `vuepress` 版本号。例如：
 
 ```sh
 npm install \
-  vuepress@1.0.0-alpha.35 \
-  @vuepress/core@1.0.0-alpha.35 \
-  @vuepress/markdown@1.0.0-alpha.35 \
-  @vuepress/markdown-loader@1.0.0-alpha.35 \
-  vuepress-theme-meteorlxy@1.0.0-alpha.13
+  vuepress@1.0.0-alpha.41 \
+  vuepress-theme-meteorlxy@1.0.0-alpha.22
 ```
 
 是的，你必须手动锁定所有相关包的版本号，因为 Vuepress 并没有锁定它们（这确实很不好）
@@ -60,16 +57,6 @@ my-blog
 
 ::: tip
 注意，`src/index.md` 或 `src/README.md` 不是必须的，本主题会自动为你加上首页。
-
-如果你创建了 `src/index.md` 的话，你需要手动添加 frontmatter:
-
-```yaml
----
-layout: Home
-# 通过这种方式可以覆盖首页的默认标题
-title: Welcome to My Blog
----
-```
 :::
 
 在 `package.json` 加入 `script` 字段：
@@ -251,16 +238,6 @@ module.exports = {
 }
 ```
 </details>
-
-::: danger 注意
-如果你的 Vuepress 版本为 `< 1.0.0-alpha.33` 或 `= 1.0.0-alpha.40`，你需要通过 `require.resolve()` 来引入本主题，即：
-
-```js
-module.exports: {
-  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
-}
-```
-:::
 
 ### 开始写博客
 

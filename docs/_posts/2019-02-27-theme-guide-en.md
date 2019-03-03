@@ -31,15 +31,12 @@ npm install vuepress@next vuepress-theme-meteorlxy@next
 ```
 
 ::: warning ATTENTION
-Vuepress 1.x is at alpha stage now, which may have breaking changes. If you have problem when installing with `@next`, suggest to lock the version of `vuepress` and related packages according to the `peerDependencies` of this theme. For example:
+Vuepress 1.x is at alpha stage now, which may have breaking changes. If you have problem when installing with `@next`, suggest to lock the version of `vuepress` according to the `peerDependencies` of this theme. For example:
 
 ```sh
 npm install \
-  vuepress@1.0.0-alpha.35 \
-  @vuepress/core@1.0.0-alpha.35 \
-  @vuepress/markdown@1.0.0-alpha.35 \
-  @vuepress/markdown-loader@1.0.0-alpha.35 \
-  vuepress-theme-meteorlxy@1.0.0-alpha.13
+  vuepress@1.0.0-alpha.41 \
+  vuepress-theme-meteorlxy@1.0.0-alpha.22
 ```
 
 Yes you have to lock all the related packages manaully, as vuepress does not lock them for you (it's bad)
@@ -61,16 +58,6 @@ my-blog
 
 ::: tip
 Notice that `src/index.md` or `src/README.md` is not necessray. This theme will auto add homepage for you.
-
-If you created `src/index.md`, you need to add frontmatter as:
-
-```yaml
----
-layout: Home
-# This will override the default title of homepage
-title: Welcome to My Blog
----
-```
 :::
 
 Add `script` fields into `package.json` :
@@ -251,16 +238,6 @@ module.exports = {
 }
 ```
 </details>
-
-::: danger ATTENTION
-If the version of your Vuepress is `< 1.0.0-alpha.33` or `= 1.0.0-alpha.40`, you have to use `require.resolve()` to introduce this theme, i.e.
-
-```js
-module.exports: {
-  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
-}
-```
-:::
 
 ### Write your posts
 
