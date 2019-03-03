@@ -46,6 +46,10 @@ export default {
         return this.$page.frontmatter.layout
       }
 
+      if (!this.$page.path) {
+        return 'NotFound'
+      }
+
       return 'Home'
     },
 

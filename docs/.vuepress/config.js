@@ -18,6 +18,7 @@ module.exports = {
   themeConfig: {
     lang: require(path.resolve(__dirname, '../../lib/langs/en-US')),
     // lang: require(path.resolve(__dirname, '../../lib/langs/zh-CN')),
+    // lang: require(path.resolve(__dirname, '../../lib/langs/pt-BR')),
 
     personalInfo: {
       nickname: 'meteorlxy',

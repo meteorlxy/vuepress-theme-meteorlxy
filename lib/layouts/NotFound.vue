@@ -1,23 +1,18 @@
 <template>
-  <div>
-    <TheHeader>
-      <h1>404 Not Found</h1>
-    </TheHeader>
+  <div class="main-div not-found">
+    <h1>404 Not Found</h1>
 
-    <TheFooter />
+    <p>{{ $themeConfig.lang.notFound }}</p>
   </div>
 </template>
 
 <script>
-import TheHeader from '../components/TheHeader.vue'
-import TheFooter from '../components/TheFooter.vue'
-
 export default {
   name: 'NotFound',
-
-  components: {
-    TheHeader,
-    TheFooter,
-  },
 }
 </script>
+
+<style lang="stylus" scoped>
+.not-found
+  text-align center
+</style>
