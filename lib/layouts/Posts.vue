@@ -24,18 +24,30 @@
       <PostsFilterSearch v-model="filterSearch" />
     </div>
 
-    <PostsList
-      class="main-div"
-      :posts="filteredPosts"
-    />
+    <div class="main-div">
+      <TransitionFadeSlide>
+        <div
+          v-if="filteredPosts.length ===0"
+          class="no-posts"
+        >
+          {{ $themeConfig.lang.noRelatedPosts }}
+        </div>
+
+        <PostsList
+          v-else
+          :posts="filteredPosts"
+        />
+      </TransitionFadeSlide>
+    </div>
   </div>
 </template>
 
 <script>
-import PostsList from '../PostsList.vue'
-import PostsFilterCategories from '../PostsFilterCategories.vue'
-import PostsFilterTags from '../PostsFilterTags.vue'
-import PostsFilterSearch from '../PostsFilterSearch.vue'
+import PostsList from '../components/PostsList.vue'
+import PostsFilterCategories from '../components/PostsFilterCategories.vue'
+import PostsFilterTags from '../components/PostsFilterTags.vue'
+import PostsFilterSearch from '../components/PostsFilterSearch.vue'
+import TransitionFadeSlide from '../components/TransitionFadeSlide.vue'
 
 export default {
   name: 'Posts',
@@ -45,6 +57,7 @@ export default {
     PostsFilterCategories,
     PostsFilterTags,
     PostsFilterSearch,
+    TransitionFadeSlide,
   },
 
   data () {
@@ -74,6 +87,17 @@ export default {
           return false
         })
       }
+
+      if (this.filterSearch !== '') {
+        const searchString = this.filterSearch.toLowerCase().trim()
+        filteredPosts = filteredPosts.filter(p => p.title.includes(searchString) ||
+          (p.excerpt && p.excerpt.includes(searchString)) ||
+          (p.frontmatter.description && p.frontmatter.description.includes(searchString)) ||
+          (p.tags && p.tags.includes(searchString)) ||
+          (p.category && p.category.includes(searchString))
+        )
+      }
+
       return filteredPosts
     },
   },
@@ -87,4 +111,11 @@ export default {
 .filter-tags
   a
     color $textColor
+</style>
+
+<style lang="stylus" scoped>
+@require '~@theme/styles/variables'
+
+.no-posts
+  color $grayTextColor
 </style>
