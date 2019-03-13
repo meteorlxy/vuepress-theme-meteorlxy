@@ -53,7 +53,8 @@ export default {
   input
     outline none
     width 20rem
-    height: 2rem
+    max-width calc(100% - 1.5em)
+    height 2rem
     font-size 0.9rem
     padding 0 0.7rem
     border 1px solid darken($borderColor, 10%)
