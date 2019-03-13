@@ -22,6 +22,21 @@
         />
       </TransitionFadeSlide>
     </TransitionFadeSlide>
+
+    <div class="posts-paginator">
+      <ul v-if="total > 1">
+        <li
+          v-for="i in total"
+          :key="i"
+          :class="{
+            'active': page === i,
+          }"
+          @click="page = i"
+        >
+          {{ i }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -46,8 +61,26 @@ export default {
     },
   },
 
+  data () {
+    return {
+      page: 1,
+    }
+  },
+
   computed: {
-    listPosts () {
+    pagination () {
+      return this.$themeConfig.pagination || {}
+    },
+
+    perPage () {
+      return this.pagination.perPage || 10
+    },
+
+    total () {
+      return Math.ceil(this.allPosts.length / this.perPage)
+    },
+
+    allPosts () {
       const listPosts = this.posts || this.$posts
 
       const pageSort = (p1, p2) => {
@@ -62,6 +95,18 @@ export default {
 
       return listPosts.sort(pageSort)
     },
+
+    listPosts () {
+      const begin = (this.page - 1) * this.perPage
+      const end = begin + this.perPage
+      return this.allPosts.slice(begin, end)
+    },
+  },
+
+  watch: {
+    allPosts () {
+      this.page = 1
+    },
   },
 }
 </script>
@@ -69,6 +114,20 @@ export default {
 <style lang="stylus" scoped>
 @require '~@theme/styles/variables'
 
+<<<<<<< HEAD
 .no-posts
   color $grayTextColor
+=======
+.posts-paginator
+  ul
+    list-style none
+    li
+      display inline-block
+      padding 0.5rem
+      &.active
+        color $accentColor
+        font-weight bold
+      &:not(.active)
+        cursor pointer
+>>>>>>> e240967... feat: posts pagination
 </style>
