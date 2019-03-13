@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import PostMeta from '../PostMeta.vue'
+import PostMeta from '../components/PostMeta.vue'
 
 export default {
   name: 'Post',

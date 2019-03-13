@@ -31,13 +31,12 @@ npm install vuepress@next vuepress-theme-meteorlxy@next
 ```
 
 ::: warning 注意
-现在 Vuepress 1.x 还处于 Alpha 阶段，经常会发生改动，如果直接安装 `@next` 后使用主题出现问题的话，建议按照本主题的 `peerDependencies` 要求锁定对应的 `vuepress` 和 `@vuepress/core` 的版本号。例如：
+现在 Vuepress 1.x 还处于 Alpha 阶段，经常会发生改动，如果直接安装 `@next` 后使用主题出现问题的话，建议按照本主题的 `peerDependencies` 要求锁定对应的 `vuepress` 版本号。例如：
 
 ```sh
 npm install \
-  vuepress@1.0.0-alpha.35 \
-  @vuepress/core@1.0.0-alpha.35 \
-  vuepress-theme-meteorlxy@1.0.0-alpha.13
+  vuepress@1.0.0-alpha.41 \
+  vuepress-theme-meteorlxy@1.0.0-alpha.22
 ```
 :::
 
@@ -56,16 +55,6 @@ my-blog
 
 ::: tip
 注意，`src/index.md` 或 `src/README.md` 不是必须的，本主题会自动为你加上首页。
-
-如果你创建了 `src/index.md` 的话，你需要手动添加 frontmatter:
-
-```yaml
----
-layout: Home
-# 通过这种方式可以覆盖首页的默认标题
-title: Welcome to My Blog
----
-```
 :::
 
 在 `package.json` 加入 `script` 字段：
@@ -104,8 +93,8 @@ module.exports = {
     },
   },
 
-  // 使用的主题。如果你使用 >= vuepress@1.0.0-alpha.33, <= vuepress@1.0.0-alpha.39 以外的版本，必须通过 require.resolve() 引入本主题，注意主题文件是在 lib 子目录下。
-  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
+  // 使用的主题
+  theme: 'meteorlxy',
 
   // 主题配置
   themeConfig: {
@@ -248,16 +237,6 @@ module.exports = {
 ```
 </details>
 
-::: danger 注意
-如果你的 Vuepress 版本小于 1.0.0-alpha.33 或大于 1.0.0-alpha.39，你需要通过 `require.resolve()` 来引入本主题，即：
-
-```js
-module.exports: {
-  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
-}
-```
-:::
-
 ### 开始写博客
 
 创建你的第一篇博文：
@@ -294,7 +273,7 @@ npm run build
 
 ## 主题语言
 
-> 你可以前往 [Blogs that use this theme](./2019-02-01-demo-blogs.md) 来看看使用不同语言的效果。
+你可以前往 [Blogs that use this theme](./2019-02-01-demo-blogs.md) 来看看使用不同语言的效果。
 
 ### 引入预设的语言包
 
@@ -306,9 +285,15 @@ npm run build
 // .vuepress/config.js
 
 module.exports = {
-  themeConfig: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+  themeConfig: {
+    lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+  },
 }
 ```
+
+::: tip
+如果没有设置 `lang` 选项，主题将会使用 `en-US` 作为默认语言。
+:::
 
 ### 翻译成你自己的语言
 
@@ -321,17 +306,19 @@ module.exports = {
 
 module.exports = {
   themeConfig: {
-    home: '首页',
-    posts: '文章',
-    category: '分类',
-    categories: '分类',
-    allCategories: '全部',
-    tag: '标签',
-    tags: '标签',
-    createdAt: '发布时间',
-    updatedAt: '最后修改',
-    prevPost: '上一篇',
-    nextPost: '下一篇',
+    lang: {
+      home: '首页',
+      posts: '文章',
+      category: '分类',
+      categories: '分类',
+      allCategories: '全部',
+      tag: '标签',
+      tags: '标签',
+      createdAt: '发布时间',
+      updatedAt: '最后修改',
+      prevPost: '上一篇',
+      nextPost: '下一篇',
+    },
   },
 }
 ```
@@ -344,10 +331,12 @@ module.exports = {
 // .vuepress/config.js
 
 module.exports = {
-  themeConfig: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
-    home: '欢迎来到我的首页！',
-    posts: '这是我写的文章哦',
-  }),
+  themeConfig: {
+    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
+      home: '欢迎来到我的首页！',
+      posts: '这是我写的文章哦',
+    }),
+  }
 }
 ```
 

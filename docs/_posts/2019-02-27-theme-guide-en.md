@@ -31,13 +31,12 @@ npm install vuepress@next vuepress-theme-meteorlxy@next
 ```
 
 ::: warning ATTENTION
-Vuepress 1.x is at alpha stage now, which may have breaking changes. If you have problem when installing with `@next`, suggest to lock the version of `vuepress` and `@vuepress/core` according to the `peerDependencies` of this theme. For example:
+Vuepress 1.x is at alpha stage now, which may have breaking changes. If you have problem when installing with `@next`, suggest to lock the version of `vuepress` according to the `peerDependencies` of this theme. For example:
 
 ```sh
 npm install \
-  vuepress@1.0.0-alpha.35 \
-  @vuepress/core@1.0.0-alpha.35 \
-  vuepress-theme-meteorlxy@1.0.0-alpha.13
+  vuepress@1.0.0-alpha.41 \
+  vuepress-theme-meteorlxy@1.0.0-alpha.22
 ```
 :::
 
@@ -56,16 +55,6 @@ my-blog
 
 ::: tip
 Notice that `src/index.md` or `src/README.md` is not necessray. This theme will auto add homepage for you.
-
-If you created `src/index.md`, you need to add frontmatter as:
-
-```yaml
----
-layout: Home
-# This will override the default title of homepage
-title: Welcome to My Blog
----
-```
 :::
 
 Add `script` fields into `package.json` :
@@ -100,17 +89,17 @@ module.exports = {
   // Language of your website
   locales: {
     '/': {
-      lang: 'zh-CN',
+      lang: 'en-US',
     },
   },
 
-  // Theme to use. If you are NOT using >= vuepress@1.0.0-alpha.33, <= vuepress@1.0.0-alpha.39 , you have to use `require.resolve()` to introduce this theme, and don't forget the `lib/` sub directory.
-  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
+  // Theme to use
+  theme: 'meteorlxy',
 
   // Theme config
   themeConfig: {
     // Language of this theme. See the [Theme Language] section below.
-    lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+    lang: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
 
     // Personal infomation (delete the fields if you don't have / don't want to display)
     personalInfo: {
@@ -247,16 +236,6 @@ module.exports = {
 ```
 </details>
 
-::: danger ATTENTION
-If the version of your Vuepress is `<1.0.0-alpha.33` or `>1.0.0-alpha.39`, you hanve to use `require.resolve()` to introduce this theme, i.e.
-
-```js
-module.exports: {
-  theme: require.resolve('vuepress-theme-meteorlxy/lib'),
-}
-```
-:::
-
 ### Write your posts
 
 Create your first post:
@@ -305,9 +284,15 @@ To help users with different languages to use this theme, we provide some langua
 // .vuepress/config.js
 
 module.exports = {
-  themeConfig: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
+  themeConfig: {
+    lang: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
+  },
 }
 ```
+
+::: tip
+If the `lang` option is not set, theme will use `en-US` as the default language.
+:::
 
 ### Translate to your own language
 
@@ -320,17 +305,19 @@ You can also translate the fields into your own language manually.
 
 module.exports = {
   themeConfig: {
-    home: 'Home',
-    posts: 'Posts',
-    category: 'Category',
-    categories: 'Categories',
-    allCategories: 'All',
-    tag: 'Tag',
-    tags: 'Tags',
-    createdAt: 'Created',
-    updatedAt: 'Updated',
-    prevPost: 'Previous Post',
-    nextPost: 'Next Post',
+    lang: {
+      home: 'Home',
+      posts: 'Posts',
+      category: 'Category',
+      categories: 'Categories',
+      allCategories: 'All',
+      tag: 'Tag',
+      tags: 'Tags',
+      createdAt: 'Created',
+      updatedAt: 'Updated',
+      prevPost: 'Previous Post',
+      nextPost: 'Next Post',
+    },
   },
 }
 ```
@@ -343,10 +330,12 @@ If you don't like some translation of the language packs, or you want to use som
 // .vuepress/config.js
 
 module.exports = {
-  themeConfig: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
-    home: 'Welcome to my Homepage !',
-    posts: 'Here is my articles',
-  }),
+  themeConfig: {
+    lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/en-US'), {
+      home: 'Welcome to my Homepage !',
+      posts: 'Here is my articles',
+    }),
+  },
 }
 ```
 

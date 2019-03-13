@@ -5,8 +5,9 @@
   padding 0 1rem
   @media (min-width $MQWide)
     max-width (($MQWide + $MQNarrow) / 2)
-  @media (max-width $MQMobile - 1px)
+  @media (min-width $MQNarrow) and (max-width $MQWide - 1px)
     max-width $MQNarrow
+  @media (max-width $MQMobile - 1px)
     padding 0 0.5rem
 
 .main-div

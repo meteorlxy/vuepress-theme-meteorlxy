@@ -2,7 +2,7 @@ You can add more pages.
 
 First, create another directory, and put a `index.md` or `readme.md` in it:
 
-```bash {5,6}
+```bash {6-7}
 root
 ├── .vuepress
 │   └── config.js
@@ -14,7 +14,7 @@ root
 
 Then, add nav in your `.vuepress/config.js`:
 
-```js {6}
+```js {7}
 module.exports = {
   // ...
   themeConfig: {

@@ -12,18 +12,7 @@
 
       <span>{{ $themeConfig.lang.toc }}</span>
 
-      <ul>
-        <template v-for="h in $page.headers">
-          <li
-            v-if="h.level === 2"
-            :key="h.slug"
-          >
-            <RouterLink :to="`#${h.slug}`">
-              {{ h.title }}
-            </RouterLink>
-          </li>
-        </template>
-      </ul>
+      <TOC class="post-nav-toc" />
     </div>
 
     <div
@@ -110,7 +99,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @require '~@theme/styles/variables'
 
 .post-nav-card
@@ -120,9 +109,14 @@ export default {
   line-height 160%
   .icon
     fill $grayTextColor
-  .post-nav-comments
-    a
-      color $grayTextColor
-      &:hover
-        text-decoration underline
+  .post-nav-toc > ul
+      word-break normal
+      margin 0.5rem 0
+      padding-left 2rem
+      ul
+        padding-left 0.8rem
+  .post-nav-comments a
+    color $grayTextColor
+    &:hover
+      text-decoration underline
 </style>

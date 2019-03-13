@@ -13,7 +13,7 @@ Demo of how to set categories and tags.
 
 Set `category` and `tags` in the frontmatter of the post:
 
-```yaml {2,5}
+```yaml {2-4}
 ---
 category: demo
 tags:
