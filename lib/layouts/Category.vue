@@ -1,20 +1,20 @@
 <template>
   <div class="category">
-    <PostsList
-      class="main-div"
+    <PostsMain
       :posts="$category.posts"
+      :category-filter="false"
     />
   </div>
 </template>
 
 <script>
-import PostsList from '../components/PostsList.vue'
+import PostsMain from '../components/PostsMain.vue'
 
 export default {
   name: 'Category',
 
   components: {
-    PostsList,
+    PostsMain,
   },
 }
 </script>

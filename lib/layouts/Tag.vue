@@ -1,20 +1,20 @@
 <template>
   <div class="tag">
-    <PostsList
-      class="main-div"
+    <PostsMain
       :posts="$tag.posts"
+      :tag-filter="false"
     />
   </div>
 </template>
 
 <script>
-import PostsList from '../components/PostsList.vue'
+import PostsMain from '../components/PostsMain.vue'
 
 export default {
   name: 'Tag',
 
   components: {
-    PostsList,
+    PostsMain,
   },
 }
 </script>

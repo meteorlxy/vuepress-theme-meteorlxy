@@ -1,17 +1,20 @@
 <template>
   <div class="home">
-    <PostsList class="main-div" />
+    <PostsMain
+      :category-filter="false"
+      :tag-filter="false"
+    />
   </div>
 </template>
 
 <script>
-import PostsList from '../components/PostsList.vue'
+import PostsMain from '../components/PostsMain.vue'
 
 export default {
   name: 'Home',
 
   components: {
-    PostsList,
+    PostsMain,
   },
 }
 </script>
