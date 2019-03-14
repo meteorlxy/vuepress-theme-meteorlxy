@@ -16,29 +16,11 @@
       </h3>
 
       <PostsFilterTags v-model="filterTags" />
-
-      <h3 class="filter-search">
-        {{ $themeConfig.lang.search }}
-      </h3>
-
-      <PostsFilterSearch v-model="filterSearch" />
     </div>
 
-    <div class="main-div">
-      <TransitionFadeSlide>
-        <div
-          v-if="filteredPosts.length ===0"
-          class="no-posts"
-        >
-          {{ $themeConfig.lang.noRelatedPosts }}
-        </div>
-
-        <PostsList
-          v-else
-          :posts="filteredPosts"
-        />
-      </TransitionFadeSlide>
-    </div>
+    <PostsList
+      :posts="filteredPosts"
+    />
   </div>
 </template>
 
@@ -46,8 +28,6 @@
 import PostsList from '../components/PostsList.vue'
 import PostsFilterCategories from '../components/PostsFilterCategories.vue'
 import PostsFilterTags from '../components/PostsFilterTags.vue'
-import PostsFilterSearch from '../components/PostsFilterSearch.vue'
-import TransitionFadeSlide from '../components/TransitionFadeSlide.vue'
 
 export default {
   name: 'Posts',
@@ -56,15 +36,12 @@ export default {
     PostsList,
     PostsFilterCategories,
     PostsFilterTags,
-    PostsFilterSearch,
-    TransitionFadeSlide,
   },
 
   data () {
     return {
       filterTags: [],
       filterCategory: null,
-      filterSearch: '',
     }
   },
 
@@ -88,28 +65,6 @@ export default {
         })
       }
 
-      if (this.filterSearch !== '') {
-        const searchString = this.filterSearch.toLowerCase().trim()
-        const match = item => {
-          if (typeof item === 'string') {
-            return item.toLowerCase().includes(searchString)
-          }
-
-          if (Array.isArray(item)) {
-            return item.map(i => match(i)).includes(true)
-          }
-
-          return false
-        }
-        filteredPosts = filteredPosts.filter(p =>
-          match(p.title) ||
-          match(p.excerpt) ||
-          match(p.frontmatter.description) ||
-          match(p.tags) ||
-          match(p.category)
-        )
-      }
-
       return filteredPosts
     },
   },
@@ -123,11 +78,4 @@ export default {
 .filter-tags
   a
     color $textColor
-</style>
-
-<style lang="stylus" scoped>
-@require '~@theme/styles/variables'
-
-.no-posts
-  color $grayTextColor
 </style>
