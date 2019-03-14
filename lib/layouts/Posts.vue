@@ -1,27 +1,44 @@
 <template>
   <div class="posts">
     <div class="main-div">
-      <h3 class="link-categories">
+      <h3 class="filter-categories">
         <RouterLink to="/posts/categories/">
           {{ $themeConfig.lang.categories }}
         </RouterLink>
       </h3>
 
-      <PostsFilterCategories v-model="selectedCategory" />
+      <PostsFilterCategories v-model="filterCategory" />
 
-      <h3 class="link-tags">
+      <h3 class="filter-tags">
         <RouterLink to="/posts/tags/">
           {{ $themeConfig.lang.tags }}
         </RouterLink>
       </h3>
 
-      <PostsFilterTags v-model="selectedTags" />
+      <PostsFilterTags v-model="filterTags" />
+
+      <h3 class="filter-search">
+        {{ $themeConfig.lang.search }}
+      </h3>
+
+      <PostsFilterSearch v-model="filterSearch" />
     </div>
 
-    <PostsList
-      class="main-div"
-      :posts="filteredPosts"
-    />
+    <div class="main-div">
+      <TransitionFadeSlide>
+        <div
+          v-if="filteredPosts.length ===0"
+          class="no-posts"
+        >
+          {{ $themeConfig.lang.noRelatedPosts }}
+        </div>
+
+        <PostsList
+          v-else
+          :posts="filteredPosts"
+        />
+      </TransitionFadeSlide>
+    </div>
   </div>
 </template>
 
@@ -29,6 +46,8 @@
 import PostsList from '../components/PostsList.vue'
 import PostsFilterCategories from '../components/PostsFilterCategories.vue'
 import PostsFilterTags from '../components/PostsFilterTags.vue'
+import PostsFilterSearch from '../components/PostsFilterSearch.vue'
+import TransitionFadeSlide from '../components/TransitionFadeSlide.vue'
 
 export default {
   name: 'Posts',
@@ -37,12 +56,15 @@ export default {
     PostsList,
     PostsFilterCategories,
     PostsFilterTags,
+    PostsFilterSearch,
+    TransitionFadeSlide,
   },
 
   data () {
     return {
-      selectedTags: [],
-      selectedCategory: null,
+      filterTags: [],
+      filterCategory: null,
+      filterSearch: '',
     }
   },
 
@@ -50,14 +72,14 @@ export default {
     filteredPosts () {
       let filteredPosts = this.$posts
 
-      if (this.selectedCategory) {
-        filteredPosts = filteredPosts.filter(p => p.category === this.selectedCategory)
+      if (this.filterCategory) {
+        filteredPosts = filteredPosts.filter(p => p.category === this.filterCategory)
       }
 
-      if (this.selectedTags.length !== 0) {
+      if (this.filterTags.length !== 0) {
         filteredPosts = filteredPosts.filter(p => {
           const postTags = p.tags
-          for (const tag of this.selectedTags) {
+          for (const tag of this.filterTags) {
             if (postTags.includes(tag)) {
               return true
             }
@@ -65,6 +87,17 @@ export default {
           return false
         })
       }
+
+      if (this.filterSearch !== '') {
+        const searchString = this.filterSearch.toLowerCase().trim()
+        filteredPosts = filteredPosts.filter(p => p.title.includes(searchString) ||
+          (p.excerpt && p.excerpt.includes(searchString)) ||
+          (p.frontmatter.description && p.frontmatter.description.includes(searchString)) ||
+          (p.tags && p.tags.includes(searchString)) ||
+          (p.category && p.category.includes(searchString))
+        )
+      }
+
       return filteredPosts
     },
   },
@@ -74,8 +107,15 @@ export default {
 <style lang="stylus">
 @require '~@theme/styles/variables'
 
-.link-categories,
-.link-tags
+.filter-categories,
+.filter-tags
   a
     color $textColor
+</style>
+
+<style lang="stylus" scoped>
+@require '~@theme/styles/variables'
+
+.no-posts
+  color $grayTextColor
 </style>
