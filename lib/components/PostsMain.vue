@@ -108,7 +108,7 @@ export default {
 
   computed: {
     filteredPosts () {
-      let filteredPosts = this.$posts
+      let filteredPosts = this.posts || this.$posts
 
       if (this.filterCategory) {
         filteredPosts = filteredPosts.filter(p => p.category === this.filterCategory)
