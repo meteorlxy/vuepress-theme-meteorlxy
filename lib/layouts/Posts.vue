@@ -90,11 +90,23 @@ export default {
 
       if (this.filterSearch !== '') {
         const searchString = this.filterSearch.toLowerCase().trim()
-        filteredPosts = filteredPosts.filter(p => p.title.includes(searchString) ||
-          (p.excerpt && p.excerpt.includes(searchString)) ||
-          (p.frontmatter.description && p.frontmatter.description.includes(searchString)) ||
-          (p.tags && p.tags.includes(searchString)) ||
-          (p.category && p.category.includes(searchString))
+        const match = item => {
+          if (typeof item === 'string') {
+            return item.toLowerCase().includes(searchString)
+          }
+
+          if (Array.isArray(item)) {
+            return item.map(i => match(i)).includes(true)
+          }
+
+          return false
+        }
+        filteredPosts = filteredPosts.filter(p =>
+          match(p.title) ||
+          match(p.excerpt) ||
+          match(p.frontmatter.description) ||
+          match(p.tags) ||
+          match(p.category)
         )
       }
 
