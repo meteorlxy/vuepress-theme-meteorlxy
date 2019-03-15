@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <PostsList class="main-div" />
+    <PostsList />
   </div>
 </template>
 
