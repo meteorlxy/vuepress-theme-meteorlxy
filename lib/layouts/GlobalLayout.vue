@@ -21,6 +21,12 @@ export default {
     TheMain,
     TheFooter,
   },
+
+  watch: {
+    '$page.path' () {
+      this.updateZoom()
+    },
+  },
 }
 </script>
 
