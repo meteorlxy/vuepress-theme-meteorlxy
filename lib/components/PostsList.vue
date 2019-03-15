@@ -1,16 +1,28 @@
 <template>
-  <TransitionFadeSlide
-    tag="div"
-    class="posts-list"
-    direction="x"
-    group
-  >
-    <PostsListItem
-      v-for="post in listPosts"
-      :key="post.path"
-      :post="post"
-    />
-  </TransitionFadeSlide>
+  <div class="main-div posts-list">
+    <TransitionFadeSlide>
+      <div
+        v-if="listPosts.length === 0"
+        class="no-posts"
+        key="no-posts"
+      >
+        {{ $themeConfig.lang.noRelatedPosts }}
+      </div>
+
+      <TransitionFadeSlide
+        v-else
+        tag="div"
+        direction="x"
+        group
+      >
+        <PostsListItem
+          v-for="post in listPosts"
+          :key="post.path"
+          :post="post"
+        />
+      </TransitionFadeSlide>
+    </TransitionFadeSlide>
+  </div>
 </template>
 
 <script>
@@ -40,3 +52,10 @@ export default {
   },
 }
 </script>
+
+<style lang="stylus" scoped>
+@require '~@theme/styles/variables'
+
+.no-posts
+  color $grayTextColor
+</style>

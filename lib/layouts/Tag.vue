@@ -1,20 +1,35 @@
 <template>
   <div class="tag">
-    <PostsMain
+    <PostsFilter
+      v-model="posts"
       :posts="$tag.posts"
-      :tag-filter="false"
+      :tags="false"
     />
+
+    <PostsList :posts="posts" />
   </div>
 </template>
 
 <script>
-import PostsMain from '../components/PostsMain.vue'
+import PostsFilter from '../components/PostsFilter.vue'
+import PostsList from '../components/PostsList.vue'
 
 export default {
   name: 'Tag',
 
   components: {
-    PostsMain,
+    PostsFilter,
+    PostsList,
+  },
+
+  data () {
+    return {
+      posts: null,
+    }
+  },
+
+  created () {
+    this.posts = this.$tag.posts
   },
 }
 </script>

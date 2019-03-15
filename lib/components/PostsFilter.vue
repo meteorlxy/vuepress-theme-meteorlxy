@@ -1,78 +1,84 @@
 <template>
-  <div class="posts">
-    <div class="main-div">
-      <div
-        class="filter-categories"
-        v-if="categoryFilter"
-      >
-        <h3 class="filter-categories">
-          <RouterLink to="/posts/categories/">
-            {{ $themeConfig.lang.categories }}
-          </RouterLink>
-        </h3>
+  <div class="main-div">
+    <div
+      v-if="categories"
+      class="filter-categories"
+    >
+      <h3>
+        <RouterLink to="/posts/categories/">
+          {{ $themeConfig.lang.categories }}
+        </RouterLink>
+      </h3>
 
-        <PostsFilterCategories v-model="filterCategory" />
-      </div>
-
-      <div
-        class="filter-tags"
-        v-if="tagFilter"
-      >
-        <h3 class="filter-tags">
-          <RouterLink to="/posts/tags/">
-            {{ $themeConfig.lang.tags }}
-          </RouterLink>
-        </h3>
-
-        <PostsFilterTags v-model="filterTags" />
-      </div>
-
-      <div
-        class="filter-search"
-        v-if="search"
-      >
-        <h3 class="filter-search">
-          {{ $themeConfig.lang.search }}
-        </h3>
-
-        <PostsFilterSearch v-model="filterSearch" />
-      </div>
+      <PostsFilterCategories v-model="filterCategory" />
     </div>
 
-    <div class="main-div">
-      <TransitionFadeSlide>
-        <div
-          v-if="filteredPosts.length ===0"
-          class="no-posts"
-        >
-          {{ $themeConfig.lang.noRelatedPosts }}
-        </div>
+    <div
+      v-if="tags"
+      class="filter-tags"
+    >
+      <h3>
+        <RouterLink to="/posts/tags/">
+          {{ $themeConfig.lang.tags }}
+        </RouterLink>
+      </h3>
 
-        <PostsList
-          v-else
-          :posts="filteredPosts"
-        />
-      </TransitionFadeSlide>
+      <PostsFilterTags v-model="filterTags" />
+    </div>
+
+    <div
+      v-if="search"
+      class="filter-search"
+    >
+      <h3>
+        {{ $themeConfig.lang.search }}
+      </h3>
+
+      <PostsFilterSearch v-model="filterSearch" />
     </div>
   </div>
 </template>
 
 <script>
-import PostsList from '../components/PostsList.vue'
 import PostsFilterCategories from '../components/PostsFilterCategories.vue'
 import PostsFilterTags from '../components/PostsFilterTags.vue'
 import PostsFilterSearch from '../components/PostsFilterSearch.vue'
-import TransitionFadeSlide from '../components/TransitionFadeSlide.vue'
 
 export default {
-  name: 'PostsMain',
+  name: 'PostsFilter',
 
   components: {
-    PostsList,
     PostsFilterCategories,
     PostsFilterTags,
     PostsFilterSearch,
-    TransitionFadeSlide,
+  },
+
+  props: {
+    posts: {
+      type: Array,
+      required: false,
+      default: null,
+    },
+    categories: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    tags: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    search: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    value: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
   },
 
   data () {
@@ -83,38 +89,15 @@ export default {
     }
   },
 
-  props: {
-    posts: {
-      type: Array,
-      required: false,
-      default: null,
-    },
-    search: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
-    categoryFilter: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
-    tagFilter: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
-  },
-
   computed: {
     filteredPosts () {
       let filteredPosts = this.posts || this.$posts
 
-      if (this.filterCategory) {
+      if (this.categories && this.filterCategory) {
         filteredPosts = filteredPosts.filter(p => p.category === this.filterCategory)
       }
 
-      if (this.filterTags.length !== 0) {
+      if (this.tags && this.filterTags.length !== 0) {
         filteredPosts = filteredPosts.filter(p => {
           const postTags = p.tags
           for (const tag of this.filterTags) {
@@ -126,7 +109,7 @@ export default {
         })
       }
 
-      if (this.filterSearch !== '') {
+      if (this.search && this.filterSearch !== '') {
         const searchString = this.filterSearch.toLowerCase().trim()
         const match = item => {
           if (typeof item === 'string') {
@@ -151,6 +134,15 @@ export default {
       return filteredPosts
     },
   },
+
+  watch: {
+    filteredPosts: {
+      immediate: true,
+      handler (val) {
+        this.$emit('input', val)
+      },
+    },
+  },
 }
 </script>
 
@@ -161,11 +153,4 @@ export default {
 .filter-tags
   a
     color $textColor
-</style>
-
-<style lang="stylus" scoped>
-@require '~@theme/styles/variables'
-
-.no-posts
-  color $grayTextColor
 </style>
