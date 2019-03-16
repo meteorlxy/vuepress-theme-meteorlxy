@@ -96,7 +96,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/', exact: true },
       { text: 'Posts', link: '/posts/', exact: false },
-      { text: 'More Pages', link: '/more-pages/', exact: false },
+      { text: 'Custom Pages', link: '/custom-pages/', exact: false },
       { text: 'Github', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy' },
     ],
 
