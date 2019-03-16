@@ -15,14 +15,14 @@ List of blogs that use this theme.
 
 > Create a PR to this file to add your own blog if you are using this theme :heart:
 
-### English Blogs
+## English Blogs
 
 - Add yours here!
 
-### 中文博客
+## 中文博客
 
 - [@meteorlxy](https://www.meteorlxy.cn)
 
-### Portuguese Blogs
+## Portuguese Blogs
 
 - [@tgmti](https://tgmti.github.io/advpl/)
