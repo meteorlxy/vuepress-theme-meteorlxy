@@ -11,6 +11,12 @@ Guide of `vuepress-theme-meteorlxy`.
 
 <!-- more -->
 
+::: tip
+If you have any questions / ideas about this theme, feel free to open issues / PRs in the [Github Repo](https://github.com/meteorlxy/vuepress-theme-meteorlxy).
+
+Give this theme a star if you like it :wink:
+:::
+
 [[toc]]
 
 ## Getting Started
@@ -443,3 +449,54 @@ module.exports = {
 ```
 
 If you set `comments: false`, Vuepress will not introduce Vssue at all.
+
+## Frontmatter reference
+
+### Common frontmatter
+
+These frontmatters work for custom pages and posts.
+
+```yaml
+---
+# Title of current page/post, which will be displayed in the header banner
+title: Welcome to vuepresss-theme-meteorlxy
+
+# Set the layout of current page/post. Go to the [Custom Pages] for details
+layout: CustomLayout
+
+# Show the personal info card on this page or not
+## Default: `true`
+aside: true
+---
+```
+
+### Post frontmatter
+
+These frontmatters only work for posts.
+
+```yaml
+---
+# Set the category of current post
+category: docs
+
+# Set the tags of current post
+tags:
+  - zh
+  - en
+
+# Set the created date of current post
+date: 2019-02-27
+
+# Show the meta info of the post or not , i.e. Created, Updated, Previous Post, Next Post, etc.
+## Default: `true`
+meta: true
+
+# Comments config, see the [Post Comments] section above
+## Default: `true`
+vssue: true
+## Default: `undefined`
+vssue-id: 1
+## Default: `frontmatter.title`
+vssue-title: Comments of this page
+---
+```

@@ -11,6 +11,12 @@ vssue-id: 2
 
 <!-- more -->
 
+::: tip
+如果你在使用这个主题时遇到问题，或者有什么好主意，可以在 [Github 仓库](https://github.com/meteorlxy/vuepress-theme-meteorlxy) 发表 Issue 或者 PR 。
+
+觉得这个主题还不错的话，给一个 Star 支持一下吧 :wink:
+:::
+
 [[toc]]
 
 ## 开始使用
@@ -444,3 +450,54 @@ module.exports = {
 ```
 
 设置 `comments: false` 后，Vuepress 就不会引入 Vssue 相关的代码了。
+
+## Frontmatter 参考
+
+### 通用 Frontmatter
+
+这些 Frontmatters 可以在自定义页面和文章中使用。
+
+```yaml
+---
+# 当前页面/文章的标题，会显示在顶部的 banner 中
+title: Welcome to vuepresss-theme-meteorlxy
+
+# 当前页面/文章的 layout，前往 [Custom Pages] 查看详细用法
+layout: CustomLayout
+
+# 是否在当前页面显示个人信息卡片
+## 默认： `true`
+aside: true
+---
+```
+
+### 文章 Frontmatter
+
+这些 Frontmatters 只能在文章中使用。
+
+```yaml
+---
+# 设置当前文章的分类
+category: docs
+
+# 设置当前文章的标签
+tags:
+  - zh
+  - en
+
+# 设置当前文章的发布时间
+date: 2019-02-27
+
+# 设置是否显示当前文章的额外信息，即 发布时间、修改时间、上一篇、下一篇 等。
+## 默认： `true`
+meta: true
+
+# 评论设置，查看上方的 [页面评论] 章节
+## 默认： `true`
+vssue: true
+## 默认： `undefined`
+vssue-id: 1
+## 默认： `frontmatter.title`
+vssue-title: Comments of this page
+---
+```
