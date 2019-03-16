@@ -1,16 +1,18 @@
 <template>
-  <article class="post">
-    <PostMeta />
+  <div class="post">
+    <PostMeta v-if="meta" />
 
-    <Content
-      :key="$page.path"
-      class="post-content"
-    />
+    <article class="main-div">
+      <Content
+        :key="$page.path"
+        class="post-content"
+      />
+    </article>
 
-    <PostMeta />
+    <PostMeta v-if="meta" />
 
-    <section
-      v-if="useVssue"
+    <div
+      v-if="vssue"
       id="post-comments"
       class="main-div"
     >
@@ -18,8 +20,8 @@
         :title="vssueTitle"
         :issue-id="vssueId"
       />
-    </section>
-  </article>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -33,16 +35,20 @@ export default {
   },
 
   computed: {
+    meta () {
+      return this.$frontmatter['meta'] !== false
+    },
+
+    vssue () {
+      return this.$site.themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
+    },
+
     vssueTitle () {
       return this.$frontmatter['vssue-title'] || this.$frontmatter['title'] || undefined
     },
 
     vssueId () {
       return this.$frontmatter['vssue-id'] || undefined
-    },
-
-    useVssue () {
-      return this.$site.themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
     },
   },
 }
