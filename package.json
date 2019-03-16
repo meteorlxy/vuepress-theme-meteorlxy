@@ -41,6 +41,7 @@
     "@vue/babel-preset-jsx": "^1.0.0-beta.2",
     "@vuepress/plugin-back-to-top": "1.0.0-alpha.44",
     "@vuepress/plugin-container": "1.0.0-alpha.44",
+    "@vuepress/plugin-google-analytics": "1.0.0-alpha.44",
     "@vuepress/plugin-medium-zoom": "1.0.0-alpha.44",
     "@vuepress/plugin-nprogress": "1.0.0-alpha.44",
     "date-fns": "^1.30.1",
