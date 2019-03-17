@@ -131,7 +131,7 @@ $lineHeight = $navbarHeight - ($gutter * 2)
   &.fixed
     position fixed
     background-color $navbarColor
-    @media (max-width $MQMobile - 1)
+    @media (max-width $MQMobile - 1px)
       .navbar-links
         background-color $navbarColor
   .navbar-site-name
@@ -150,12 +150,12 @@ $lineHeight = $navbarHeight - ($gutter * 2)
     z-index 100
     .icon
       fill $accentColor
-    @media (max-width $MQMobile - 1)
+    @media (max-width $MQMobile - 1px)
       display inline
     @media (min-width $MQMobile)
       display none
   .navbar-links
-    @media (max-width $MQMobile - 1)
+    @media (max-width $MQMobile - 1px)
       &.show
         display block
       display none
@@ -182,7 +182,7 @@ $lineHeight = $navbarHeight - ($gutter * 2)
     &:hover
     &.router-link-active
       border-bottom 2px solid $accentColor
-    @media (max-width $MQMobile - 1)
+    @media (max-width $MQMobile - 1px)
       display block
     @media (min-width $MQMobile)
       display inline-block

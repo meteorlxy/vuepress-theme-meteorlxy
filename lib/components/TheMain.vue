@@ -78,7 +78,7 @@ export default {
   margin 1rem auto
   .aside
     position relative
-  @media (max-width $MQMobile - 1)
+  @media (max-width $MQMobile - 1px)
     margin 0.5rem auto
   &:not(.show-aside)
     .main
@@ -102,7 +102,7 @@ export default {
       .aside
         float left
         padding-left 1rem
-    @media (max-width $MQMobile - 1)
+    @media (max-width $MQMobile - 1px)
       .main
         width 100%
       .aside
