@@ -1,9 +1,11 @@
 <template>
   <div class="page">
-    <Content
-      :key="$page.path"
-      class="page-content"
-    />
+    <div class="main-div">
+      <Content
+        :key="$page.path"
+        class="page-content"
+      />
+    </div>
   </div>
 </template>
 
