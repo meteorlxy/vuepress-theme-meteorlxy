@@ -84,6 +84,9 @@ export default {
 
 .posts-list-item
   padding 0 0.5rem
+  &:first-child
+    h3
+      margin-top 0
   &:not(:first-child)
     border-top 1px solid $borderColor
   .post-title
