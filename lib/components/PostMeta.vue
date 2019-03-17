@@ -1,7 +1,10 @@
 <template>
   <section class="post-meta main-div">
     <section class="post-date clearfix">
-      <span class="create-date">
+      <span
+        v-if="$page.createdAt"
+        class="create-date"
+      >
         {{ `${$themeConfig.lang.createdAt} : ${$page.createdAt}` }}
       </span>
 
