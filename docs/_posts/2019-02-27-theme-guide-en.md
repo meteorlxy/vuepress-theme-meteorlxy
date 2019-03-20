@@ -455,9 +455,41 @@ module.exports = {
 
 If you set `comments: false`, Vuepress will not introduce Vssue at all.
 
-## Frontmatter reference
+## References
 
-### Common frontmatter
+### Style variables
+
+Support `palette.styl` of Vuepress to customize style variables.
+
+```stylus
+// colors
+$textColor ?= #2c3e50
+$accentColor ?= #1e90ff
+$grayTextColor ?= #666
+$lightTextColor ?= #999
+$borderColor ?= #eaecef
+$codeBgColor ?= #282c34
+$arrowBgColor ?= #ccc
+$navbarColor ?= #fff
+$headerColor ?= #fff
+$nprogressColor ?= $accentColor
+
+// layout
+$navbarHeight ?= 3.6rem
+$bannerHeight ?= 12rem
+
+// responsive breakpoints
+$MQWide ?= 1440px
+$MQNarrow ?= 1024px
+$MQMobile ?= 768px
+$MQMobileNarrow ?= 480px
+```
+
+
+
+### Frontmatter
+
+#### Common frontmatter
 
 These frontmatters work for custom pages and posts.
 
@@ -475,7 +507,7 @@ aside: true
 ---
 ```
 
-### Post frontmatter
+#### Post frontmatter
 
 These frontmatters only work for posts.
 

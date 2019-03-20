@@ -457,9 +457,39 @@ module.exports = {
 
 设置 `comments: false` 后，Vuepress 就不会引入 Vssue 相关的代码了。
 
-## Frontmatter 参考
+## 配置参考
 
-### 通用 Frontmatter
+### 样式变量
+
+支持通过 Vuepress 的 `palette.styl` 功能自定义样式变量。
+
+```stylus
+// 颜色
+$textColor ?= #2c3e50
+$accentColor ?= #1e90ff
+$grayTextColor ?= #666
+$lightTextColor ?= #999
+$borderColor ?= #eaecef
+$codeBgColor ?= #282c34
+$arrowBgColor ?= #ccc
+$navbarColor ?= #fff
+$headerColor ?= #fff
+$nprogressColor ?= $accentColor
+
+// 布局
+$navbarHeight ?= 3.6rem
+$bannerHeight ?= 12rem
+
+// 响应式 breakpoints
+$MQWide ?= 1440px
+$MQNarrow ?= 1024px
+$MQMobile ?= 768px
+$MQMobileNarrow ?= 480px
+```
+
+### Frontmatter
+
+#### 通用 Frontmatter
 
 这些 Frontmatters 可以在自定义页面和文章中使用。
 
@@ -477,7 +507,7 @@ aside: true
 ---
 ```
 
-### 文章 Frontmatter
+#### 文章 Frontmatter
 
 这些 Frontmatters 只能在文章中使用。
 
