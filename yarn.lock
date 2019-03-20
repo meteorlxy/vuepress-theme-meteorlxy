@@ -4948,11 +4948,6 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
-medium-zoom@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.0.3.tgz#6edf14e894976bc52964a10e08a7ec7817152379"
-  integrity sha512-/8FocjPsVNuKkwUoI44l4nSsVTWalVqkB+FOXJTBQgl26y3Vp4er8FJpkk6kLQQPdCpm/W3eG7ptNoIm4Y6Rbw==
-
 mem@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/mem/-/mem-4.1.0.tgz#aeb9be2d21f47e78af29e4ac5978e8afa2ca5b8a"
@@ -7930,13 +7925,6 @@ vuepress-plugin-container@^1.1.1:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-medium-zoom@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-medium-zoom/-/vuepress-plugin-medium-zoom-1.0.1.tgz#38ce113afcc0e6beaa3d8b7a0b60a9023681aec8"
-  integrity sha512-Rs46noE7NvOCOLEM8X56qUP3KzUqhCLNov44mtqDCmKeyR59I9kVOtGwFnqt35Ho3dHXwaP4FKYe8nQ5vWJSmg==
-  dependencies:
-    medium-zoom "^1.0.3"
-
 vuepress-plugin-nprogress@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-nprogress/-/vuepress-plugin-nprogress-1.0.0.tgz#8ce561537cca470aaf1738b3e35e699d21149f7d"
@@ -7950,6 +7938,13 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   integrity sha512-qsQkDftLVFLe8BiviIHaLV0Ea38YLZKKonDGsNQy1IE0wllFpFIEldWD8frWZtDFdx6b/O3KDMgVQ0qp5NjJCg==
   dependencies:
     smoothscroll-polyfill "^0.4.3"
+
+vuepress-plugin-zooming@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-zooming/-/vuepress-plugin-zooming-1.0.0.tgz#64c5ca816e62970696ffd09bf8bd0e02d02ddf3f"
+  integrity sha512-F1j0wPUWC7LsvRjbeo927/QsngHn5NWAKkG6gHuzXx+wkSY59I8Onocf2DHFd4kpUYTrG3cvH1FeEB6tnQ5b+A==
+  dependencies:
+    zooming "^2.1.1"
 
 vuepress@1.0.0-alpha.44:
   version "1.0.0-alpha.44"
@@ -8247,3 +8242,8 @@ zepto@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/zepto/-/zepto-1.2.0.tgz#e127bd9e66fd846be5eab48c1394882f7c0e4f98"
   integrity sha1-4Se9nmb9hGvl6rSME5SIL3wOT5g=
+
+zooming@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/zooming/-/zooming-2.1.1.tgz#3e05006b4e10335235ca626244d053d90a9c7e72"
+  integrity sha512-Z38dkZRQsFNBE67+xDBQLNKMs5J1Gc+s3/zO6iezTrC24VYLJV7YPBdBDJmiLhff5qa6Awxv4wsjqx3oYz2MYA==
