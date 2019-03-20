@@ -5,6 +5,7 @@ tags:
 date: 2019-02-26
 title: 主题使用指南
 vssue-id: 2
+lang: zh-CN
 ---
 
 `vuepress-theme-meteorlxy` 主题使用指南
