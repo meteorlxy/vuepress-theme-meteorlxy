@@ -9,6 +9,9 @@ vssue-id: 10
 
 Guide of `vuepress-theme-meteorlxy`.
 
+![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy/next.svg?style=flat)
+![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
+
 <!-- more -->
 
 ::: tip

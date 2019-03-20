@@ -10,6 +10,9 @@ vssue-id: 2
 
 `vuepress-theme-meteorlxy` 主题使用指南
 
+![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy/next.svg?style=flat)
+![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
+
 <!-- more -->
 
 ::: tip
