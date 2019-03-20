@@ -943,13 +943,6 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-medium-zoom@1.0.0-alpha.44":
-  version "1.0.0-alpha.44"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.0.0-alpha.44.tgz#4c0f218c2576a4c4484ed5a01955a6b6a5144d5a"
-  integrity sha512-2zkITNeyE5inxalCOAhovwswrYw5Ql/mBw73az0dir6zZao4orVu/iF2SrsLUu7t1TSFXnRLl4aC7QItGdOTmw==
-  dependencies:
-    medium-zoom "^0.4.0"
-
 "@vuepress/plugin-nprogress@^1.0.0-alpha.44":
   version "1.0.0-alpha.44"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.0.0-alpha.44.tgz#5f59cac82d3f0104199701e6090cf9c33af29859"
@@ -4955,10 +4948,10 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
-medium-zoom@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-0.4.0.tgz#8e13c9b754903c0c903220611af0d3cd373a4222"
-  integrity sha512-0z7yMfd6I1BTCAa8QaR4cp5AqDkQD571GzhHIbbfefKEssGLSvs+4Xai/itOAncm4FBlF5gUoMQ22yW9/f8Sig==
+medium-zoom@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.0.3.tgz#6edf14e894976bc52964a10e08a7ec7817152379"
+  integrity sha512-/8FocjPsVNuKkwUoI44l4nSsVTWalVqkB+FOXJTBQgl26y3Vp4er8FJpkk6kLQQPdCpm/W3eG7ptNoIm4Y6Rbw==
 
 mem@^4.0.0:
   version "4.1.0"
@@ -7936,6 +7929,13 @@ vuepress-plugin-container@^1.1.1:
   integrity sha512-eusaKnv9OIvMG9eVvoEovRBFHTu/ikASxV5g1bOd2qpO4EjAZZL1fuUWVydiJJ3PUcDh6Hey5Sza1jSeTjdqnQ==
   dependencies:
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-medium-zoom@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-medium-zoom/-/vuepress-plugin-medium-zoom-1.0.0.tgz#7174c1dbd24184a07f659240483feb9f48a34bbd"
+  integrity sha512-jFVlX0GWdeVLf3uOPWnO98+bhmzJ+kx5TZPJ3DoS3NeQNu+7rvDFG3gWQnJ4/OLNmYKHMK+JqQ08x9Wdw59YgQ==
+  dependencies:
+    medium-zoom "^1.0.3"
 
 vuepress-plugin-nprogress@^1.0.0:
   version "1.0.0"
