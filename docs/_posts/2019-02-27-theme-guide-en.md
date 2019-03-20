@@ -371,7 +371,9 @@ module.exports = {
 }
 ```
 
-Comments of your posts will be stored in the issue system of you GitHub repository. Vssue will auto create an issue for your post with the title of your post.
+Comments of your posts will be stored in the issue system of you GitHub repository. Vssue will auto create an issue for your post with the `title` of your post.
+
+By default, Vssue will use the `$lang` property of Vuepress as the locale language.
 
 ::: tip
 Why we choose to use the issue system for your comments?

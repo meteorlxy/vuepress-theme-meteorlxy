@@ -4,8 +4,8 @@ tags:
   - zh
 date: 2019-02-26
 title: 主题使用指南
-vssue-id: 2
 lang: zh-CN
+vssue-id: 2
 ---
 
 `vuepress-theme-meteorlxy` 主题使用指南
@@ -374,6 +374,8 @@ module.exports = {
 ```
 
 配置完成后，博客评论将储存在你的 Github 仓库的 Issue 系统中，每篇博文会自动创建一个 Issue，默认使用博文的标题 `title` 作为 Issue 的标题。
+
+Vssue 默认根据 Vuepress 的 `$lang` 参数来确定使用的语言。
 
 ::: tip
 为什么选择用 Issue 系统来存储评论呢？
