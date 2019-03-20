@@ -23,6 +23,8 @@ List of blogs that use this theme.
 
 - [@meteorlxy](https://www.meteorlxy.cn)
 
+- [@yuchanns](https://www.yuchanns.xyz)
+
 ## Portuguese Blogs
 
 - [@tgmti](https://tgmti.github.io/advpl/)
