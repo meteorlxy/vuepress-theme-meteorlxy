@@ -215,13 +215,19 @@ module.exports = {
       },
     },
 
-    // The background of the header. You can choose to use an image, or to use random pattern (geopattern)
-    headerBackground: {
-      // URL of the background image. If you set the URL, the random pattern will not be generated, and the `useGeo` will be ignored.
-      url: '/assets/img/bg.jpg',
+    // Header Config
+    header: {
+      // The background of the header. You can choose to use an image, or to use random pattern (geopattern)
+      background: {
+        // URL of the background image. If you set the URL, the random pattern will not be generated, and the `useGeo` will be ignored.
+        url: '/assets/img/bg.jpg',
 
-      // Use random pattern. If you set it to `false`, and you don't set the image URL, the background will be blank.
-      useGeo: true,
+        // Use random pattern. If you set it to `false`, and you don't set the image URL, the background will be blank.
+        useGeo: true,
+      },
+
+      // show title in the header or not
+      showTitle: true,
     },
 
     // Show the last updated time of your posts
@@ -472,6 +478,7 @@ $codeBgColor ?= #282c34
 $arrowBgColor ?= #ccc
 $navbarColor ?= #fff
 $headerColor ?= #fff
+$headerTitleColor ?= #fff
 $nprogressColor ?= $accentColor
 
 // layout
@@ -484,8 +491,6 @@ $MQNarrow ?= 1024px
 $MQMobile ?= 768px
 $MQMobileNarrow ?= 480px
 ```
-
-
 
 ### Frontmatter
 
@@ -504,6 +509,19 @@ layout: CustomLayout
 # Show the personal info card on this page or not
 ## Default: `true`
 aside: true
+
+# Use image as the background of the header in this page
+# If set to an array, a random image will be chosen when entering this page
+## Default `undefined`
+header-image: /assets/img/header-image-01.jpg
+header-image:
+  - /assets/img/header-image-01.jpg
+  - /assets/img/header-image-02.jpg
+  - /assets/img/header-image-03.jpg
+
+# Show title in the header or not
+## Default `true`
+header-title: true
 ---
 ```
 

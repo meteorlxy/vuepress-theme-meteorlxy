@@ -217,13 +217,19 @@ module.exports = {
       },
     },
 
-    // 上方 header 的背景，可以使用图片，或者随机变化的图案（geopattern）
-    headerBackground: {
-      // 使用图片的 URL，如果设置了图片 URL，则不会生成随机变化的图案，下面的 useGeo 将失效
-      url: '/assets/img/bg.jpg',
+    // 上方 header 的相关设置
+    header: {
+      // header 的背景，可以使用图片，或者随机变化的图案（geopattern）
+      background: {
+        // 使用图片的 URL，如果设置了图片 URL，则不会生成随机变化的图案，下面的 useGeo 将失效
+        url: '/assets/img/bg.jpg',
 
-      // 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为空白背景
-      useGeo: true,
+        // 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为空白背景
+        useGeo: true,
+      },
+
+      // 是否在 header 显示标题
+      showTitle: true,
     },
 
     // 是否显示文章的最近更新时间
@@ -474,6 +480,7 @@ $codeBgColor ?= #282c34
 $arrowBgColor ?= #ccc
 $navbarColor ?= #fff
 $headerColor ?= #fff
+$headerTitleColor ?= #fff
 $nprogressColor ?= $accentColor
 
 // 布局
@@ -504,6 +511,19 @@ layout: CustomLayout
 # 是否在当前页面显示个人信息卡片
 ## 默认： `true`
 aside: true
+
+# 使用图片作为当前页面的 Header 背景
+# 如果传入数组，则每次进入该页面时随机选取一个图片显示
+## 默认： `undefined`
+header-image: /assets/img/header-image-01.jpg
+header-image:
+  - /assets/img/header-image-01.jpg
+  - /assets/img/header-image-02.jpg
+  - /assets/img/header-image-03.jpg
+
+# 是否在 Header 显示标题
+## 默认： `true`
+header-title: true
 ---
 ```
 
