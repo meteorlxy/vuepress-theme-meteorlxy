@@ -7930,10 +7930,10 @@ vuepress-plugin-container@^1.1.1:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-medium-zoom@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-medium-zoom/-/vuepress-plugin-medium-zoom-1.0.0.tgz#7174c1dbd24184a07f659240483feb9f48a34bbd"
-  integrity sha512-jFVlX0GWdeVLf3uOPWnO98+bhmzJ+kx5TZPJ3DoS3NeQNu+7rvDFG3gWQnJ4/OLNmYKHMK+JqQ08x9Wdw59YgQ==
+vuepress-plugin-medium-zoom@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-medium-zoom/-/vuepress-plugin-medium-zoom-1.0.1.tgz#38ce113afcc0e6beaa3d8b7a0b60a9023681aec8"
+  integrity sha512-Rs46noE7NvOCOLEM8X56qUP3KzUqhCLNov44mtqDCmKeyR59I9kVOtGwFnqt35Ho3dHXwaP4FKYe8nQ5vWJSmg==
   dependencies:
     medium-zoom "^1.0.3"
 

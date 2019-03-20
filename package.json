@@ -46,7 +46,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "vuepress-plugin-container": "^1.1.1",
-    "vuepress-plugin-medium-zoom": "^1.0.0",
+    "vuepress-plugin-medium-zoom": "^1.0.1",
     "vuepress-plugin-nprogress": "^1.0.0",
     "vuepress-plugin-smooth-scroll": "^0.0.3"
   },
