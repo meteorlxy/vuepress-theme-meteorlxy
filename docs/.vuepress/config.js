@@ -112,10 +112,12 @@ module.exports = {
       },
     },
 
-    headerBackground: {
-      // url: '/assets/img/bg.jpg',
-
-      useGeo: true,
+    header: {
+      background: {
+        // url: '/assets/img/bg.jpg',
+        useGeo: true,
+      },
+      showTitle: true,
     },
 
     lastUpdated: true,
