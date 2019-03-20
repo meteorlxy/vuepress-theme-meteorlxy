@@ -18,7 +18,7 @@ Use image as the background of header.
 
 Here is the frontmatter of current demo:
 
-```yaml {7}
+```yaml {7-11}
 ---
 category: demo
 tags:
