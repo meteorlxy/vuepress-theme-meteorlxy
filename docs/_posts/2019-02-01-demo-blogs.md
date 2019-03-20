@@ -22,6 +22,7 @@ List of blogs that use this theme.
 ## 中文博客
 
 - [@meteorlxy](https://www.meteorlxy.cn)
+- [@yuchanns](https://www.yuchanns.xyz)
 
 ## Portuguese Blogs
 
