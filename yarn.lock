@@ -950,7 +950,7 @@
   dependencies:
     medium-zoom "^0.4.0"
 
-"@vuepress/plugin-nprogress@1.0.0-alpha.44", "@vuepress/plugin-nprogress@^1.0.0-alpha.44":
+"@vuepress/plugin-nprogress@^1.0.0-alpha.44":
   version "1.0.0-alpha.44"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.0.0-alpha.44.tgz#5f59cac82d3f0104199701e6090cf9c33af29859"
   integrity sha512-wQmx+y3pR8slJ+mNri3I8spCDTQsDIfZPTv2YbYSQW8LeKRIhFch3lpJBQvY3yXUonxgE8pi9PIn3KIu8tusIw==
@@ -7936,6 +7936,13 @@ vuepress-plugin-container@^1.1.1:
   integrity sha512-eusaKnv9OIvMG9eVvoEovRBFHTu/ikASxV5g1bOd2qpO4EjAZZL1fuUWVydiJJ3PUcDh6Hey5Sza1jSeTjdqnQ==
   dependencies:
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-nprogress@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-nprogress/-/vuepress-plugin-nprogress-1.0.0.tgz#8ce561537cca470aaf1738b3e35e699d21149f7d"
+  integrity sha512-x2dwgDwfcgPwSr2Ah5IXOxZik16KJpdKrt7SsAK+sn1sR1B6Tyh1ziFyQVE43lb6GEERbzRTjAYoOrmuRPCbKw==
+  dependencies:
+    nprogress "^0.2.0"
 
 vuepress-plugin-smooth-scroll@^0.0.3:
   version "0.0.3"
