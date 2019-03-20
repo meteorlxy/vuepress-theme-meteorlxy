@@ -1,14 +1,14 @@
 <template>
   <header
     class="header"
-    :style="headerStyle"
+    :style="style"
   >
     <TheHeaderNavbar />
 
     <TransitionFadeSlide>
       <TheHeaderBanner :key="$route.path">
         <slot>
-          <h1>
+          <h1 v-if="showTitle">
             {{ $page.frontmatter.title || $page.title || $site.title || '' }}
           </h1>
         </slot>
@@ -52,22 +52,47 @@ export default {
   },
 
   computed: {
-    background () {
-      return this.$site.themeConfig.headerBackground || {}
+    showTitle () {
+      return this.$frontmatter['header-title'] !== false && this.$site.themeConfig.header['showTitle'] !== false
     },
 
-    headerStyle () {
-      return this.background.url ? {
-        'background-size': 'cover',
-        'background-repeat': 'no-repeat',
-        'background-position': 'center',
-        'background-attachment': 'scroll',
-        'background-image': `url(${this.background.url})`,
-      } : !this.$ssrContext ? {
-        // avoid prerendering the geopattern in build stage
-        // or the html files will be 14KB larger
-        'background-image': this.gpImg(),
-      } : {}
+    backgroundConfig () {
+      return this.$site.themeConfig.header.background || {}
+    },
+
+    backgroundImg () {
+      // frontmatter > themeConfig
+      return this.$frontmatter['header-image'] || this.backgroundConfig['url'] || null
+    },
+
+    style () {
+      // use image
+      if (this.backgroundImg) {
+        let url = this.backgroundImg
+
+        // randomly select an image if an array is provided
+        if (Array.isArray(url)) {
+          url = this.randomArr(url)
+        }
+
+        return {
+          'background-size': 'cover',
+          'background-repeat': 'no-repeat',
+          'background-position': 'center',
+          'background-attachment': 'scroll',
+          'background-image': `url(${url})`,
+        }
+      }
+
+      // use geopattern
+      // avoid prerendering the geopattern in build stage or the html files will be 14KB larger
+      if (!this.$ssrContext) {
+        return {
+          'background-image': this.gpImg(),
+        }
+      }
+
+      return {}
     },
   },
 
@@ -75,10 +100,10 @@ export default {
     // in computed, geopattern will always be computed
     // in methods, geopattern won't be called with useGeo = false
     gpImg () {
-      return this.background.useGeo
+      return this.backgroundConfig.useGeo !== false
         ? GeoPattern.generate(this.gpString(), {
           // color: '#9fe0f6',
-          generator: this.gpGenerator(),
+          generator: this.randomArr(generators),
         }).toDataUrl()
         : null
     },
@@ -87,8 +112,8 @@ export default {
       return ((this.$page && this.$page.title) || '') + (new Date()).toString()
     },
 
-    gpGenerator () {
-      return generators[Math.floor(Math.random() * generators.length)]
+    randomArr (arr) {
+      return arr[Math.floor(Math.random() * arr.length)]
     },
   },
 }

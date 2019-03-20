@@ -21,7 +21,7 @@ export default {
   cursor default
   height $bannerHeight
   border-bottom 1px solid $borderColor
-  color #fff
+  color $headerTitleColor
   .container
     height 100%
     display flex
@@ -33,5 +33,4 @@ export default {
       transition all 0.2s ease-in-out
       &:hover
         transform scale(1.2)
-
 </style>
