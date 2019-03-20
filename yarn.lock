@@ -924,7 +924,7 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-container@1.0.0-alpha.44", "@vuepress/plugin-container@^1.0.0-alpha.44":
+"@vuepress/plugin-container@^1.0.0-alpha.44":
   version "1.0.0-alpha.44"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-container/-/plugin-container-1.0.0-alpha.44.tgz#57d067633804079d6d624d58a5def75859676c4a"
   integrity sha512-AeoH44Pp1AtOjGtxAoj96DH6UjNVZxGm1oLb0/vgxp0i4PEdMjhzzlETS9FoUnHQK+kfmKyZMbbQOJCHzkuRIQ==
@@ -7929,6 +7929,13 @@ vuepress-html-webpack-plugin@^3.2.0:
     tapable "^1.0.0"
     toposort "^1.0.0"
     util.promisify "1.0.0"
+
+vuepress-plugin-container@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-container/-/vuepress-plugin-container-1.1.1.tgz#3ef83e7e3bd070b5341edb4d9f4de4fd20d7aa84"
+  integrity sha512-eusaKnv9OIvMG9eVvoEovRBFHTu/ikASxV5g1bOd2qpO4EjAZZL1fuUWVydiJJ3PUcDh6Hey5Sza1jSeTjdqnQ==
+  dependencies:
+    markdown-it-container "^2.0.0"
 
 vuepress-plugin-smooth-scroll@^0.0.3:
   version "0.0.3"

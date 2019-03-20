@@ -40,7 +40,6 @@
     "@vssue/vuepress-plugin-vssue": "^0.7.2",
     "@vue/babel-preset-jsx": "^1.0.0-beta.2",
     "@vuepress/plugin-back-to-top": "1.0.0-alpha.44",
-    "@vuepress/plugin-container": "1.0.0-alpha.44",
     "@vuepress/plugin-google-analytics": "1.0.0-alpha.44",
     "@vuepress/plugin-medium-zoom": "1.0.0-alpha.44",
     "@vuepress/plugin-nprogress": "1.0.0-alpha.44",
@@ -48,6 +47,7 @@
     "geopattern": "^1.2.3",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
+    "vuepress-plugin-container": "^1.1.1",
     "vuepress-plugin-smooth-scroll": "^0.0.3"
   },
   "devDependencies": {
