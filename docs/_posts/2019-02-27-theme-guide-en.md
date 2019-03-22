@@ -20,7 +20,7 @@ If you have any questions / ideas about this theme, feel free to open issues / P
 Give this theme a star if you like it :wink:
 :::
 
-[[toc]]
+<TOC />
 
 ## Getting Started
 
