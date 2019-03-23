@@ -708,47 +708,47 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@vssue/api-bitbucket-v2@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@vssue/api-bitbucket-v2/-/api-bitbucket-v2-0.7.3.tgz#ef946c2678283c82b1694514175fc19cc257dbe1"
-  integrity sha512-nCzWdqVias8kYNneHuf0N5XbbW7C+LxRZA7alHfOeXijsCHHrlQ6HFItIFoWbKhC5u9EMpM+Cj+5VXNtsvbkWQ==
+"@vssue/api-bitbucket-v2@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@vssue/api-bitbucket-v2/-/api-bitbucket-v2-0.8.1.tgz#b725022c0eb75f6ec8dc015f0a1989c975b292dc"
+  integrity sha512-hyETUEJHZWiejqNjdrQWkf5W8nA6ZIwkfxcjhRN6z9Gdc3bwa1ScongpJa5YUk8AoBkHwDh6Ci/Lgs+gb8EKiQ==
   dependencies:
-    "@vssue/utils" "^0.7.3"
+    "@vssue/utils" "^0.8.1"
     axios "^0.18.0"
 
-"@vssue/api-github-v3@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@vssue/api-github-v3/-/api-github-v3-0.7.3.tgz#26c7881c5c16111e3a23f4a8db61e904320a375f"
-  integrity sha512-Dkg8cXhaaBdQ0rY5yJrxaolaAbQw0kuA4xaaCT2E0/nCap8rxw5STXO+yuvHk26Oof+r1P7YCyPtnvz1fqzxyg==
+"@vssue/api-github-v3@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@vssue/api-github-v3/-/api-github-v3-0.8.1.tgz#208ba9282b514bf1f0f0e86896b1f3ccc38dac9b"
+  integrity sha512-+NNB24Tlvyp4x7IoKIKBig7OUzpdJumJBDS40djq/9KPZjFT6VsMWfGuZHKwQVt+sOVod/9lFBZ5kQmvNyO9VQ==
   dependencies:
-    "@vssue/utils" "^0.7.3"
+    "@vssue/utils" "^0.8.1"
     axios "^0.18.0"
 
-"@vssue/api-gitlab-v4@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@vssue/api-gitlab-v4/-/api-gitlab-v4-0.7.3.tgz#0fc2361a68255b6c8292435dd8f48bd1fedf6e09"
-  integrity sha512-BaTT0POhW+MgJzglxmo5CNc5qDuNHCwIZpnqMTnCGoieKPgGZy+5H524y4V+CvhB/i7J4zlZoCAdCBYMPncytA==
+"@vssue/api-gitlab-v4@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@vssue/api-gitlab-v4/-/api-gitlab-v4-0.8.1.tgz#c5ef3a4086f96cba8f1856fc82a45b068439f383"
+  integrity sha512-bpj86HQb5SKnORVLXBgohcSyFJrJhFdUHbcycDb1k0kmseXYtUjLhLtPtf145yOT4LM+j64fJIw/FHa+NYUTlQ==
   dependencies:
-    "@vssue/utils" "^0.7.3"
+    "@vssue/utils" "^0.8.1"
     axios "^0.18.0"
 
-"@vssue/utils@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@vssue/utils/-/utils-0.7.3.tgz#b4e4a9e2a6162a4828a52b6070bc870795c99d23"
-  integrity sha512-3/vCeKPDrZ8kiIk3qbiP9B+a46Gx7uNXsUxtdf4QePYfRCDFlTCY4CwVoLgxKGRRlG271rTjWP1gRM0S53D44g==
+"@vssue/utils@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@vssue/utils/-/utils-0.8.1.tgz#75d050279761705f4f93c56f5033bb6c64516f4c"
+  integrity sha512-dHxYR85IKUCxlZBk/hjfl+AkxbxtsS8DyKrp2dRXsTRaI0mZSDe4O6mj4XXFtlLBdPr18Lxle+XqjQNupl3y0Q==
   dependencies:
     date-fns "^1.29.0"
     qs "^6.6.0"
 
-"@vssue/vuepress-plugin-vssue@^0.7.2":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@vssue/vuepress-plugin-vssue/-/vuepress-plugin-vssue-0.7.3.tgz#9f275f79d5524e3cc39faf1ba4e1df2409d308b1"
-  integrity sha512-+Vc9kz++ELlTFnGvX7pFf6Y881K3Wkw7Of3gjgpErpa1JWp8bxNoArBPqnk7B58BTTRQ7E1wIqJphVfv4uCRog==
+"@vssue/vuepress-plugin-vssue@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@vssue/vuepress-plugin-vssue/-/vuepress-plugin-vssue-0.8.1.tgz#cbcefb4a3d99d6710b0ba8f8d1964f701963bb30"
+  integrity sha512-AhVswypp3CrKSW4D8lAIrEcyXMfkg8pktiUkoXJqdMO0UtYI3byUyx7KCwQaRboFAEuJa0gV4owjFU6TUikBLg==
   dependencies:
-    "@vssue/api-bitbucket-v2" "^0.7.3"
-    "@vssue/api-github-v3" "^0.7.3"
-    "@vssue/api-gitlab-v4" "^0.7.3"
-    vssue "^0.7.3"
+    "@vssue/api-bitbucket-v2" "^0.8.1"
+    "@vssue/api-github-v3" "^0.8.1"
+    "@vssue/api-gitlab-v4" "^0.8.1"
+    vssue "^0.8.1"
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0-beta.2":
   version "1.0.0-beta.2"
@@ -7804,12 +7804,12 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vssue@^0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/vssue/-/vssue-0.7.3.tgz#f7d1c337ce417934c217ea5f11e4afc2e185b27a"
-  integrity sha512-BPwAHzr22psWHunHIiE9UP2Yt8kVOSbk+priBp2sQsYmPiF9D12twimII3GvA+xEAOYVK9rAOnYFUasxvYwi/g==
+vssue@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/vssue/-/vssue-0.8.1.tgz#8667d589f4882d2ce5a6f977f463584c724542a1"
+  integrity sha512-836PfykguJDVnfSIApod000tzemqiwN96kEHhOIcuAcwk23A8IZhEWMz4OPRwPr3Ncu3v8EKVvcBfUfCd9icGg==
   dependencies:
-    "@vssue/utils" "^0.7.3"
+    "@vssue/utils" "^0.8.1"
     github-markdown-css "^2.10.0"
     vue "^2.5.21"
     vue-i18n "^8.7.0"

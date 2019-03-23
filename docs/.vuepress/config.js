@@ -134,6 +134,7 @@ module.exports = {
       repo: 'vuepress-theme-meteorlxy',
       clientId: 'cbda894952ba70c00666',
       clientSecret: '1ade785ca693bf3092be5e5338720d5ee43672b7',
+      autoCreateIssue: false,
     },
   },
 }
