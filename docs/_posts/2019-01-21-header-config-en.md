@@ -50,8 +50,8 @@ module.exports = {
 }
 ```
 
-- `exact` means ?
 - `link` can be an internal relative link (starting with `/`) or a full external link.
+- `exact` refer to [Vue-Router](https://router.vuejs.org/api/#exact)
 
 ## Header Title
 
