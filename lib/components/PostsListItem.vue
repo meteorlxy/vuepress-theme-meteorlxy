@@ -11,6 +11,18 @@
 
     <p class="post-info-list">
       <span
+        v-if="post.top"
+        class="post-info-item"
+      >
+        <IconInfo
+          type="top"
+          :title="$themeConfig.lang.top"
+        >
+          {{ $themeConfig.lang.top }}
+        </IconInfo>
+      </span>
+
+      <span
         v-if="post.createdAt"
         class="post-info-item"
       >

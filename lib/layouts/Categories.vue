@@ -9,7 +9,7 @@
         :to="cate.path"
       >
         <IconTag
-          icon="folder-open"
+          icon="category"
           :name="cate.name"
         />
       </RouterLink>

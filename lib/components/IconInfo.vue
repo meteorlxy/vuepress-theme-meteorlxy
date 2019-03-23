@@ -1,14 +1,5 @@
 <script>
 import Icon from './Icon.vue'
-const typeIconMap = {
-  'category': 'folder-open',
-  'date': 'calendar',
-  'email': 'mail',
-  'location': 'location',
-  'organization': 'team',
-  'tag': 'tag',
-  'tags': 'tags',
-}
 
 export default {
   name: 'IconInfo',
@@ -41,13 +32,11 @@ export default {
     type: {
       type: String,
       required: true,
-      validator: val => Object.keys(typeIconMap).includes(val),
     },
   },
 
   render (h, { props: { href, size, title, type }, children }) {
     const Component = href ? 'a' : 'span'
-    const icon = typeIconMap[type]
     return (
       <Component
         href={href}
@@ -55,7 +44,7 @@ export default {
       >
         <Icon
           class="info-icon"
-          name={icon}
+          name={type}
           size={size}
           title={title}
         />
