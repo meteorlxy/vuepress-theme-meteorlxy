@@ -18,10 +18,7 @@ vssue-id: 10
 
 The header bar of the blog can be divided into following sections:
 
-- [theme-title](/posts/2019/03/23/header-config-cn.html#theme-title)
-- [theme-nav](/posts/2019/03/23/header-config-cn.html#theme-navigation)
-- [header-title](/posts/2019/03/23/header-config-cn.html#header-title)
-- [header-image](/posts/2019/03/23/header-config-cn.html#header-image)
+<TOC />
 
 ## Theme Title
 
@@ -46,12 +43,12 @@ module.exports = {
       { text: 'Custom Pages', link: '/custom-pages/', exact: false },
       { text: 'Github', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy' },
     ],
-  }
+  },
 }
 ```
 
 - `link` can be an internal relative link (starting with `/`) or a full external link.
-- `exact` refer to [Vue-Router](https://router.vuejs.org/api/#exact)
+- `exact` refers to [Vue-Router](https://router.vuejs.org/api/#exact)
 
 ## Header Title
 
@@ -82,7 +79,7 @@ module.exports = {
     header: {
       showTitle: true,
     },
-  }
+  },
 }
 ```
 
@@ -99,9 +96,9 @@ module.exports = {
         useGeo: true,
         // url: 'img/bg.jpg',
         // url: ['img/bg.jpg','img/bg2.jpg'],
-      }
+      },
     },
-  }
+  },
 }
 ```
 
@@ -109,15 +106,14 @@ module.exports = {
 - `url: 'img/bg.jpg'`: to use bg.jpg by default.
 - `url: ['bg.jpg', 'bg2.jpg']`: fill in using the random pick list.
 
-
-The background image can also be set manually in the article manually and will override the default configuration.
+The background image can be set manually in the article and this will override the default configuration.
 
 ```yaml {8-11}
 ---
 category: demo
 tags:
-  - cn
-date: 2019-03-23
+  - en
+date: 2019-01-21
 title: Header Config
 header-title: true
 header-image:
@@ -133,7 +129,7 @@ If it is a local image, it should be uploaded to the `public` folder by default,
 The full path is similar to `.vuepress/public/assets/img/header-image-01.jpg`
 :::
 
-If you feel that the heights of the image is not appropriate, you can adjust it in `.vuepress/styles/palette.styl`:
+If you feel that the height of the image is not appropriate, you can adjust it in `.vuepress/styles/palette.styl`:
 
 ```styl {1}
 $bannerHeight ?= 12rem
