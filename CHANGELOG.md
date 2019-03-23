@@ -23,6 +23,34 @@
 
 * more header configs (close [#26](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/26)) ([a515120](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/a515120))
 
+### Breaking Changes
+
+Before:
+
+```js
+themeConfig: {
+  headerBackground: {
+    url: '/assets/img/bg.jpg',
+    useGeo: true,
+  },
+}
+```
+
+After:
+
+```js
+themeConfig: {
+  header: {
+    background: {
+      url: '/assets/img/bg.jpg',
+      useGeo: true,
+    },
+    // new
+    showTitle: true,
+  },
+}
+```
+
 
 
 # [1.0.0-alpha.28](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.27...v1.0.0-alpha.28) (2019-03-17)
