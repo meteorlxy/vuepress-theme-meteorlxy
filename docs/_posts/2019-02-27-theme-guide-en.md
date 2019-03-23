@@ -1,4 +1,5 @@
 ---
+top: 1
 category: docs
 tags:
   - en
@@ -531,6 +532,12 @@ These frontmatters only work for posts.
 
 ```yaml
 ---
+# Set if to pin the post to the top
+## Default `false`
+top: true
+top: 1
+top: 2
+
 # Set the category of current post
 category: docs
 
