@@ -2,7 +2,7 @@
 category: demo
 tags:
   - en
-date: 2019-01-21
+date: 2019-03-23
 title: Header Config
 header-image:
   - /assets/img/header-image-01.jpg
@@ -11,6 +11,8 @@ header-image:
 header-title: false
 vssue-id: 10
 ---
+
+Detailed guide for header config (Thanks to [@GalAster](https://github.com/GalAster))
 
 <!-- more -->
 

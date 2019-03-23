@@ -2,8 +2,9 @@
 category: demo
 tags:
   - zh
-date: 2019-01-20
+date: 2019-03-22
 title: 标题栏的设置
+lang: zh-CN
 header-image:
   - /assets/img/header-image-01.jpg
   - /assets/img/header-image-02.jpg
@@ -11,6 +12,8 @@ header-image:
 header-title: true
 vssue-id: 2
 ---
+
+关于标题栏设置的详细教程（感谢 [@GalAster](https://github.com/GalAster)）
 
 <!-- more -->
 
