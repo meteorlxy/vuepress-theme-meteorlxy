@@ -1,4 +1,5 @@
 ---
+top: 2
 category: docs
 tags:
   - zh
@@ -533,6 +534,12 @@ header-title: true
 
 ```yaml
 ---
+# 设置是否置顶当前文章
+## 默认： `false`
+top: true
+top: 1
+top: 2
+
 # 设置当前文章的分类
 category: docs
 

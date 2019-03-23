@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-meteorlxy",
-  "version": "1.0.0-alpha.30",
+  "version": "1.0.0-alpha.31",
   "description": "Vuepress theme - Meteorlxy",
   "author": "meteorlxy <meteor.lxy@foxmail.com>",
   "license": "MIT",
@@ -20,7 +20,8 @@
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs --dest docs-dist",
-    "lint": "eslint --fix --ext .js,.vue ."
+    "lint": "eslint --fix --ext .js,.vue .",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "husky": {
     "hooks": {
@@ -37,7 +38,7 @@
     "vuepress": "1.0.0-alpha.44"
   },
   "dependencies": {
-    "@vssue/vuepress-plugin-vssue": "^0.7.2",
+    "@vssue/vuepress-plugin-vssue": "^0.8.1",
     "@vue/babel-preset-jsx": "^1.0.0-beta.2",
     "@vuepress/plugin-back-to-top": "1.0.0-alpha.44",
     "@vuepress/plugin-google-analytics": "1.0.0-alpha.44",
@@ -51,6 +52,7 @@
     "vuepress-plugin-zooming": "^1.0.0"
   },
   "devDependencies": {
+    "conventional-changelog-cli": "^2.0.12",
     "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
