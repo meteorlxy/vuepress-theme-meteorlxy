@@ -12,9 +12,11 @@ header-title: false
 vssue-id: 10
 ---
 
-Detailed guide for header config (Thanks to [@GalAster](https://github.com/GalAster))
+Detailed guide for header config
 
 <!-- more -->
+
+> Thanks to [@GalAster](https://github.com/GalAster) for contributions to this post.
 
 ![](/assets/img/header-introduce.png)
 
