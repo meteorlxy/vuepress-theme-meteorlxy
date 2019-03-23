@@ -126,6 +126,7 @@ module.exports = {
       { text: 'Home', link: '/', exact: true },
       { text: 'Posts', link: '/posts/', exact: false },
       { text: 'Custom Pages', link: '/custom-pages/', exact: false },
+      { text: 'Changelog', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy/blob/master/CHANGELOG.md' },
       { text: 'Github', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy' },
     ],
 

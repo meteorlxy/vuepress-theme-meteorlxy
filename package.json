@@ -20,7 +20,8 @@
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs --dest docs-dist",
-    "lint": "eslint --fix --ext .js,.vue ."
+    "lint": "eslint --fix --ext .js,.vue .",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "husky": {
     "hooks": {
@@ -51,6 +52,7 @@
     "vuepress-plugin-zooming": "^1.0.0"
   },
   "devDependencies": {
+    "conventional-changelog-cli": "^2.0.12",
     "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
