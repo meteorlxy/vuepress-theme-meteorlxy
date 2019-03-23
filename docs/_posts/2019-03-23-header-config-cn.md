@@ -11,9 +11,9 @@ header-image:
 header-title: true
 ---
 
-![](/assets/img/header-introduce.png)
-
 <!-- more -->
+
+![](/assets/img/header-introduce.png)
 
 博客的标题栏分为这样几个部分:
 
