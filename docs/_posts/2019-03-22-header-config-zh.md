@@ -1,5 +1,5 @@
 ---
-category: demo
+category: docs
 tags:
   - zh
 date: 2019-03-22

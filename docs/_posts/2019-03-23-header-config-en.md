@@ -1,5 +1,5 @@
 ---
-category: demo
+category: docs
 tags:
   - en
 date: 2019-03-23
