@@ -376,6 +376,7 @@ module.exports = {
       repo: 'vuepress-theme-meteorlxy',
       clientId: 'MY_CLIENT_ID',
       clientSecret: 'MY_CLIENT_SECRET',
+      autoCreateIssue: process.env.NODE_ENV !== 'development', // Optional, this will not create issue autoly in development mode
     },
   },
 }

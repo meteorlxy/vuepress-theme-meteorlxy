@@ -378,6 +378,7 @@ module.exports = {
       repo: 'vuepress-theme-meteorlxy',
       clientId: 'MY_CLIENT_ID',
       clientSecret: 'MY_CLIENT_SECRET',
+      autoCreateIssue: process.env.NODE_ENV !== 'development', // 可选，这样设置可以在开发环境下不自动创建 Issue
     },
   },
 }
