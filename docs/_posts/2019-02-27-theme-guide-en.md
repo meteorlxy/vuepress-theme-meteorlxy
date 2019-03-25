@@ -1,4 +1,5 @@
 ---
+top: 1
 category: docs
 tags:
   - en
@@ -375,6 +376,7 @@ module.exports = {
       repo: 'vuepress-theme-meteorlxy',
       clientId: 'MY_CLIENT_ID',
       clientSecret: 'MY_CLIENT_SECRET',
+      autoCreateIssue: process.env.NODE_ENV !== 'development', // Optional, this will not create issue autoly in development mode
     },
   },
 }
@@ -531,6 +533,12 @@ These frontmatters only work for posts.
 
 ```yaml
 ---
+# Set if to pin the post to the top
+## Default `false`
+top: true
+top: 1
+top: 2
+
 # Set the category of current post
 category: docs
 

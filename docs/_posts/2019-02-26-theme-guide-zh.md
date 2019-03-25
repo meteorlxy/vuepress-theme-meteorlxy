@@ -1,4 +1,5 @@
 ---
+top: 2
 category: docs
 tags:
   - zh
@@ -377,6 +378,7 @@ module.exports = {
       repo: 'vuepress-theme-meteorlxy',
       clientId: 'MY_CLIENT_ID',
       clientSecret: 'MY_CLIENT_SECRET',
+      autoCreateIssue: process.env.NODE_ENV !== 'development', // 可选，这样设置可以在开发环境下不自动创建 Issue
     },
   },
 }
@@ -533,6 +535,12 @@ header-title: true
 
 ```yaml
 ---
+# 设置是否置顶当前文章
+## 默认： `false`
+top: true
+top: 1
+top: 2
+
 # 设置当前文章的分类
 category: docs
 

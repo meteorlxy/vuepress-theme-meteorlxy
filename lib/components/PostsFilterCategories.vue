@@ -9,7 +9,7 @@
       >
 
       <IconTag
-        icon="folder-open"
+        icon="category"
         :name="$themeConfig.lang.allCategories"
       />
     </label>
@@ -27,7 +27,7 @@
       >
 
       <IconTag
-        icon="folder-open"
+        icon="category"
         :name="category"
       />
     </label>
