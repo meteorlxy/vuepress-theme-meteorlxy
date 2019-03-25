@@ -126,8 +126,17 @@ export default {
     },
 
     headerStyle () {
-      return {
-        'background-image': !this.$ssrContext ? GeoPattern.generate(this.nickname, { color: '#eee' }).toDataUrl() : null,
+      if (this.info.background) {
+        return {
+          'background-image': `url(${this.info.background})`,
+          'background-repeat': 'no-repeat',
+          'background-position': 'center',
+          'background-size': 'cover',
+        }
+      } else {
+        return {
+          'background-image': !this.$ssrContext ? GeoPattern.generate(this.nickname, { color: '#eee' }).toDataUrl() : null,
+        }
       }
     },
   },

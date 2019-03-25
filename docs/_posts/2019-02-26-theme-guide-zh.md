@@ -134,7 +134,13 @@ module.exports = {
       avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
       // 或者放置在 .vuepress/public 文件夹，例如 .vuepress/public/img/avatar.jpg
       // avatar: '/img/avatar.jpg',
-      
+
+      // 个人信息背景图片
+      background: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
+      // 使用外链或者放置在 .vuepress/public 文件夹，例如 .vuepress/public/img/background.jpg
+      // background: '/img/background.jpg',
+      // 如果不设置会随机生成一个图案
+
 
       // 社交平台帐号信息
       sns: {

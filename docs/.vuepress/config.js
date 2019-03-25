@@ -55,7 +55,7 @@ module.exports = {
       organization: 'Xi\'an Jiao Tong University',
 
       avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
-
+      background: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
       sns: {
         github: {
           account: 'meteorlxy',
