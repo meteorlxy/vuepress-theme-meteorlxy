@@ -1,3 +1,18 @@
+# [1.0.0-alpha.32](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2019-03-28)
+
+
+### Bug Fixes
+
+* move sorter to posts-list ([ae76f65](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/ae76f65))
+* **$styles:** remove background-color of content ([149d4d3](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/149d4d3))
+
+
+### Features
+
+* **$i18n:** add language ja-JP ([#34](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/34)) ([d39a5ca](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/d39a5ca))
+
+
+
 # [1.0.0-alpha.31](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2019-03-23)
 
 
