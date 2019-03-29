@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-meteorlxy",
-  "version": "1.0.0-alpha.32",
+  "version": "1.0.0-alpha.31",
   "description": "Vuepress theme - Meteorlxy",
   "author": "meteorlxy <meteor.lxy@foxmail.com>",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs --dest docs-dist",
     "lint": "eslint --fix --ext .js,.vue .",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md"
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "husky": {
     "hooks": {
