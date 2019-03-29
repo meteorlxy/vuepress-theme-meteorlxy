@@ -135,11 +135,11 @@ module.exports = {
       // avatar: '/img/avatar.jpg',
 
       // Your personal info background image
+      // If you don't set the background, it will use random pattern (geopattern)
       // Set to external link
       background: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
       // Or put into `.vuepress/public` directory. E.g. `.vuepress/public/img/background.jpg`
       // background: '/img/background.jpg',
-      // If not set the background,it will use random pattern (geopattern)
 
       // Accounts of SNS
       sns: {
