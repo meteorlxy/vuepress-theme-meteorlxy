@@ -19,6 +19,7 @@
       <Vssue
         :title="vssueTitle"
         :issue-id="vssueId"
+        :options="vssueOptions"
       />
     </div>
   </div>
@@ -49,6 +50,19 @@ export default {
 
     vssueId () {
       return this.$frontmatter['vssue-id'] || undefined
+    },
+
+    vssueOptions () {
+      if (this.$site.themeConfig.comments && (
+        typeof this.$site.themeConfig.comments.platform === 'undefined' ||
+        this.$site.themeConfig.comments.platform === 'github'
+      )) {
+        const labels = (this.$site.themeConfig.comments && this.$site.themeConfig.comments.labels) || ['Vssue']
+        return {
+          labels: labels.concat(this.vssueTitle),
+        }
+      }
+      return {}
     },
   },
 }
