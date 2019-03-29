@@ -1,3 +1,13 @@
+# [1.0.0-alpha.34](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2019-03-29)
+
+
+### Bug Fixes
+
+* **$comments:** filter the comma for labels ([9fc7035](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/9fc7035))
+* use sorter in posts computed ([7da2255](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/7da2255))
+
+
+
 # [1.0.0-alpha.33](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2019-03-29)
 
 
