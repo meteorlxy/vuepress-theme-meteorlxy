@@ -59,7 +59,7 @@ export default {
       )) {
         const labels = (this.$site.themeConfig.comments && this.$site.themeConfig.comments.labels) || ['Vssue']
         return {
-          labels: labels.concat(this.vssueTitle),
+          labels: labels.concat(this.vssueTitle.replace(/,/g, '')),
         }
       }
       return {}
