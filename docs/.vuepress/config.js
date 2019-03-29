@@ -53,10 +53,8 @@ module.exports = {
       email: 'meteor.lxy@foxmail.com',
       location: 'Xi\'an City, China',
       organization: 'Xi\'an Jiao Tong University',
-
       avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
-
-      // background: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
+      // background: '/path/to/backgound-image',
       sns: {
         github: {
           account: 'meteorlxy',
