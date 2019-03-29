@@ -1,3 +1,13 @@
+# [1.0.0-alpha.33](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2019-03-29)
+
+
+### Bug Fixes
+
+* **$comments:** use title as label in github ([2d29d17](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/2d29d17))
+
+> NOTICE: Blogs using prior version of this theme should regenerate the issues, or add a label with the issue title to all the existing issues manually.
+
+
 # [1.0.0-alpha.32](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2019-03-28)
 
 
