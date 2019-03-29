@@ -53,11 +53,11 @@ export default {
 
   computed: {
     showTitle () {
-      return this.$frontmatter['header-title'] !== false && this.$site.themeConfig.header['showTitle'] !== false
+      return this.$frontmatter['header-title'] !== false && this.$themeConfig.header['showTitle'] !== false
     },
 
     backgroundConfig () {
-      return this.$site.themeConfig.header.background || {}
+      return this.$themeConfig.header.background || {}
     },
 
     backgroundImg () {

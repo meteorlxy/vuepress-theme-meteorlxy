@@ -43,7 +43,7 @@ export default {
 
   computed: {
     sns () {
-      return this.$site.themeConfig.personalInfo.sns || null
+      return this.$themeConfig.personalInfo.sns || null
     },
   },
 }

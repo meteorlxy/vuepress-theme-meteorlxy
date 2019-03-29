@@ -41,7 +41,7 @@ export default {
     },
 
     vssue () {
-      return this.$site.themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
+      return this.$themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
     },
 
     vssueTitle () {
@@ -53,11 +53,11 @@ export default {
     },
 
     vssueOptions () {
-      if (this.$site.themeConfig.comments && (
-        typeof this.$site.themeConfig.comments.platform === 'undefined' ||
-        this.$site.themeConfig.comments.platform === 'github'
+      if (this.$themeConfig.comments && (
+        typeof this.$themeConfig.comments.platform === 'undefined' ||
+        this.$themeConfig.comments.platform === 'github'
       )) {
-        const labels = (this.$site.themeConfig.comments && this.$site.themeConfig.comments.labels) || ['Vssue']
+        const labels = (this.$themeConfig.comments && this.$themeConfig.comments.labels) || ['Vssue']
         return {
           labels: labels.concat(this.vssueTitle.replace(/,/g, '')),
         }

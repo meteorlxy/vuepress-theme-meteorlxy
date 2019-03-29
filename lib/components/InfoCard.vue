@@ -94,7 +94,7 @@ export default {
 
   computed: {
     info () {
-      return this.$site.themeConfig.personalInfo || {}
+      return this.$themeConfig.personalInfo || {}
     },
 
     nickname () {

@@ -30,7 +30,7 @@
             'show': showNavLinks,
           }"
         >
-          <template v-for="nav of $site.themeConfig.nav">
+          <template v-for="nav of $themeConfig.nav">
             <RouterLink
               v-if="!isExternal(nav.link)"
               :key="nav.text"
