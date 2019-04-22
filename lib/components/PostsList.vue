@@ -103,7 +103,7 @@ export default {
   },
 
   watch: {
-    allPosts () {
+    listPosts () {
       this.page = 1
     },
   },
