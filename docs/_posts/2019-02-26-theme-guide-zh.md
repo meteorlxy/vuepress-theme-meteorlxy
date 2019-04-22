@@ -249,6 +249,19 @@ module.exports = {
       clientId: 'MY_CLIENT_ID',
       clientSecret: 'MY_CLIENT_SECRET',
     },
+
+    // 分页配置
+    pagination: {
+      perPage: 5,
+    },
+
+    // 默认页面（可选，默认全为 true）
+    defaultPages: {
+      // 是否允许主题自动添加 Home 页面 (url: /)
+      home: true,
+      // 是否允许主题自动添加 Posts 页面 (url: /posts/)
+      posts: true,
+    },
   },
 }
 ```

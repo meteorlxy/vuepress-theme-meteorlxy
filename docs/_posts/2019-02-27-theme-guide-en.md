@@ -247,6 +247,19 @@ module.exports = {
       clientId: 'MY_CLIENT_ID',
       clientSecret: 'MY_CLIENT_SECRET',
     },
+
+    // Pagination config
+    pagination: {
+      perPage: 5,
+    },
+
+    // Default Pages (Optional, the default value of all pages is `true`)
+    defaultPages: {
+      // Allow theme to add Home page (url: /)
+      home: true,
+      // Allow theme to add Posts page (url: /posts/)
+      posts: true,
+    },
   },
 }
 ```
