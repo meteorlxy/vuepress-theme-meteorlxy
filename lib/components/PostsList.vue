@@ -9,33 +9,34 @@
         {{ $themeConfig.lang.noRelatedPosts }}
       </div>
 
-      <TransitionFadeSlide
+      <div
         v-else
-        tag="div"
-        direction="x"
-        group
+        class="posts-items"
+        :key="page"
       >
-        <PostsListItem
-          v-for="post in listPosts"
-          :key="post.path"
-          :post="post"
-        />
-      </TransitionFadeSlide>
+        <TransitionFadeSlide
+          tag="div"
+          direction="x"
+          group
+        >
+          <PostsListItem
+            v-for="post in pagePosts"
+            :key="post.path"
+            :post="post"
+            :each-side="2"
+          />
+        </TransitionFadeSlide>
+      </div>
     </TransitionFadeSlide>
 
-    <div class="posts-paginator">
-      <ul v-if="total > 1">
-        <li
-          v-for="i in total"
-          :key="i"
-          :class="{
-            'active': page === i,
-          }"
-          @click="page = i"
-        >
-          {{ i }}
-        </li>
-      </ul>
+    <div
+      v-if="total > 1"
+      class="posts-paginator"
+    >
+      <Pagination
+        v-model="page"
+        :total="total"
+      />
     </div>
   </div>
 </template>
@@ -44,6 +45,7 @@
 import compareDesc from 'date-fns/compare_desc'
 import TransitionFadeSlide from './TransitionFadeSlide.vue'
 import PostsListItem from './PostsListItem.vue'
+import Pagination from './Pagination.vue'
 
 export default {
   name: 'PostsList',
@@ -51,6 +53,7 @@ export default {
   components: {
     TransitionFadeSlide,
     PostsListItem,
+    Pagination,
   },
 
   props: {
@@ -68,20 +71,16 @@ export default {
   },
 
   computed: {
-    pagination () {
-      return this.$themeConfig.pagination || {}
-    },
-
     perPage () {
-      return this.pagination.perPage || 10
+      return this.$themeConfig.pagination.perPage || 5
     },
 
     total () {
-      return Math.ceil(this.allPosts.length / this.perPage)
+      return Math.ceil(this.listPosts.length / this.perPage)
     },
 
-    allPosts () {
-      const listPosts = this.posts || this.$posts
+    listPosts () {
+      const allPosts = this.posts || this.$posts
 
       const pageSort = (p1, p2) => {
         if (p1.top === p2.top) {
@@ -93,13 +92,13 @@ export default {
         return p2.top ? 1 : -1
       }
 
-      return listPosts.sort(pageSort)
+      return allPosts.sort(pageSort)
     },
 
-    listPosts () {
+    pagePosts () {
       const begin = (this.page - 1) * this.perPage
       const end = begin + this.perPage
-      return this.allPosts.slice(begin, end)
+      return this.listPosts.slice(begin, end)
     },
   },
 
@@ -114,20 +113,6 @@ export default {
 <style lang="stylus" scoped>
 @require '~@theme/styles/variables'
 
-<<<<<<< HEAD
 .no-posts
   color $grayTextColor
-=======
-.posts-paginator
-  ul
-    list-style none
-    li
-      display inline-block
-      padding 0.5rem
-      &.active
-        color $accentColor
-        font-weight bold
-      &:not(.active)
-        cursor pointer
->>>>>>> e240967... feat: posts pagination
 </style>
