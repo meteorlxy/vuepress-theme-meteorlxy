@@ -1,3 +1,12 @@
+# [1.0.0-alpha.35](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2019-04-22)
+
+
+### Features
+
+* posts pagination ([#17](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/17)) ([4c79f9e](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/4c79f9e))
+
+
+
 # [1.0.0-alpha.34](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2019-03-29)
 
 
