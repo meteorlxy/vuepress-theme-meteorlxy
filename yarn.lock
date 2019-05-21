@@ -8516,10 +8516,10 @@ vuepress-plugin-container@^1.1.1:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-nprogress@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-nprogress/-/vuepress-plugin-nprogress-1.0.0.tgz#8ce561537cca470aaf1738b3e35e699d21149f7d"
-  integrity sha512-x2dwgDwfcgPwSr2Ah5IXOxZik16KJpdKrt7SsAK+sn1sR1B6Tyh1ziFyQVE43lb6GEERbzRTjAYoOrmuRPCbKw==
+vuepress-plugin-nprogress@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-nprogress/-/vuepress-plugin-nprogress-1.1.0.tgz#a9bb2df2ab642ad2ec1aaecdfefee5418fcd94db"
+  integrity sha512-iDia5eDygV6dAFmzIM15J350t1OGXMHv0SN47XVoTrMiJlIh21G79Fu7y2nkPVlZsMUpZYpBA9qSORlbjQgiEA==
   dependencies:
     nprogress "^0.2.0"
 
