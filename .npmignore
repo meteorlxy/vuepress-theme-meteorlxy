@@ -5,11 +5,7 @@ docs/
 docs-dist/
 .editorconfig
 .eslint*
-.gitattributes
-.gitignore
+.git*
 yarn.lock
-
-# Log files
-npm-debug.log
-yarn-debug.log
-yarn-error.log
+package-lock.json
+*.log
