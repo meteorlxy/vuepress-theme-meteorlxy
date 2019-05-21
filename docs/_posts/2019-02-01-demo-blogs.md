@@ -18,7 +18,7 @@ List of blogs that use this theme.
 
 ## English Blogs
 
-- Add yours here!
+- [@Lyricalz](https://mikey.dev)
 
 ## 中文博客
 
