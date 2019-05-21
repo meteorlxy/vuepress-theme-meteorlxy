@@ -1,3 +1,12 @@
+# [1.0.0-alpha.36](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2019-05-21)
+
+
+### Bug Fixes
+
+* sort pages in global computed properties ([246a48a](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/246a48a))
+
+
+
 # [1.0.0-alpha.35](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2019-04-22)
 
 
