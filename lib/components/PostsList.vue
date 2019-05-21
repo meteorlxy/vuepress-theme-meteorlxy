@@ -42,7 +42,6 @@
 </template>
 
 <script>
-import compareDesc from 'date-fns/compare_desc'
 import TransitionFadeSlide from './TransitionFadeSlide.vue'
 import PostsListItem from './PostsListItem.vue'
 import Pagination from './Pagination.vue'
@@ -80,19 +79,7 @@ export default {
     },
 
     listPosts () {
-      const allPosts = this.posts || this.$posts
-
-      const pageSort = (p1, p2) => {
-        if (p1.top === p2.top) {
-          return compareDesc(p1.createdAt, p2.createdAt)
-        }
-        if (p1.top && p2.top) {
-          return p1.top - p2.top
-        }
-        return p2.top ? 1 : -1
-      }
-
-      return allPosts.sort(pageSort)
+      return this.posts || this.$posts
     },
 
     pagePosts () {
