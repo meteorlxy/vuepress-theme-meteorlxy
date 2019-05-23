@@ -1,3 +1,12 @@
+# [1.0.0-alpha.37](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2019-05-23)
+
+
+### Features
+
+* add table-of-contents plugin ([46423c3](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/46423c3))
+
+
+
 # [1.0.0-alpha.36](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2019-05-21)
 
 
