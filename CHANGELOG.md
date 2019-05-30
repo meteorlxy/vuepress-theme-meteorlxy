@@ -1,3 +1,12 @@
+# [1.0.0-alpha.38](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2019-05-30)
+
+
+### Features
+
+* allow string for language config ([bdf6e24](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/bdf6e24))
+
+
+
 # [1.0.0-alpha.37](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2019-05-23)
 
 
