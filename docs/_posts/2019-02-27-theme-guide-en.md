@@ -109,7 +109,7 @@ module.exports = {
   // Theme config
   themeConfig: {
     // Language of this theme. See the [Theme Language] section below.
-    lang: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
+    lang: 'en-US',
 
     // Personal infomation (delete the fields if you don't have / don't want to display)
     personalInfo: {
@@ -314,6 +314,8 @@ To help users with different languages to use this theme, we provide some langua
 
 module.exports = {
   themeConfig: {
+    lang: 'en-US',
+    // OR
     lang: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
   },
 }

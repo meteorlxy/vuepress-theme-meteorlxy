@@ -110,7 +110,7 @@ module.exports = {
   // 主题配置
   themeConfig: {
     // 主题语言，参考下方 [主题语言] 章节
-    lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+    lang: 'zh-CN',
 
     // 个人信息（没有或不想设置的，删掉对应字段即可）
     personalInfo: {
@@ -316,6 +316,8 @@ npm run build
 
 module.exports = {
   themeConfig: {
+    lang: 'zh-CN',
+    // 或者
     lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
   },
 }
