@@ -1,3 +1,12 @@
+# [1.0.0-beta.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.38...v1.0.0-beta.1) (2019-06-04)
+
+
+### Reverts
+
+* fix($comments): use title as label in github ([21e22f8](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/21e22f8))
+
+
+
 # [1.0.0-alpha.38](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2019-05-30)
 
 
@@ -49,9 +58,9 @@
 
 ### Bug Fixes
 
-* **$comments:** use title as label in github ([2d29d17](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/2d29d17))
+* ~~**$comments:** use title as label in github ([2d29d17](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/2d29d17))~~ (Reverted in v1.0.0-beta.1)
 
-> NOTICE: Blogs using prior version of this theme should regenerate the issues, or add a label with the issue title to all the existing issues manually.
+> ~~NOTICE: Blogs using prior version of this theme should regenerate the issues, or add a label with the issue title to all the existing issues manually.~~ (Reverted in v1.0.0-beta.1)
 
 
 # [1.0.0-alpha.32](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2019-03-28)
