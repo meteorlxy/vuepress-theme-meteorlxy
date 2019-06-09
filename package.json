@@ -1,13 +1,14 @@
 {
   "name": "vuepress-theme-meteorlxy",
   "version": "1.0.0-beta.1",
-  "description": "Vuepress theme - Meteorlxy",
+  "description": "Vuepress blog theme - Meteorlxy",
   "author": "meteorlxy <meteor.lxy@foxmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
   "keywords": [
     "vuepress",
-    "theme"
+    "theme",
+    "blog"
   ],
   "homepage": "https://github.com/meteorlxy/vuepress-theme-meteorlxy",
   "repository": {
