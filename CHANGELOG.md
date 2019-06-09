@@ -1,3 +1,10 @@
+# [1.0.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-beta.1...v1.0.0) (2019-06-09)
+
+Version 1.0.0 release 
+
+> VuePress version 1.0.0 [release](https://github.com/vuejs/vuepress/releases/tag/v1.0.0)
+
+
 # [1.0.0-beta.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.38...v1.0.0-beta.1) (2019-06-04)
 
 
