@@ -10,7 +10,7 @@ vssue-id: 10
 
 Guide of `vuepress-theme-meteorlxy`.
 
-![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy/next.svg?style=flat)
+![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy.svg?style=flat)
 ![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
 
 <!-- more -->
@@ -34,21 +34,11 @@ mkdir my-blog
 cd my-blog
 ```
 
-Install `vuepress` and `vuepress-theme-meteorlxy`, remember to add `next` tag to install the `1.x` version:
+Install `vuepress` and `vuepress-theme-meteorlxy`:
 
 ```sh
-npm install vuepress@next vuepress-theme-meteorlxy@next
+npm install vuepress vuepress-theme-meteorlxy
 ```
-
-::: warning ATTENTION
-Vuepress 1.x is at alpha stage now, which may have breaking changes. If you have problem when installing with `@next`, suggest to lock the version of `vuepress` according to the `peerDependencies` of this theme. For example:
-
-```sh
-npm install \
-  vuepress@1.0.0-alpha.41 \
-  vuepress-theme-meteorlxy@1.0.0-alpha.22
-```
-:::
 
 Create `src/_posts` directory and the config file of Vuepress. The structure of your project looks like:
 
