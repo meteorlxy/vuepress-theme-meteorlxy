@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0...v1.0.1) (2019-06-09)
+
+
+### Bug Fixes
+
+* content class breaks code styles ([a50d059](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/a50d059))
+
+
+
 # [1.0.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-beta.1...v1.0.0) (2019-06-09)
 
 Version 1.0.0 release 
