@@ -5,7 +5,7 @@
     <article class="main-div">
       <Content
         :key="$page.path"
-        class="post-content"
+        class="post-content content"
       />
     </article>
 

@@ -3,7 +3,7 @@
     <div class="main-div">
       <Content
         :key="$page.path"
-        class="page-content"
+        class="page-content content"
       />
     </div>
   </div>
