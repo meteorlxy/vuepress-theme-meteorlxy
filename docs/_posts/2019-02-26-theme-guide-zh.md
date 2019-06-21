@@ -454,6 +454,24 @@ vssue: false
 如果你熟悉 Vssue，那么 `vssue-title` 对应的就是 Vssue 组件的 prop `title`，`vssue-id` 对应的就是 Vssue 组件的 prop `issue-id`。
 :::
 
+### 隐藏博文
+
+如果你的博文还没有完成，不想展示在文章列表中，只需要`published: false`来隐藏你的博文。
+
+```md {8}
+---
+category: hello
+tags:
+  - world
+date: 2019-01-21
+title: Hello, world!
+vssue: false
+published: false
+---
+
+这是一篇未完成的博文。
+```
+
 ### 禁用评论功能
 
 当然，如果你不想让你的博客拥有评论功能，你可以完全禁用它：

@@ -452,6 +452,24 @@ This is my first post.
 If you are familiar with Vssue, `vssue-title` is the prop `title` of Vssue component, and `vssue-id` is the prop `issue-id` of Vssue component.
 :::
 
+### Hide post
+
+If your blog hasn't finished yet and don't want to show it in the list of articles, just 'published: false' to hide your post.
+
+```md {8}
+---
+category: hello
+tags:
+  - world
+date: 2019-01-21
+title: Hello, world!
+vssue: false
+published: false
+---
+
+This is an unfinished post.
+```
+
 ### Disable Comments
 
 Of course, if you don't want comments on your blog, you can disable it totally:
