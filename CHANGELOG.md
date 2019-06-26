@@ -1,3 +1,84 @@
+## [1.0.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0...v1.0.1) (2019-06-09)
+
+
+### Bug Fixes
+
+* content class breaks code styles ([a50d059](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/a50d059))
+
+
+
+# [1.0.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-beta.1...v1.0.0) (2019-06-09)
+
+Version 1.0.0 release 
+
+> VuePress version 1.0.0 [release](https://github.com/vuejs/vuepress/releases/tag/v1.0.0)
+
+
+# [1.0.0-beta.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.38...v1.0.0-beta.1) (2019-06-04)
+
+
+### Reverts
+
+* fix($comments): use title as label in github ([21e22f8](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/21e22f8))
+
+
+
+# [1.0.0-alpha.38](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2019-05-30)
+
+
+### Features
+
+* allow string for language config ([bdf6e24](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/bdf6e24))
+
+
+
+# [1.0.0-alpha.37](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2019-05-23)
+
+
+### Features
+
+* add table-of-contents plugin ([46423c3](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/46423c3))
+
+
+
+# [1.0.0-alpha.36](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2019-05-21)
+
+
+### Bug Fixes
+
+* sort pages in global computed properties ([246a48a](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/246a48a))
+
+
+
+# [1.0.0-alpha.35](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2019-04-22)
+
+
+### Features
+
+* posts pagination ([#17](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/17)) ([4c79f9e](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/4c79f9e))
+
+
+
+# [1.0.0-alpha.34](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2019-03-29)
+
+
+### Bug Fixes
+
+* **$comments:** filter the comma for labels ([9fc7035](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/9fc7035))
+* use sorter in posts computed ([7da2255](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/7da2255))
+
+
+
+# [1.0.0-alpha.33](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2019-03-29)
+
+
+### Bug Fixes
+
+* ~~**$comments:** use title as label in github ([2d29d17](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/2d29d17))~~ (Reverted in v1.0.0-beta.1)
+
+> ~~NOTICE: Blogs using prior version of this theme should regenerate the issues, or add a label with the issue title to all the existing issues manually.~~ (Reverted in v1.0.0-beta.1)
+
+
 # [1.0.0-alpha.32](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2019-03-28)
 
 

@@ -10,7 +10,7 @@ vssue-id: 10
 
 Guide of `vuepress-theme-meteorlxy`.
 
-![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy/next.svg?style=flat)
+![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy.svg?style=flat)
 ![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
 
 <!-- more -->
@@ -34,21 +34,11 @@ mkdir my-blog
 cd my-blog
 ```
 
-Install `vuepress` and `vuepress-theme-meteorlxy`, remember to add `next` tag to install the `1.x` version:
+Install `vuepress` and `vuepress-theme-meteorlxy`:
 
 ```sh
-npm install vuepress@next vuepress-theme-meteorlxy@next
+npm install vuepress vuepress-theme-meteorlxy
 ```
-
-::: warning ATTENTION
-Vuepress 1.x is at alpha stage now, which may have breaking changes. If you have problem when installing with `@next`, suggest to lock the version of `vuepress` according to the `peerDependencies` of this theme. For example:
-
-```sh
-npm install \
-  vuepress@1.0.0-alpha.41 \
-  vuepress-theme-meteorlxy@1.0.0-alpha.22
-```
-:::
 
 Create `src/_posts` directory and the config file of Vuepress. The structure of your project looks like:
 
@@ -109,7 +99,7 @@ module.exports = {
   // Theme config
   themeConfig: {
     // Language of this theme. See the [Theme Language] section below.
-    lang: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
+    lang: 'en-US',
 
     // Personal infomation (delete the fields if you don't have / don't want to display)
     personalInfo: {
@@ -254,6 +244,19 @@ module.exports = {
       clientId: 'MY_CLIENT_ID',
       clientSecret: 'MY_CLIENT_SECRET',
     },
+
+    // Pagination config
+    pagination: {
+      perPage: 5,
+    },
+
+    // Default Pages (Optional, the default value of all pages is `true`)
+    defaultPages: {
+      // Allow theme to add Home page (url: /)
+      home: true,
+      // Allow theme to add Posts page (url: /posts/)
+      posts: true,
+    },
   },
 }
 ```
@@ -308,6 +311,8 @@ To help users with different languages to use this theme, we provide some langua
 
 module.exports = {
   themeConfig: {
+    lang: 'en-US',
+    // OR
     lang: require('vuepress-theme-meteorlxy/lib/langs/en-US'),
   },
 }

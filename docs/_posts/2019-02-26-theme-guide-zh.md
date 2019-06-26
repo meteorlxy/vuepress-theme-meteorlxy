@@ -11,7 +11,7 @@ vssue-id: 2
 
 `vuepress-theme-meteorlxy` 主题使用指南
 
-![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy/next.svg?style=flat)
+![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy.svg?style=flat)
 ![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
 
 <!-- more -->
@@ -35,21 +35,11 @@ mkdir my-blog
 cd my-blog
 ```
 
-安装 `vuepress` 和 `vuepress-theme-meteorlxy`，注意添加 `next` 标签安装 `1.x` 版本：
+安装 `vuepress` 和 `vuepress-theme-meteorlxy`：
 
 ```sh
-npm install vuepress@next vuepress-theme-meteorlxy@next
+npm install vuepress vuepress-theme-meteorlxy
 ```
-
-::: warning 注意
-现在 Vuepress 1.x 还处于 Alpha 阶段，经常会发生改动，如果直接安装 `@next` 后使用主题出现问题的话，建议按照本主题的 `peerDependencies` 要求锁定对应的 `vuepress` 版本号。例如：
-
-```sh
-npm install \
-  vuepress@1.0.0-alpha.41 \
-  vuepress-theme-meteorlxy@1.0.0-alpha.22
-```
-:::
 
 创建 `src/_posts` 文件夹和 Vuepress 配置文件，项目结构大致为：
 
@@ -110,7 +100,7 @@ module.exports = {
   // 主题配置
   themeConfig: {
     // 主题语言，参考下方 [主题语言] 章节
-    lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
+    lang: 'zh-CN',
 
     // 个人信息（没有或不想设置的，删掉对应字段即可）
     personalInfo: {
@@ -255,6 +245,19 @@ module.exports = {
       clientId: 'MY_CLIENT_ID',
       clientSecret: 'MY_CLIENT_SECRET',
     },
+
+    // 分页配置
+    pagination: {
+      perPage: 5,
+    },
+
+    // 默认页面（可选，默认全为 true）
+    defaultPages: {
+      // 是否允许主题自动添加 Home 页面 (url: /)
+      home: true,
+      // 是否允许主题自动添加 Posts 页面 (url: /posts/)
+      posts: true,
+    },
   },
 }
 ```
@@ -309,6 +312,8 @@ npm run build
 
 module.exports = {
   themeConfig: {
+    lang: 'zh-CN',
+    // 或者
     lang: require('vuepress-theme-meteorlxy/lib/langs/zh-CN'),
   },
 }

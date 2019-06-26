@@ -5,7 +5,7 @@
     <article class="main-div">
       <Content
         :key="$page.path"
-        class="post-content"
+        class="post-content content"
       />
     </article>
 
@@ -40,7 +40,7 @@ export default {
     },
 
     vssue () {
-      return this.$site.themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
+      return this.$themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
     },
 
     vssueTitle () {

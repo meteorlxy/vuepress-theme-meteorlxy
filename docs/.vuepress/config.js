@@ -43,9 +43,7 @@ module.exports = {
   theme: path.resolve(__dirname, '../../lib'),
 
   themeConfig: {
-    lang: require(path.resolve(__dirname, '../../lib/langs/en-US')),
-    // lang: require(path.resolve(__dirname, '../../lib/langs/zh-CN')),
-    // lang: require(path.resolve(__dirname, '../../lib/langs/pt-BR')),
+    lang: 'en-US',
 
     personalInfo: {
       nickname: 'meteorlxy',
@@ -135,6 +133,10 @@ module.exports = {
       clientId: 'cbda894952ba70c00666',
       clientSecret: '1ade785ca693bf3092be5e5338720d5ee43672b7',
       autoCreateIssue: false,
+    },
+
+    pagination: {
+      perPage: 5,
     },
   },
 }
