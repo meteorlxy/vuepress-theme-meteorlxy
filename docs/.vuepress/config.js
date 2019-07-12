@@ -49,8 +49,8 @@ module.exports = {
       nickname: 'meteorlxy',
       description: 'Happy Coding<br/>Happy Life',
       email: 'meteor.lxy@foxmail.com',
-      location: 'Xi\'an City, China',
-      organization: 'Xi\'an Jiao Tong University',
+      location: 'Shenzhen, China',
+      organization: 'Tencent',
 
       avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
 
