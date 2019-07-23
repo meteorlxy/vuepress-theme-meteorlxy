@@ -7,9 +7,9 @@
     >
       <input
         v-show="false"
+        v-model="selectedTags"
         type="checkbox"
         :value="tag"
-        v-model="selectedTags"
       >
 
       <IconTag

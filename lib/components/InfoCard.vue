@@ -16,11 +16,13 @@
         {{ nickname }}
       </section>
 
+      <!-- eslint-disable vue/no-v-html -->
       <section
         v-if="description"
         class="info-desc"
         v-html="description"
       />
+      <!-- eslint-enable vue/no-v-html -->
 
       <section class="info-contact">
         <section v-if="location">

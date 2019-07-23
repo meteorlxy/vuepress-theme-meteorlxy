@@ -3,9 +3,9 @@
     <label class="tag-checkbox">
       <input
         v-show="false"
+        v-model="selectedCategory"
         type="radio"
         :value="null"
-        v-model="selectedCategory"
       >
 
       <IconTag
@@ -21,9 +21,9 @@
     >
       <input
         v-show="false"
+        v-model="selectedCategory"
         type="radio"
         :value="category"
-        v-model="selectedCategory"
       >
 
       <IconTag

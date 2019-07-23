@@ -1,9 +1,9 @@
 <template>
   <TransitionFadeSlide>
     <div
+      :key="showAside"
       class="container clearfix"
       :class="containerClass"
-      :key="showAside"
     >
       <main class="main">
         <TransitionFadeSlide>
