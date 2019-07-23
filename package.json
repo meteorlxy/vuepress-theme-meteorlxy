@@ -38,6 +38,19 @@
       "git add"
     ]
   },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "standard",
+      "plugin:vue/recommended"
+    ],
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ]
+    }
+  },
   "peerDependencies": {
     "vuepress": "^1.0.0"
   },
