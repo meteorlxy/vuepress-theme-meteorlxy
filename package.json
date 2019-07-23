@@ -4,7 +4,6 @@
   "description": "Vuepress blog theme - Meteorlxy",
   "author": "meteorlxy <meteor.lxy@foxmail.com>",
   "license": "MIT",
-  "main": "lib/index.js",
   "keywords": [
     "vuepress",
     "theme",
@@ -18,6 +17,10 @@
   "bugs": {
     "url": "https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues"
   },
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs --dest docs-dist",
