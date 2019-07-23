@@ -55,7 +55,7 @@ export default {
     },
 
     showAside () {
-      if (this.$page.frontmatter.hasOwnProperty('aside')) {
+      if ('aside' in this.$page.frontmatter) {
         return this.$page.frontmatter.aside
       }
       return true

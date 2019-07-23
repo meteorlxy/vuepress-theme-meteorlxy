@@ -85,7 +85,7 @@ export default {
   computed: {
     navbarClass () {
       return {
-        'fixed': this.fixed,
+        fixed: this.fixed,
       }
     },
   },

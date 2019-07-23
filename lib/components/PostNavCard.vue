@@ -56,9 +56,9 @@ export default {
   computed: {
     style () {
       return {
-        'position': this.fixed ? 'fixed' : 'relative',
-        'top': this.fixed ? `${this.navbarHeight}px` : 0,
-        'width': `${this.width}px`,
+        position: this.fixed ? 'fixed' : 'relative',
+        top: this.fixed ? `${this.navbarHeight}px` : 0,
+        width: `${this.width}px`,
       }
     },
 

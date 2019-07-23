@@ -74,7 +74,7 @@ export default {
     },
 
     paginators () {
-      let paginators = []
+      const paginators = []
       if (this.lastPage < this.eachSide * 2 + 4) {
         for (let i = this.firstPage; i < this.lastPage + 1; ++i) {
           paginators.push({
