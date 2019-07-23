@@ -115,6 +115,12 @@ export default {
       word-break normal
       margin 0.5rem 0
       padding-left 2rem
+      max-height calc(100vh - 16rem)
+      overflow-y scroll
+      overflow -moz-scrollbars-none
+      -ms-overflow-style none
+      &::-webkit-scrollbar
+        width 0 !important
       ul
         padding-left 0.8rem
   .post-nav-comments a
