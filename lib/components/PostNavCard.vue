@@ -116,7 +116,9 @@ export default {
     margin 0.5rem 0
     padding-left 2rem
     max-height calc(100vh - 16rem)
-    overflow hidden auto
+    // separate overflow to be compatible with Safari
+    overflow-x hidden
+    overflow-y auto
     scrollbar-width thin
     &::-webkit-scrollbar
       width 3px
