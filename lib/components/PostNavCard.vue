@@ -109,6 +109,7 @@ export default {
   color $grayTextColor
   word-break break-all
   line-height 160%
+  overflow-y auto
   .icon
     fill $grayTextColor
   .post-nav-toc > ul
@@ -116,7 +117,6 @@ export default {
       margin 0.5rem 0
       padding-left 2rem
       max-height calc(100vh - 16rem)
-      overflow auto
       &::-webkit-scrollbar
         width 0 !important
       ul
