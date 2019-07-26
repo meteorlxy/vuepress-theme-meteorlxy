@@ -112,17 +112,22 @@ export default {
   .icon
     fill $grayTextColor
   .post-nav-toc > ul
-      word-break normal
-      margin 0.5rem 0
-      padding-left 2rem
-      max-height calc(100vh - 16rem)
-      overflow-y scroll
-      overflow -moz-scrollbars-none
-      -ms-overflow-style none
-      &::-webkit-scrollbar
-        width 0 !important
-      ul
-        padding-left 0.8rem
+    word-break normal
+    margin 0.5rem 0
+    padding-left 2rem
+    max-height calc(100vh - 16rem)
+    // separate overflow to be compatible with Safari
+    overflow-x hidden
+    overflow-y auto
+    scrollbar-width thin
+    &::-webkit-scrollbar
+      width 3px
+    &::-webkit-scrollbar-track
+      background-color $borderColor
+    &::-webkit-scrollbar-thumb
+      background-color $lightTextColor
+    ul
+      padding-left 0.8rem
   .post-nav-comments a
     color $grayTextColor
     &:hover
