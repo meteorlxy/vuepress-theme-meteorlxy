@@ -116,7 +116,7 @@ export default {
       margin 0.5rem 0
       padding-left 2rem
       max-height calc(100vh - 16rem)
-      overflow hidden
+      overflow auto
       &::-webkit-scrollbar
         width 0 !important
       ul
