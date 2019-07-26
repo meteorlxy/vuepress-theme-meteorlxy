@@ -109,18 +109,23 @@ export default {
   color $grayTextColor
   word-break break-all
   line-height 160%
-  overflow-y auto
   .icon
     fill $grayTextColor
   .post-nav-toc > ul
-      word-break normal
-      margin 0.5rem 0
-      padding-left 2rem
-      max-height calc(100vh - 16rem)
-      &::-webkit-scrollbar
-        width 0 !important
-      ul
-        padding-left 0.8rem
+    word-break normal
+    margin 0.5rem 0
+    padding-left 2rem
+    max-height calc(100vh - 16rem)
+    overflow hidden auto
+    scrollbar-width thin
+    &::-webkit-scrollbar
+      width 3px
+    &::-webkit-scrollbar-track
+      background-color $borderColor
+    &::-webkit-scrollbar-thumb
+      background-color $lightTextColor
+    ul
+      padding-left 0.8rem
   .post-nav-comments a
     color $grayTextColor
     &:hover
