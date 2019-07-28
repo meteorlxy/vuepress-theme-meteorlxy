@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.1.0...v1.2.0) (2019-07-28)
+
+
+### Features
+
+* support draft posts ([#47](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/47)) ([8bb5ed5](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/8bb5ed5))
+
+
+
 # [1.1.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.2...v1.1.0) (2019-07-28)
 
 
