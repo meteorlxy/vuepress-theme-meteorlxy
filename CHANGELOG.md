@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.2...v1.1.0) (2019-07-28)
+
+
+### Bug Fixes
+
+* navbar menu failed in ios (close [#38](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/38), [#50](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/50)) ([#51](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/51)) ([c0f7bea](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/c0f7bea))
+
+
+### Features
+
+* better scrollbar of post-nav-toc ([#52](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/52)) ([ba9b860](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/ba9b860))
+
+
+
 ## [1.0.2](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.1...v1.0.2) (2019-07-23)
 
 
