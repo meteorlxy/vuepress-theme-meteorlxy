@@ -456,17 +456,17 @@ vssue: false
 
 ### 隐藏博文
 
-如果你的博文还没有完成，不想展示在文章列表中，只需要`published: false`来隐藏你的博文。
+如果你的博文还没有完成，不想展示在文章列表中，在 frontmatter 中设置 `draft: true` 即可：
 
-```md {8}
+```md {2}
 ---
+draft: true
 category: hello
 tags:
   - world
 date: 2019-01-21
 title: Hello, world!
 vssue: false
-published: false
 ---
 
 这是一篇未完成的博文。
