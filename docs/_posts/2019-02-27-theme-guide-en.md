@@ -452,19 +452,19 @@ This is my first post.
 If you are familiar with Vssue, `vssue-title` is the prop `title` of Vssue component, and `vssue-id` is the prop `issue-id` of Vssue component.
 :::
 
-### Hide post
+### Draft post
 
-If your blog hasn't finished yet and don't want to show it in the list of articles, just 'published: false' to hide your post.
+If your post is not finished and you don't want to show it in the posts list, set `draft: true` in the frontmatter:
 
-```md {8}
+```md {2}
 ---
+draft: true
 category: hello
 tags:
   - world
 date: 2019-01-21
 title: Hello, world!
 vssue: false
-published: false
 ---
 
 This is an unfinished post.
