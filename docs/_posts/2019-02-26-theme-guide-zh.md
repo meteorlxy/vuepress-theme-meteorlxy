@@ -205,6 +205,18 @@ module.exports = {
           account: 'meteorlxy',
           link: 'https://hub.docker.com/u/meteorlxy',
         },
+
+        // CSDN 帐号和链接
+        csdn: {
+          account: '',
+          link: 'https://www.csdn.net/',
+        },
+
+        // 掘金 帐号和链接
+        juejin: {
+          account: 'meteorlxy',
+          link: 'https://juejin.im/user/5c6fa9dde51d453fcb7baf09',
+        },
       },
     },
 
