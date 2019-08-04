@@ -41,6 +41,12 @@ const nameMap = {
   instagram: {
     title: 'Instagram',
   },
+  csdn: {
+    title: 'CSDN',
+  },
+  juejin: {
+    title: '掘金',
+  },
 }
 
 export default {
