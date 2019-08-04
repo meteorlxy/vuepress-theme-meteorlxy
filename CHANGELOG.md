@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.2.0...v1.3.0) (2019-08-04)
+
+
+### Bug Fixes
+
+* missing toc header ([4e719d3](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/4e719d3))
+
+
+### Features
+
+* add csdn and juejin icons ([#55](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/55)) ([31d49a8](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/31d49a8))
+
+
+
 # [1.2.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.1.0...v1.2.0) (2019-07-28)
 
 
