@@ -203,6 +203,18 @@ module.exports = {
           account: 'meteorlxy',
           link: 'https://hub.docker.com/u/meteorlxy',
         },
+
+        // CSDN account and link
+        csdn: {
+          account: '',
+          link: 'https://www.csdn.net/',
+        },
+
+        // Juejin account and link
+        juejin: {
+          account: 'meteorlxy',
+          link: 'https://juejin.im/user/5c6fa9dde51d453fcb7baf09',
+        },
       },
     },
 
