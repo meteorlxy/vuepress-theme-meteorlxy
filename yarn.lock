@@ -8723,10 +8723,10 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-plugin-table-of-contents@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-table-of-contents/-/vuepress-plugin-table-of-contents-1.0.1.tgz#b86d00973404020ba2dc80d69cc4d9b8ed86a597"
-  integrity sha512-l4CL8/wY2wWI0pdiEQy03+6KNmEKazZuAjZYdyd03si/SY0YjuGVWCnkL+ZFYq5TLZJcRE0vwjNu9uBhhi/2Pw==
+vuepress-plugin-table-of-contents@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-table-of-contents/-/vuepress-plugin-table-of-contents-1.0.2.tgz#0ab6b7440a388cc3921d788d41c12c30deae1f74"
+  integrity sha512-RQXm8pmwtcRuTJjsvZg9iVjpcQxGXNtMw/8gicUOUB6rmKJihLvocRjIxdbNyiNUFlUqr7sRttzBFypGL7Uicw==
 
 vuepress-plugin-zooming@^1.0.0:
   version "1.1.1"
