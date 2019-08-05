@@ -17,6 +17,9 @@ module.exports = {
     ['@vuepress/google-analytics', {
       ga: 'UA-132770851-2',
     }],
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10,
+    }],
   ],
 
   chainWebpack: (config, isServer) => {
@@ -127,6 +130,8 @@ module.exports = {
     },
 
     lastUpdated: true,
+
+    useSearchBox: true, // 启用Header搜索框
 
     nav: [
       { text: 'Home', link: '/', exact: true },
