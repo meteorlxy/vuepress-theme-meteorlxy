@@ -18,8 +18,8 @@ List of blogs that use this theme.
 
 ## English Blogs
 
-- [@acq688](https://amandaquint.com)
 - [@Lyricalz](https://mikey.dev)
+- [@acq688](https://amandaquint.com)
 
 ## 中文博客
 
