@@ -74,6 +74,7 @@
     "vuepress-plugin-zooming": "^1.0.0"
   },
   "devDependencies": {
+    "@vuepress/plugin-search": "^1.0.3",
     "conventional-changelog-cli": "^2.0.21",
     "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
