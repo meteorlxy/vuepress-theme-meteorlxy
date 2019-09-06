@@ -1,3 +1,13 @@
+## [1.3.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.3.0...v1.3.1) (2019-09-06)
+
+
+### Bug Fixes
+
+* update zooming after page navigation ([8206383](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/8206383))
+* upgrade plugin-zooming ([e6c19e7](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/e6c19e7))
+
+
+
 # [1.3.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.2.0...v1.3.0) (2019-08-04)
 
 
