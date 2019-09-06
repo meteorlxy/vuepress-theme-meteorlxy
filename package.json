@@ -30,13 +30,19 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "*.{js,vue}": [
       "eslint --fix",
       "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   },
   "eslintConfig": {
@@ -74,6 +80,8 @@
     "vuepress-plugin-zooming": "^1.1.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "conventional-changelog-cli": "^2.0.21",
     "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
