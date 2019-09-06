@@ -8728,10 +8728,10 @@ vuepress-plugin-table-of-contents@^1.0.2:
   resolved "https://registry.yarnpkg.com/vuepress-plugin-table-of-contents/-/vuepress-plugin-table-of-contents-1.0.2.tgz#0ab6b7440a388cc3921d788d41c12c30deae1f74"
   integrity sha512-RQXm8pmwtcRuTJjsvZg9iVjpcQxGXNtMw/8gicUOUB6rmKJihLvocRjIxdbNyiNUFlUqr7sRttzBFypGL7Uicw==
 
-vuepress-plugin-zooming@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-zooming/-/vuepress-plugin-zooming-1.1.1.tgz#53169f1c4e0a8bf43d45711fec1e6d8a1dde9468"
-  integrity sha512-ugp91JPMOQ09IfwcYS+Er0/O8uwBjhVB/+sN7qWjNFvtQ52OoC95TQlQjG013N+3VLSEEqfK7kkkpZPf7wH7+Q==
+vuepress-plugin-zooming@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-zooming/-/vuepress-plugin-zooming-1.1.2.tgz#1751f043221500132913904c3bcd3aef6830b116"
+  integrity sha512-z9GvOKlU2CkiW55R2v3F1b+WvOIFeyRS31uN9PLHb4eDfXteOQtKMsWP+Le7lMz0KP9R1zy+8kt/3C35rDfDYg==
   dependencies:
     zooming "^2.1.1"
 

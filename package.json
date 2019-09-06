@@ -71,7 +71,7 @@
     "vuepress-plugin-nprogress": "^1.1.0",
     "vuepress-plugin-smooth-scroll": "^0.0.3",
     "vuepress-plugin-table-of-contents": "^1.0.2",
-    "vuepress-plugin-zooming": "^1.0.0"
+    "vuepress-plugin-zooming": "^1.1.2"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.21",
