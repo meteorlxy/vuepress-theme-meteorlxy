@@ -157,6 +157,11 @@ export default {
     setPage (targetPage) {
       if (targetPage <= this.lastPage && targetPage >= this.firstPage) {
         this.$emit('input', targetPage)
+
+        // update zooming after page navigation
+        this.$nextTick(() => {
+          this.$vuepress.zooming.updateDelay()
+        })
       }
     },
   },
