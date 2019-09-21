@@ -35,7 +35,7 @@
         <span> | </span>
 
         <a
-          href="https://vuepress-theme-meteorlxy.meteorlxy.cn/"
+          href="https://github.com/meteorlxy/vuepress-theme-meteorlxy"
           target="_blank"
         >
           meteorlxy
