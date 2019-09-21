@@ -24,7 +24,7 @@
   "scripts": {
     "build": "vuepress build docs --dest docs-dist",
     "dev": "vuepress dev docs --temp .temp",
-    "lint": "eslint --ext .js,.vue .",
+    "lint": "eslint --ext .js,.vue lib docs",
     "publish": "git push origin master:master --tags",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md"
   },
@@ -56,6 +56,12 @@
     ],
     "root": true,
     "rules": {
+      "dot-notation": [
+        "error",
+        {
+          "allowPattern": "^$"
+        }
+      ],
       "comma-dangle": [
         "error",
         "always-multiline"
