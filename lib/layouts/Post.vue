@@ -36,15 +36,15 @@ export default {
 
   computed: {
     meta () {
-      return this.$frontmatter['meta'] !== false
+      return this.$frontmatter.meta !== false
     },
 
     vssue () {
-      return this.$themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
+      return this.$themeConfig.comments !== false && this.$frontmatter.vssue !== false && (this.vssueTitle || this.vssueId)
     },
 
     vssueTitle () {
-      return this.$frontmatter['vssue-title'] || this.$frontmatter['title'] || undefined
+      return this.$frontmatter['vssue-title'] || this.$frontmatter.title || undefined
     },
 
     vssueId () {

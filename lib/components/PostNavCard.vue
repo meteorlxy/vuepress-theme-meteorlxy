@@ -75,8 +75,8 @@ export default {
     },
 
     showComments () {
-      return this.$themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (
-        this.$frontmatter['vssue-id'] || this.$frontmatter['vssue-title'] || this.$frontmatter['title']
+      return this.$themeConfig.comments !== false && this.$frontmatter.vssue !== false && (
+        this.$frontmatter['vssue-id'] || this.$frontmatter['vssue-title'] || this.$frontmatter.title
       )
     },
   },

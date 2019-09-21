@@ -53,7 +53,7 @@ export default {
 
   computed: {
     showTitle () {
-      return this.$frontmatter['header-title'] !== false && this.$themeConfig.header['showTitle'] !== false
+      return this.$frontmatter['header-title'] !== false && this.$themeConfig.header.showTitle !== false
     },
 
     backgroundConfig () {
@@ -62,7 +62,7 @@ export default {
 
     backgroundImg () {
       // frontmatter > themeConfig
-      return this.$frontmatter['header-image'] || this.backgroundConfig['url'] || null
+      return this.$frontmatter['header-image'] || this.backgroundConfig.url || null
     },
 
     style () {
