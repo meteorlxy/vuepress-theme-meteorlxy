@@ -126,6 +126,12 @@ module.exports = {
       showTitle: true,
     },
 
+    footer: {
+      poweredBy: true,
+      poweredByTheme: true,
+      custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
+    },
+
     lastUpdated: true,
 
     nav: [

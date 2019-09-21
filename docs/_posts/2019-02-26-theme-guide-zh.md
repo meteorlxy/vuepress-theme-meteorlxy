@@ -13,6 +13,7 @@ vssue-id: 2
 
 ![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy.svg?style=flat)
 ![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
+![](https://img.shields.io/github/stars/meteorlxy/vuepress-theme-meteorlxy?style=social)
 
 <!-- more -->
 
@@ -107,7 +108,7 @@ module.exports = {
       // 昵称
       nickname: 'meteorlxy',
 
-      // 个人简介
+      // 个人简介 (支持 HTML)
       description: 'Happy Coding<br/>Happy Life',
 
       // 电子邮箱
@@ -220,7 +221,7 @@ module.exports = {
       },
     },
 
-    // 上方 header 的相关设置
+    // 上方 header 的相关设置 (可选)
     header: {
       // header 的背景，可以使用图片，或者随机变化的图案（geopattern）
       background: {
@@ -233,6 +234,18 @@ module.exports = {
 
       // 是否在 header 显示标题
       showTitle: true,
+    },
+
+    // 底部 footer 的相关设置 (可选)
+    footer: {
+      // 是否显示 Powered by VuePress
+      poweredBy: true,
+
+      // 是否显示使用的主题
+      poweredByTheme: true,
+
+      // 添加自定义 footer (支持 HTML)
+      custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
     },
 
     // 是否显示文章的最近更新时间
@@ -252,7 +265,7 @@ module.exports = {
       clientSecret: 'MY_CLIENT_SECRET',
     },
 
-    // 分页配置
+    // 分页配置 (可选)
     pagination: {
       perPage: 5,
     },

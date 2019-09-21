@@ -12,6 +12,7 @@ Guide of `vuepress-theme-meteorlxy`.
 
 ![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy.svg?style=flat)
 ![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
+![](https://img.shields.io/github/stars/meteorlxy/vuepress-theme-meteorlxy?style=social)
 
 <!-- more -->
 
@@ -106,7 +107,7 @@ module.exports = {
       // Nickname
       nickname: 'meteorlxy',
 
-      // Introduction of yourself
+      // Introduction of yourself (HTML supported)
       description: 'Happy Coding<br/>Happy Life',
 
       // Email
@@ -218,7 +219,7 @@ module.exports = {
       },
     },
 
-    // Header Config
+    // Header Config (Optional)
     header: {
       // The background of the header. You can choose to use an image, or to use random pattern (geopattern)
       background: {
@@ -232,6 +233,19 @@ module.exports = {
       // show title in the header or not
       showTitle: true,
     },
+
+    // Footer Config (Optional)
+    footer: {
+      // Show 'Powered by VuePress' or not (enable it to support VuePress)
+      poweredBy: true,
+
+      // Show the theme that you are using (enable it to support this theme) (please do not disable it, haha)
+      poweredByTheme: true,
+
+      // Add your custom footer (HTML supported)
+      custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
+    },
+
 
     // Show the last updated time of your posts
     lastUpdated: true,
@@ -250,7 +264,7 @@ module.exports = {
       clientSecret: 'MY_CLIENT_SECRET',
     },
 
-    // Pagination config
+    // Pagination config (Optional)
     pagination: {
       perPage: 5,
     },
