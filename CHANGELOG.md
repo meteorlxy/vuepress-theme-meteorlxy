@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.3.1...v1.4.0) (2019-09-21)
+
+
+### Features
+
+* footer field of theme-config ([c4161f5](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/c4161f5))
+
+
+
 ## [1.3.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.3.0...v1.3.1) (2019-09-06)
 
 
