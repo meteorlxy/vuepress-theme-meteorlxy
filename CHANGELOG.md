@@ -1,3 +1,17 @@
+# [1.5.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.4.0...v1.5.0) (2019-09-23)
+
+
+### Bug Fixes
+
+* footer link to theme repo ([602b817](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/602b817))
+
+
+### Features
+
+* info-card field of theme-config ([8d28950](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/8d28950))
+
+
+
 # [1.4.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.3.1...v1.4.0) (2019-09-21)
 
 
