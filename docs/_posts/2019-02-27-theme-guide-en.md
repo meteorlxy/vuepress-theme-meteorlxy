@@ -246,6 +246,17 @@ module.exports = {
       custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
     },
 
+    // Info Card Config (Optional)
+    infoCard: {
+      // The background of the info card's header. You can choose to use an image, or to use random pattern (geopattern)
+      headerBackground: {
+        // URL of the background image. If you set the URL, the random pattern will not be generated, and the `useGeo` will be ignored.
+        url: '/assets/img/bg.jpg',
+
+        // Use random pattern. If you set it to `false`, and you don't set the image URL, the background will be blank.
+        useGeo: true,
+      },
+    },
 
     // Show the last updated time of your posts
     lastUpdated: true,

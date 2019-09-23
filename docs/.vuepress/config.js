@@ -120,7 +120,7 @@ module.exports = {
 
     header: {
       background: {
-        // url: '/assets/img/bg.jpg',
+        // url: '/assets/img/header-image-01.jpg',
         useGeo: true,
       },
       showTitle: true,
@@ -130,6 +130,13 @@ module.exports = {
       poweredBy: true,
       poweredByTheme: true,
       custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
+    },
+
+    infoCard: {
+      headerBackground: {
+        // url: '/assets/img/header-image-01.jpg',
+        useGeo: true,
+      },
     },
 
     lastUpdated: true,
