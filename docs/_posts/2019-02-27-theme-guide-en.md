@@ -12,6 +12,7 @@ Guide of `vuepress-theme-meteorlxy`.
 
 ![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy.svg?style=flat)
 ![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
+![](https://img.shields.io/github/stars/meteorlxy/vuepress-theme-meteorlxy?style=social)
 
 <!-- more -->
 
@@ -106,7 +107,7 @@ module.exports = {
       // Nickname
       nickname: 'meteorlxy',
 
-      // Introduction of yourself
+      // Introduction of yourself (HTML supported)
       description: 'Happy Coding<br/>Happy Life',
 
       // Email
@@ -210,10 +211,22 @@ module.exports = {
           account: 'meteorlxy',
           link: 'https://hub.docker.com/u/meteorlxy',
         },
+
+        // CSDN account and link
+        csdn: {
+          account: '',
+          link: 'https://www.csdn.net/',
+        },
+
+        // Juejin account and link
+        juejin: {
+          account: 'meteorlxy',
+          link: 'https://juejin.im/user/5c6fa9dde51d453fcb7baf09',
+        },
       },
     },
 
-    // Header Config
+    // Header Config (Optional)
     header: {
       // The background of the header. You can choose to use an image, or to use random pattern (geopattern)
       background: {
@@ -226,6 +239,30 @@ module.exports = {
 
       // show title in the header or not
       showTitle: true,
+    },
+
+    // Footer Config (Optional)
+    footer: {
+      // Show 'Powered by VuePress' or not (enable it to support VuePress)
+      poweredBy: true,
+
+      // Show the theme that you are using (enable it to support this theme) (please do not disable it, haha)
+      poweredByTheme: true,
+
+      // Add your custom footer (HTML supported)
+      custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
+    },
+
+    // Info Card Config (Optional)
+    infoCard: {
+      // The background of the info card's header. You can choose to use an image, or to use random pattern (geopattern)
+      headerBackground: {
+        // URL of the background image. If you set the URL, the random pattern will not be generated, and the `useGeo` will be ignored.
+        url: '/assets/img/bg.jpg',
+
+        // Use random pattern. If you set it to `false`, and you don't set the image URL, the background will be blank.
+        useGeo: true,
+      },
     },
 
     // Show the last updated time of your posts
@@ -245,7 +282,7 @@ module.exports = {
       clientSecret: 'MY_CLIENT_SECRET',
     },
 
-    // Pagination config
+    // Pagination config (Optional)
     pagination: {
       perPage: 5,
     },
@@ -458,6 +495,24 @@ This is my first post.
 ::: tip
 If you are familiar with Vssue, `vssue-title` is the prop `title` of Vssue component, and `vssue-id` is the prop `issue-id` of Vssue component.
 :::
+
+### Draft post
+
+If your post is not finished and you don't want to show it in the posts list, set `draft: true` in the frontmatter:
+
+```md {2}
+---
+draft: true
+category: hello
+tags:
+  - world
+date: 2019-01-21
+title: Hello, world!
+vssue: false
+---
+
+This is an unfinished post.
+```
 
 ### Disable Comments
 

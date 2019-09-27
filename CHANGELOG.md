@@ -1,3 +1,82 @@
+# [1.5.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.4.0...v1.5.0) (2019-09-23)
+
+
+### Bug Fixes
+
+* footer link to theme repo ([602b817](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/602b817))
+
+
+### Features
+
+* info-card field of theme-config ([8d28950](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/8d28950))
+
+
+
+# [1.4.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.3.1...v1.4.0) (2019-09-21)
+
+
+### Features
+
+* footer field of theme-config ([c4161f5](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/c4161f5))
+
+
+
+## [1.3.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.3.0...v1.3.1) (2019-09-06)
+
+
+### Bug Fixes
+
+* update zooming after page navigation ([8206383](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/8206383))
+* upgrade plugin-zooming ([e6c19e7](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/e6c19e7))
+
+
+
+# [1.3.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.2.0...v1.3.0) (2019-08-04)
+
+
+### Bug Fixes
+
+* missing toc header ([4e719d3](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/4e719d3))
+
+
+### Features
+
+* add csdn and juejin icons ([#55](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/55)) ([31d49a8](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/31d49a8))
+
+
+
+# [1.2.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.1.0...v1.2.0) (2019-07-28)
+
+
+### Features
+
+* support draft posts ([#47](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/47)) ([8bb5ed5](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/8bb5ed5))
+
+
+
+# [1.1.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.2...v1.1.0) (2019-07-28)
+
+
+### Bug Fixes
+
+* navbar menu failed in ios (close [#38](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/38), [#50](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/50)) ([#51](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/51)) ([c0f7bea](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/c0f7bea))
+
+
+### Features
+
+* better scrollbar of post-nav-toc ([#52](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/52)) ([ba9b860](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/ba9b860))
+
+
+
+## [1.0.2](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.1...v1.0.2) (2019-07-23)
+
+
+### Bug Fixes
+
+* max-height of post-nav-toc ([#49](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/49)) ([c7e8322](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/c7e8322))
+
+
+
 ## [1.0.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.0.0...v1.0.1) (2019-06-09)
 
 

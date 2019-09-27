@@ -74,7 +74,7 @@ export default {
     },
 
     paginators () {
-      let paginators = []
+      const paginators = []
       if (this.lastPage < this.eachSide * 2 + 4) {
         for (let i = this.firstPage; i < this.lastPage + 1; ++i) {
           paginators.push({
@@ -157,6 +157,11 @@ export default {
     setPage (targetPage) {
       if (targetPage <= this.lastPage && targetPage >= this.firstPage) {
         this.$emit('input', targetPage)
+
+        // update zooming after page navigation
+        this.$nextTick(() => {
+          this.$vuepress.zooming.updateDelay()
+        })
       }
     },
   },

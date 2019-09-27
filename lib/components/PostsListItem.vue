@@ -65,10 +65,12 @@
       </span>
     </p>
 
+    <!-- eslint-disable vue/no-v-html -->
     <p
       class="post-excerpt content"
       v-html="post.excerpt || post.frontmatter.description || ''"
     />
+    <!-- eslint-enable vue/no-v-html -->
   </div>
 </template>
 

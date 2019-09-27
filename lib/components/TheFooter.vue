@@ -2,7 +2,7 @@
   <footer class="footer">
     <p
       v-if="sns"
-      class="sns-links"
+      class="footer-sns-links"
     >
       <a
         v-for="(item, name) in sns"
@@ -18,16 +18,38 @@
       </a>
     </p>
 
-    <p>
+    <p
+      v-if="poweredBy"
+      class="footer-text"
+    >
       <span>Powered by </span>
 
       <a
-        href="https://vuepress.vuejs.org"
+        href="https://github.com/vuejs/vuepress"
         target="_blank"
       >
-        Vuepress
+        VuePress
       </a>
+
+      <template v-if="poweredByTheme">
+        <span> | </span>
+
+        <a
+          href="https://github.com/meteorlxy/vuepress-theme-meteorlxy"
+          target="_blank"
+        >
+          meteorlxy
+        </a>
+      </template>
     </p>
+
+    <!-- eslint-disable vue/no-v-html -->
+    <p
+      v-if="custom"
+      class="footer-text"
+      v-html="custom"
+    />
+    <!-- eslint-enable vue/no-v-html -->
   </footer>
 </template>
 
@@ -42,6 +64,18 @@ export default {
   },
 
   computed: {
+    poweredBy () {
+      return this.$themeConfig.footer.poweredBy !== false
+    },
+
+    poweredByTheme () {
+      return this.$themeConfig.footer.poweredByTheme !== false
+    },
+
+    custom () {
+      return this.$themeConfig.footer.custom || null
+    },
+
     sns () {
       return this.$themeConfig.personalInfo.sns || null
     },
@@ -57,4 +91,8 @@ export default {
   padding-bottom 1.5rem
   text-align center
   border-top 1px solid $borderColor
+  .footer-sns-links
+    margin 1em 0
+  .footer-text
+    margin 0.5em 0
 </style>

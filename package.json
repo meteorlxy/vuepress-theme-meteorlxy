@@ -1,42 +1,72 @@
 {
   "name": "vuepress-theme-meteorlxy",
-  "version": "1.0.1",
-  "description": "Vuepress blog theme - Meteorlxy",
-  "author": "meteorlxy <meteor.lxy@foxmail.com>",
-  "license": "MIT",
-  "main": "lib/index.js",
+  "version": "1.5.0",
+  "description": "vuepress blog theme - meteorlxy",
   "keywords": [
-    "vuepress",
+    "blog",
     "theme",
-    "blog"
+    "vuepress"
   ],
   "homepage": "https://github.com/meteorlxy/vuepress-theme-meteorlxy",
+  "bugs": {
+    "url": "https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/meteorlxy/vuepress-theme-meteorlxy.git"
   },
-  "bugs": {
-    "url": "https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues"
-  },
+  "license": "MIT",
+  "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
   "scripts": {
-    "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs --dest docs-dist",
-    "lint": "eslint --fix --ext .js,.vue .",
+    "dev": "vuepress dev docs --temp .temp",
+    "lint": "eslint --ext .js,.vue lib docs",
+    "publish": "git push origin master:master --tags",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "lint-staged": {
     "*.{js,vue}": [
       "eslint --fix",
       "git add"
+    ],
+    "package.json": [
+      "sort-package-json",
+      "git add"
     ]
   },
-  "peerDependencies": {
-    "vuepress": "^1.0.0"
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "plugin:vue/recommended"
+    ],
+    "root": true,
+    "rules": {
+      "dot-notation": [
+        "error",
+        {
+          "allowPattern": "^$"
+        }
+      ],
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ]
+    }
   },
   "dependencies": {
     "@vssue/api-github-v3": "^1.0.0",
@@ -53,20 +83,26 @@
     "vuepress-plugin-container": "^1.1.1",
     "vuepress-plugin-nprogress": "^1.1.0",
     "vuepress-plugin-smooth-scroll": "^0.0.3",
-    "vuepress-plugin-table-of-contents": "^1.0.0",
-    "vuepress-plugin-zooming": "^1.0.0"
+    "vuepress-plugin-table-of-contents": "^1.0.2",
+    "vuepress-plugin-zooming": "^1.1.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "conventional-changelog-cli": "^2.0.21",
-    "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^5.2.2",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "sort-package-json": "^1.22.1",
+    "vuepress": "^1.0.4"
+  },
+  "peerDependencies": {
     "vuepress": "^1.0.0"
   }
 }

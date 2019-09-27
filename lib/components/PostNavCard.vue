@@ -56,9 +56,9 @@ export default {
   computed: {
     style () {
       return {
-        'position': this.fixed ? 'fixed' : 'relative',
-        'top': this.fixed ? `${this.navbarHeight}px` : 0,
-        'width': `${this.width}px`,
+        position: this.fixed ? 'fixed' : 'relative',
+        top: this.fixed ? `${this.navbarHeight}px` : 0,
+        width: `${this.width}px`,
       }
     },
 
@@ -75,8 +75,8 @@ export default {
     },
 
     showComments () {
-      return this.$themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (
-        this.$frontmatter['vssue-id'] || this.$frontmatter['vssue-title'] || this.$frontmatter['title']
+      return this.$themeConfig.comments !== false && this.$frontmatter.vssue !== false && (
+        this.$frontmatter['vssue-id'] || this.$frontmatter['vssue-title'] || this.$frontmatter.title
       )
     },
   },
@@ -112,11 +112,22 @@ export default {
   .icon
     fill $grayTextColor
   .post-nav-toc > ul
-      word-break normal
-      margin 0.5rem 0
-      padding-left 2rem
-      ul
-        padding-left 0.8rem
+    word-break normal
+    margin 0.5rem 0
+    padding-left 2rem
+    max-height calc(100vh - 16rem)
+    // separate overflow to be compatible with Safari
+    overflow-x hidden
+    overflow-y auto
+    scrollbar-width thin
+    &::-webkit-scrollbar
+      width 3px
+    &::-webkit-scrollbar-track
+      background-color $borderColor
+    &::-webkit-scrollbar-thumb
+      background-color $lightTextColor
+    ul
+      padding-left 0.8rem
   .post-nav-comments a
     color $grayTextColor
     &:hover

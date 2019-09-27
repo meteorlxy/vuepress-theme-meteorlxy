@@ -3,16 +3,16 @@
     <TransitionFadeSlide>
       <div
         v-if="listPosts.length === 0"
-        class="no-posts"
         key="no-posts"
+        class="no-posts"
       >
         {{ $themeConfig.lang.noRelatedPosts }}
       </div>
 
       <div
         v-else
-        class="posts-items"
         :key="page"
+        class="posts-items"
       >
         <TransitionFadeSlide
           tag="div"

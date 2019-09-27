@@ -15,7 +15,7 @@ module.exports = {
 
   plugins: [
     ['@vuepress/google-analytics', {
-      'ga': 'UA-132770851-2',
+      ga: 'UA-132770851-2',
     }],
   ],
 
@@ -51,6 +51,8 @@ module.exports = {
       email: 'meteor.lxy@foxmail.com',
       location: 'Xi\'an City, China',
       organization: 'Xi\'an Jiao Tong University',
+      location: 'Shenzhen, China',
+      organization: 'Tencent',
       avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
       // background: '/path/to/backgound-image',
       sns: {
@@ -106,15 +108,36 @@ module.exports = {
           account: 'meteorlxy',
           link: 'https://hub.docker.com/u/meteorlxy',
         },
+        csdn: {
+          account: '',
+          link: 'https://www.csdn.net/',
+        },
+        juejin: {
+          account: 'meteorlxy',
+          link: 'https://juejin.im/user/5c6fa9dde51d453fcb7baf09',
+        },
       },
     },
 
     header: {
       background: {
-        // url: '/assets/img/bg.jpg',
+        // url: '/assets/img/header-image-01.jpg',
         useGeo: true,
       },
       showTitle: true,
+    },
+
+    footer: {
+      poweredBy: true,
+      poweredByTheme: true,
+      custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
+    },
+
+    infoCard: {
+      headerBackground: {
+        // url: '/assets/img/header-image-01.jpg',
+        useGeo: true,
+      },
     },
 
     lastUpdated: true,

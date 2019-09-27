@@ -34,7 +34,7 @@ export default {
       <svg
         class="icon"
         style={{
-          'fill': color,
+          fill: color,
           'font-size': size,
         }}
       >

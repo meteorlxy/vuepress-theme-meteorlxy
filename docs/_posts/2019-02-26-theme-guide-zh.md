@@ -13,6 +13,7 @@ vssue-id: 2
 
 ![](https://img.shields.io/npm/v/vuepress-theme-meteorlxy.svg?style=flat)
 ![](https://img.shields.io/github/license/meteorlxy/vuepress-theme-meteorlxy.svg?style=flat)
+![](https://img.shields.io/github/stars/meteorlxy/vuepress-theme-meteorlxy?style=social)
 
 <!-- more -->
 
@@ -107,7 +108,7 @@ module.exports = {
       // 昵称
       nickname: 'meteorlxy',
 
-      // 个人简介
+      // 个人简介 (支持 HTML)
       description: 'Happy Coding<br/>Happy Life',
 
       // 电子邮箱
@@ -211,10 +212,22 @@ module.exports = {
           account: 'meteorlxy',
           link: 'https://hub.docker.com/u/meteorlxy',
         },
+
+        // CSDN 帐号和链接
+        csdn: {
+          account: '',
+          link: 'https://www.csdn.net/',
+        },
+
+        // 掘金 帐号和链接
+        juejin: {
+          account: 'meteorlxy',
+          link: 'https://juejin.im/user/5c6fa9dde51d453fcb7baf09',
+        },
       },
     },
 
-    // 上方 header 的相关设置
+    // 上方 header 的相关设置 (可选)
     header: {
       // header 的背景，可以使用图片，或者随机变化的图案（geopattern）
       background: {
@@ -227,6 +240,30 @@ module.exports = {
 
       // 是否在 header 显示标题
       showTitle: true,
+    },
+
+    // 底部 footer 的相关设置 (可选)
+    footer: {
+      // 是否显示 Powered by VuePress
+      poweredBy: true,
+
+      // 是否显示使用的主题
+      poweredByTheme: true,
+
+      // 添加自定义 footer (支持 HTML)
+      custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
+    },
+
+    // 个人信息卡片相关设置 (可选)
+    infoCard: {
+      // 卡片 header 的背景，可以使用图片，或者随机变化的图案（geopattern）
+      headerBackground: {
+        // 使用图片的 URL，如果设置了图片 URL，则不会生成随机变化的图案，下面的 useGeo 将失效
+        url: '/assets/img/bg.jpg',
+
+        // 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为空白背景
+        useGeo: true,
+      },
     },
 
     // 是否显示文章的最近更新时间
@@ -246,7 +283,7 @@ module.exports = {
       clientSecret: 'MY_CLIENT_SECRET',
     },
 
-    // 分页配置
+    // 分页配置 (可选)
     pagination: {
       perPage: 5,
     },
@@ -459,6 +496,24 @@ vssue: false
 ::: tip
 如果你熟悉 Vssue，那么 `vssue-title` 对应的就是 Vssue 组件的 prop `title`，`vssue-id` 对应的就是 Vssue 组件的 prop `issue-id`。
 :::
+
+### 隐藏博文
+
+如果你的博文还没有完成，不想展示在文章列表中，在 frontmatter 中设置 `draft: true` 即可：
+
+```md {2}
+---
+draft: true
+category: hello
+tags:
+  - world
+date: 2019-01-21
+title: Hello, world!
+vssue: false
+---
+
+这是一篇未完成的博文。
+```
 
 ### 禁用评论功能
 

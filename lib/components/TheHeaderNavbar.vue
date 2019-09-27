@@ -85,7 +85,7 @@ export default {
   computed: {
     navbarClass () {
       return {
-        'fixed': this.fixed,
+        fixed: this.fixed,
       }
     },
   },
@@ -127,7 +127,6 @@ $lineHeight = $navbarHeight - ($gutter * 2)
   color $textColor
   background-color alpha($navbarColor, 0.8)
   transition all 0.5s ease-out
-  overflow hidden
   &.fixed
     position fixed
     background-color $navbarColor
@@ -135,10 +134,14 @@ $lineHeight = $navbarHeight - ($gutter * 2)
       .navbar-links
         background-color $navbarColor
   .navbar-site-name
+    display inline-block
     position relative
     font-size 1.2rem
     font-weight 600
     color $accentColor
+    max-width 'calc(100% - %s)' % $lineHeight
+    max-height $lineHeight
+    overflow hidden
   .navbar-toggler
     float right
     cursor pointer

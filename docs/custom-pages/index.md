@@ -54,7 +54,7 @@ Add you custom layout in `.vuepress/components/CustomLayout.vue`:
 
     <div class="main-div">
       <!-- <Content /> is to show the rendered markdown content of this page -->
-      <Content />
+      <Content class="content" />
     </div>
   </div>
 </template>

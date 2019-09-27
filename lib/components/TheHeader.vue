@@ -53,7 +53,7 @@ export default {
 
   computed: {
     showTitle () {
-      return this.$frontmatter['header-title'] !== false && this.$themeConfig.header['showTitle'] !== false
+      return this.$frontmatter['header-title'] !== false && this.$themeConfig.header.showTitle !== false
     },
 
     backgroundConfig () {
@@ -62,7 +62,7 @@ export default {
 
     backgroundImg () {
       // frontmatter > themeConfig
-      return this.$frontmatter['header-image'] || this.backgroundConfig['url'] || null
+      return this.$frontmatter['header-image'] || this.backgroundConfig.url || null
     },
 
     style () {
@@ -86,7 +86,7 @@ export default {
 
       // use geopattern
       // avoid prerendering the geopattern in build stage or the html files will be 14KB larger
-      if (!this.$ssrContext) {
+      if (!this.$ssrContext && this.backgroundConfig.useGeo !== false) {
         return {
           'background-image': this.gpImg(),
         }
@@ -97,15 +97,10 @@ export default {
   },
 
   methods: {
-    // in computed, geopattern will always be computed
-    // in methods, geopattern won't be called with useGeo = false
     gpImg () {
-      return this.backgroundConfig.useGeo !== false
-        ? GeoPattern.generate(this.gpString(), {
-          // color: '#9fe0f6',
-          generator: this.randomArr(generators),
-        }).toDataUrl()
-        : null
+      return GeoPattern.generate(this.gpString(), {
+        generator: this.randomArr(generators),
+      }).toDataUrl()
     },
 
     gpString () {

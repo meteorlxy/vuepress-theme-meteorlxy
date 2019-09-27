@@ -7,7 +7,7 @@
     </div>
 
     <div class="main-div">
-      <Content />
+      <Content class="content" />
     </div>
   </div>
 </template>

@@ -2,44 +2,50 @@
 import Icon from './Icon.vue'
 
 const nameMap = {
-  'github': {
+  github: {
     title: 'GitHub',
   },
-  'gitlab': {
+  gitlab: {
     title: 'GitLab',
   },
-  'bitbucket': {
+  bitbucket: {
     title: 'Bitbucket',
   },
-  'docker': {
+  docker: {
     title: 'Docker Hub',
   },
-  'facebook': {
+  facebook: {
     title: 'Facebook',
   },
-  'twitter': {
+  twitter: {
     title: 'Twitter',
   },
-  'linkedin': {
+  linkedin: {
     title: 'LinkedIn',
   },
-  'weibo': {
+  weibo: {
     title: '新浪微博',
   },
-  'zhihu': {
+  zhihu: {
     title: '知乎',
   },
-  'douban': {
+  douban: {
     title: '豆瓣',
   },
-  'reddit': {
+  reddit: {
     title: 'Reddit',
   },
-  'medium': {
+  medium: {
     title: 'Medium',
   },
-  'instagram': {
+  instagram: {
     title: 'Instagram',
+  },
+  csdn: {
+    title: 'CSDN',
+  },
+  juejin: {
+    title: '掘金',
   },
 }
 
