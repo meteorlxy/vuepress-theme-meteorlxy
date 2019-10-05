@@ -26,6 +26,7 @@ List of blogs that use this theme.
 - [@meteorlxy](https://www.meteorlxy.cn)
 - [@yuchanns](https://www.yuchanns.xyz)
 - [@W-Qing](https://www.sunburst.wang)
+- [@kenberkeley](https://kenberkeley.github.io)
 
 ## Portuguese Blogs
 
