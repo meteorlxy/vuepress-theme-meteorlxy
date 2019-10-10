@@ -26,6 +26,7 @@
     "dev": "vuepress dev docs --temp .temp",
     "lint": "eslint --ext .js,.vue lib docs",
     "publish": "git push origin master:master --tags",
+    "serve": "vuepress serve docs --dest docs-dist",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md"
   },
   "husky": {
@@ -82,6 +83,7 @@
     "lodash.throttle": "^4.1.1",
     "vuepress-plugin-container": "^1.1.1",
     "vuepress-plugin-nprogress": "^1.1.0",
+    "vuepress-plugin-serve": "^1.1.0",
     "vuepress-plugin-smooth-scroll": "^0.0.3",
     "vuepress-plugin-table-of-contents": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.2"
