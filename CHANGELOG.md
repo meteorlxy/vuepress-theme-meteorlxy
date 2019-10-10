@@ -1,3 +1,12 @@
+## [1.5.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.5.0...v1.5.1) (2019-10-10)
+
+
+### Bug Fixes
+
+* add redirect plugin to handle redirection (fix [#62](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/62)) ([9163830](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/9163830))
+
+
+
 # [1.5.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.4.0...v1.5.0) (2019-09-23)
 
 
