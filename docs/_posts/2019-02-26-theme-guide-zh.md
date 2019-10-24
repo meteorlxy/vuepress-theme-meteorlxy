@@ -491,24 +491,6 @@ vssue: false
 如果你熟悉 Vssue，那么 `vssue-title` 对应的就是 Vssue 组件的 prop `title`，`vssue-id` 对应的就是 Vssue 组件的 prop `issue-id`。
 :::
 
-### 隐藏博文
-
-如果你的博文还没有完成，不想展示在文章列表中，在 frontmatter 中设置 `draft: true` 即可：
-
-```md {2}
----
-draft: true
-category: hello
-tags:
-  - world
-date: 2019-01-21
-title: Hello, world!
-vssue: false
----
-
-这是一篇未完成的博文。
-```
-
 ### 禁用评论功能
 
 当然，如果你不想让你的博客拥有评论功能，你可以完全禁用它：
@@ -524,6 +506,46 @@ module.exports = {
 ```
 
 设置 `comments: false` 后，Vuepress 就不会引入 Vssue 相关的代码了。
+
+## 其他特性
+
+### 置顶博文
+
+如果你想要置顶博文，在 frontmatter 中设置 `top: true` 即可：
+
+```md {2}
+---
+top: true
+category: hello
+tags:
+  - world
+date: 2019-01-21
+title: Hello, world!
+---
+
+这是一篇置顶的博文。
+```
+
+::: tip
+你还可以设置 `top: 1`, `top: 2` 来控制顺序。
+:::
+
+### 草稿博文
+
+如果你的博文还没有完成，不想展示在文章列表中，在 frontmatter 中设置 `draft: true` 即可：
+
+```md {2}
+---
+draft: true
+category: hello
+tags:
+  - world
+date: 2019-01-21
+title: Hello, world!
+---
+
+这是一篇未完成的博文。
+```
 
 ## 配置参考
 
