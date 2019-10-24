@@ -546,6 +546,20 @@ title: Hello, world!
 This is an unfinished post.
 ```
 
+### Center syntax
+
+Support syntax to make a block center:
+
+```md
+-><img width="180" src="https://vuepress.vuejs.org/hero.png" alt="logo"><-
+
+->This theme is powered by VuePress<-
+```
+
+-><img width="180" src="https://vuepress.vuejs.org/hero.png" alt="logo"><-
+
+->This theme is powered by VuePress<-
+
 ## References
 
 ### Style variables

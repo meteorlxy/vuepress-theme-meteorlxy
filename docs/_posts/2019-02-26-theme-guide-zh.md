@@ -547,6 +547,20 @@ title: Hello, world!
 这是一篇未完成的博文。
 ```
 
+### 居中语法
+
+支持居中语法：
+
+```md
+-><img width="180" src="https://vuepress.vuejs.org/hero.png" alt="logo"><-
+
+->该主题由 VuePress 驱动<-
+```
+
+->!<img width="180" src="https://vuepress.vuejs.org/hero.png" alt="logo"><-
+
+->该主题由 VuePress 驱动<-
+
 ## 配置参考
 
 ### 样式变量
