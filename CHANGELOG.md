@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.5.1...v1.6.0) (2019-10-24)
+
+
+### Features
+
+* markdown center syntax ([f20a064](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/f20a064))
+
+
+
 ## [1.5.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.5.0...v1.5.1) (2019-10-10)
 
 
