@@ -23,7 +23,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "vuepress build docs --dest docs-dist",
-    "dev": "vuepress dev docs --temp .temp",
+    "dev": "vuepress dev docs --no-cache --temp .temp",
     "lint": "eslint --ext .js,.vue lib docs",
     "publish": "git push origin master:master --tags",
     "serve": "vuepress serve docs --dest docs-dist",
@@ -81,6 +81,7 @@
     "geopattern": "^1.2.3",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
+    "markdown-it-center-text": "^1.0.4",
     "vuepress-plugin-container": "^1.1.1",
     "vuepress-plugin-nprogress": "^1.1.0",
     "vuepress-plugin-redirect": "^1.1.2",
