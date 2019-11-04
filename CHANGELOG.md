@@ -1,3 +1,12 @@
+## [1.7.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.7.0...v1.7.1) (2019-11-04)
+
+
+### Bug Fixes
+
+* tags styles regression and remove useless files ([37a0e30](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/37a0e30))
+
+
+
 # [1.7.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.6.0...v1.7.0) (2019-11-04)
 
 
