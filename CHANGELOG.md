@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.6.0...v1.7.0) (2019-11-04)
+
+
+### Bug Fixes
+
+* filter categories and tags of draft posts (fix [#63](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/63)) ([4f4cdb5](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/4f4cdb5))
+
+
+### Features
+
+* add OutboundLink for external links in navbar (close [#60](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/60)) ([3d6f9a3](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/3d6f9a3))
+
+
+
 # [1.6.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.5.1...v1.6.0) (2019-10-24)
 
 
