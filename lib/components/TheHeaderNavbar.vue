@@ -50,7 +50,9 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              {{ nav.text }}
+              <span>{{ nav.text }}</span>
+
+              <OutboundLink />
             </a>
           </template>
         </div>
