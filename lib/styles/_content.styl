@@ -1,0 +1,79 @@
+@require 'variables'
+
+.content
+  width 100%
+  padding-left 0.2rem
+  line-height 1.65
+  overflow-wrap break-word
+  a:hover
+    text-decoration underline
+  ul, ol
+    padding-left 1.2em
+  img
+    max-width 100%
+  p.demo
+    padding 1rem 1.5rem
+    border 1px solid #ddd
+    border-radius 4px
+  hr
+    display block
+    height 1px
+    border 0
+    border-top 1px solid $borderColor
+    margin 1.2rem 0
+    padding 0
+  strong
+    font-weight 600
+  a.header-anchor
+    font-size 0.85em
+    float left
+    margin 0.125em 0 0 -0.85em
+    opacity 0
+    transition all 0.2s
+    &:hover
+      text-decoration none
+  h1, h2, h3, h4, h5, h6
+    margin-top (0.5rem - $navbarHeight)
+    padding-top (1rem + $navbarHeight)
+    &:hover > a.header-anchor
+      opacity 1
+  h1
+    font-size 1.6rem
+    padding-bottom 0.3em
+    margin-bottom 0.5em
+    border-bottom 1px solid $borderColor
+  h2
+    font-size 1.3rem
+    padding-bottom 0.3em
+    margin-bottom 0.5em
+    border-bottom 1px solid $borderColor
+  h3
+    font-size 1.1rem
+  h4, h5, h6
+    font-size 1rem
+  code, kbd
+    font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+  blockquote
+    padding 0 1em
+    color #6a737d
+    border-left 0.25em solid #dfe2e5
+    margin-left 0
+    >:first-child
+      margin-top 0
+    >:last-child
+      margin-bottom 0
+  table
+    max-width 100%
+    border-collapse collapse
+    margin 1rem 0
+
+  tr
+    border-top 1px solid #dfe2e5
+    &:nth-child(2n)
+      background-color #f6f8fa
+
+  th, td
+    border 1px solid #dfe2e5
+    padding .6em 1em
+
+  

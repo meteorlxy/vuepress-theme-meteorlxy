@@ -54,13 +54,3 @@ export default {
   },
 }
 </script>
-
-<style lang="stylus" scoped>
-@require '~@theme/styles/variables'
-
-.tag-checkbox
-  input[type="checkbox"]:checked + .post-tag
-    color $accentColor
-    .icon
-      fill $accentColor
-</style>
