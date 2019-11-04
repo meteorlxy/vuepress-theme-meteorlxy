@@ -15,7 +15,7 @@
     </label>
 
     <label
-      v-for="category in Object.keys($categories.map)"
+      v-for="category in categories"
       :key="category"
       class="tag-checkbox"
     >
@@ -48,6 +48,17 @@ export default {
     return {
       selectedCategory: null,
     }
+  },
+
+  computed: {
+    categories () {
+      return Object.keys(this.$categories.map)
+        .filter(
+          key => !this.$categories.map[key].posts.every(
+            item => item.frontmatter.draft === true
+          )
+        )
+    },
   },
 
   watch: {

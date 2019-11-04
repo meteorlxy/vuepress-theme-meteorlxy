@@ -1,7 +1,7 @@
 <template>
   <div class="tags-select">
     <label
-      v-for="tag in Object.keys($tags.map)"
+      v-for="tag in tags"
       :key="tag"
       class="tag-checkbox"
     >
@@ -34,6 +34,17 @@ export default {
     return {
       selectedTags: [],
     }
+  },
+
+  computed: {
+    tags () {
+      return Object.keys(this.$tags.map)
+        .filter(
+          key => !this.$tags.map[key].posts.every(
+            item => item.frontmatter.draft === true
+          )
+        )
+    },
   },
 
   watch: {
