@@ -53,11 +53,6 @@ export default {
   computed: {
     categories () {
       return Object.keys(this.$categories.map)
-        .filter(
-          key => !this.$categories.map[key].posts.every(
-            item => item.frontmatter.draft === true
-          )
-        )
     },
   },
 
