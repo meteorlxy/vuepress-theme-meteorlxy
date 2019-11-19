@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import PostsFilter from '../components/PostsFilter.vue'
-import PostsList from '../components/PostsList.vue'
+import PostsFilter from '@theme/components/PostsFilter.vue'
+import PostsList from '@theme/components/PostsList.vue'
 
 export default {
   name: 'Tag',

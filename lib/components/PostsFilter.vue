@@ -40,9 +40,9 @@
 </template>
 
 <script>
-import PostsFilterCategories from '../components/PostsFilterCategories.vue'
-import PostsFilterTags from '../components/PostsFilterTags.vue'
-import PostsFilterSearch from '../components/PostsFilterSearch.vue'
+import PostsFilterCategories from '@theme/components/PostsFilterCategories.vue'
+import PostsFilterTags from '@theme/components/PostsFilterTags.vue'
+import PostsFilterSearch from '@theme/components/PostsFilterSearch.vue'
 
 export default {
   name: 'PostsFilter',

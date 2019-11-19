@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import TransitionFadeSlide from './TransitionFadeSlide.vue'
-import TheHeaderNavbar from './TheHeaderNavbar.vue'
-import TheHeaderBanner from './TheHeaderBanner.vue'
 import GeoPattern from 'geopattern'
+import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
+import TheHeaderNavbar from '@theme/components/TheHeaderNavbar.vue'
+import TheHeaderBanner from '@theme/components/TheHeaderBanner.vue'
 
 const generators = [
   'octogons',

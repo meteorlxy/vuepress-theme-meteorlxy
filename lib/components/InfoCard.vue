@@ -82,9 +82,9 @@
 </template>
 
 <script>
-import IconInfo from './IconInfo.vue'
-import IconSns from './IconSns.vue'
 import GeoPattern from 'geopattern'
+import IconInfo from '@theme/components/IconInfo.vue'
+import IconSns from '@theme/components/IconSns.vue'
 
 export default {
   name: 'InfoCard',

@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import TheHeader from '../components/TheHeader.vue'
-import TheMain from '../components/TheMain.vue'
-import TheFooter from '../components/TheFooter.vue'
+import TheHeader from '@theme/components/TheHeader.vue'
+import TheMain from '@theme/components/TheMain.vue'
+import TheFooter from '@theme/components/TheFooter.vue'
 
 export default {
   name: 'ThemeMeteorlxy',
@@ -24,4 +24,4 @@ export default {
 }
 </script>
 
-<style lang="stylus" src="../styles/index.styl" />
+<style lang="stylus" src="@theme/styles/index.styl" />

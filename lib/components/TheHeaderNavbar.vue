@@ -68,7 +68,7 @@
 
 <script>
 import throttle from 'lodash.throttle'
-import Icon from './Icon.vue'
+import Icon from '@theme/components/Icon.vue'
 
 export default {
   name: 'TheHeaderNavbar',

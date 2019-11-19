@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import IconTag from './IconTag.vue'
+import IconTag from '@theme/components/IconTag.vue'
 
 export default {
   name: 'PostsFilterTags',

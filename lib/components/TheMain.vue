@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import TransitionFadeSlide from './TransitionFadeSlide.vue'
-import PostNavCard from './PostNavCard.vue'
-import InfoCard from './InfoCard.vue'
+import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
+import PostNavCard from '@theme/components/PostNavCard.vue'
+import InfoCard from '@theme/components/InfoCard.vue'
 
 export default {
   name: 'TheMain',

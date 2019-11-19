@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import IconSns from './IconSns.vue'
+import IconSns from '@theme/components/IconSns.vue'
 
 export default {
   name: 'TheFooter',

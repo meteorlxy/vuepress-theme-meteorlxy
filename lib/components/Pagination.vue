@@ -32,6 +32,8 @@
 
 <script>
 export default {
+  name: 'Pagination',
+
   props: {
     value: {
       type: Number,

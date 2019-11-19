@@ -42,9 +42,9 @@
 </template>
 
 <script>
-import TransitionFadeSlide from './TransitionFadeSlide.vue'
-import PostsListItem from './PostsListItem.vue'
-import Pagination from './Pagination.vue'
+import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
+import PostsListItem from '@theme/components/PostsListItem.vue'
+import Pagination from '@theme/components/Pagination.vue'
 
 export default {
   name: 'PostsList',
