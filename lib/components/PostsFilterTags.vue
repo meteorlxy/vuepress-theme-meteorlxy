@@ -39,11 +39,6 @@ export default {
   computed: {
     tags () {
       return Object.keys(this.$tags.map)
-        .filter(
-          key => !this.$tags.map[key].posts.every(
-            item => item.frontmatter.draft === true
-          )
-        )
     },
   },
 
