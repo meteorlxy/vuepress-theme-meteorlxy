@@ -17,10 +17,10 @@
   },
   "license": "MIT",
   "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "main": "lib/index.js",
   "files": [
     "lib/"
   ],
-  "main": "lib/index.js",
   "scripts": {
     "build": "vuepress build docs --dest docs-dist",
     "dev": "vuepress dev docs --no-cache --temp .temp",
@@ -55,19 +55,19 @@
       "standard",
       "plugin:vue/recommended"
     ],
-    "root": true,
     "rules": {
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
       "dot-notation": [
         "error",
         {
           "allowPattern": "^$"
         }
-      ],
-      "comma-dangle": [
-        "error",
-        "always-multiline"
       ]
-    }
+    },
+    "root": true
   },
   "dependencies": {
     "@vssue/api-github-v3": "^1.0.0",
@@ -97,10 +97,10 @@
     "eslint": "^6.3.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^5.2.3",
+    "eslint-plugin-vue": "^6.1.2",
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
     "sort-package-json": "^1.22.1",
