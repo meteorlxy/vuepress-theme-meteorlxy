@@ -1,3 +1,17 @@
+# [1.8.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.7.1...v1.8.0) (2020-02-03)
+
+
+### Bug Fixes
+
+* filter draft in prod mode (close [#67](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/67)) ([0331dd5](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/0331dd5785dfa7d8e2695832923e134ad4ab890b))
+
+
+### Features
+
+* add Arabic language file ([#73](https://github.com/meteorlxy/vuepress-theme-meteorlxy/issues/73)) ([d45f709](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/d45f709344b4d2a35d72ad54a9aaf7aae6ae7c6d))
+
+
+
 ## [1.7.1](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.7.0...v1.7.1) (2019-11-04)
 
 
