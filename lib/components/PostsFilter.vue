@@ -127,7 +127,7 @@ export default {
           match(p.excerpt) ||
           match(p.frontmatter.description) ||
           match(p.tags) ||
-          match(p.category)
+          match(p.category),
         )
       }
 
