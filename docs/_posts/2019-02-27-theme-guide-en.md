@@ -546,6 +546,10 @@ title: Hello, world!
 This is an unfinished post.
 ```
 
+::: tip
+Draft posts will be displayed in dev mode, but be filtered in build mode.
+:::
+
 ### Center syntax
 
 Support syntax to make a block center:
