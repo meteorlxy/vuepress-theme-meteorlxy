@@ -112,6 +112,10 @@ export default {
       a
         color $lightTextColor
         font-weight normal
+        &:hover
+          color $accentColor
+          .icon
+            fill $accentColor
       .icon
         fill $lightTextColor
   .post-excerpt
