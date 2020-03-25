@@ -7,7 +7,7 @@
       <a
         v-for="(item, name) in sns"
         :key="name"
-        class="sns-link"
+        class="sns-link-vtm"
         :href="item.link"
         target="_blank"
       >

@@ -67,7 +67,7 @@
           v-for="(item, name) of sns"
           :key="name"
           :href="item.link"
-          class="sns-link"
+          class="sns-link-vtm"
           target="_blank"
         >
           <IconSns

@@ -97,7 +97,7 @@ export default {
 <style lang="stylus">
 @require '~@theme/styles/variables'
 
-.sns-link
+.sns-link-vtm
   margin 0 0.1em
   .sns-icon
     color $grayTextColor
