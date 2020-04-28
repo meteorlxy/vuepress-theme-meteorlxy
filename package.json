@@ -25,7 +25,6 @@
     "build": "vuepress build docs --dest docs-dist",
     "dev": "vuepress dev docs --no-cache --temp .temp",
     "lint": "eslint --ext .js,.vue lib docs",
-    "publish": "git push origin master:master --tags",
     "semantic-release": "semantic-release",
     "serve": "vuepress serve docs --dest docs-dist",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md"
