@@ -37,10 +37,25 @@ jobs:
       - run:
           name: Lint Code
           command: yarn lint
+  release:
+    executor: node
+    steps:
+      - install
+      - run:
+          name: Semantic Release
+          command: yarn semantic-release
 
 workflows:
   version: 2
-  checks:
+  check_and_release:
     jobs:
       - lint
       - build
+      - release:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - lint
+            - build
