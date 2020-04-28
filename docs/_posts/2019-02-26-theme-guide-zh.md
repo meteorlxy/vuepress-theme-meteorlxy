@@ -269,6 +269,14 @@ module.exports = {
       { text: '文章', link: '/posts/', exact: false },
     ],
 
+    // 是否开启平滑滚动
+    smoothScroll: true,
+
+    // vuepress-plugin-zooming 的配置项
+    zooming: {
+      // @see https://vuepress.github.io/en/plugins/zooming
+    },
+
     // 评论配置，参考下方 [页面评论] 章节
     comments: {
       owner: 'meteorlxy',

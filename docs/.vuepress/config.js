@@ -149,6 +149,14 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy' },
     ],
 
+    // Enable smooth scrolling or not
+    smoothScroll: false,
+
+    // Configs for vuepress-plugin-zooming
+    zooming: {
+      // @see https://vuepress.github.io/en/plugins/zooming
+    },
+
     comments: {
       owner: 'meteorlxy',
       repo: 'vuepress-theme-meteorlxy',

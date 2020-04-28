@@ -267,6 +267,14 @@ module.exports = {
       { text: 'Posts', link: '/posts/', exact: false },
     ],
 
+    // Enable smooth scrolling or not
+    smoothScroll: true,
+
+    // Configs for vuepress-plugin-zooming
+    zooming: {
+      // @see https://vuepress.github.io/en/plugins/zooming
+    },
+
     // Comments config. See the [Posts Comments] section below.
     comments: {
       owner: 'meteorlxy',
