@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.8.0...v1.9.0) (2020-04-28)
+
+
+### Features
+
+* add smoothScroll and zooming config ([89d60f8](https://github.com/meteorlxy/vuepress-theme-meteorlxy/commit/89d60f88c5b314ce4dae2ea051339c3444243d6d))
+
+
+
 # [1.8.0](https://github.com/meteorlxy/vuepress-theme-meteorlxy/compare/v1.7.1...v1.8.0) (2020-02-03)
 
 
